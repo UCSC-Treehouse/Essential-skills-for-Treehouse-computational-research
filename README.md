@@ -6,14 +6,19 @@ Welcome to your introductory guide to computational research!
 
 Here are some (peer reviewed) reasons why computational research matters:
 
-1. Developing computational skills enhances your **computational thinking** (a term coined by Jeannette M. Wing in 2006). It involves "**solving problems** [and] **designing systems**" to address the ultimate question of "what is computable?" [<sup>1</sup>].
-2. A preliminary study on code comprehension in a cohort of 57 scientific researchers, 51 of whom hold a PhD, found that "most participants learn programming through **self-study or on-the-job training**, with 57.9% lacking formal instruction" [<sup>2</sup>].
-3. **Data and code sharing** is absolutely essential for scientific research. A study in cancer research, observing "306 cancer-related articles indexed in PubMed in 2019" show that 59/306, or only 19%, provided publicly available data [<sup>3a</sup>]. Published and publicly available data and code is imperative for "scientific transparency, reproducibility, reuse, or compliance with funding bodies, journals, and academic institutions" [<sup>3b</sup>]. 
+1. Developing computational skills enhances your **computational thinking** (a term coined by Jeannette M. Wing in 2006). It involves "**solving problems** [and] **designing systems**" to address the ultimate question of "what is computable?" <sup>1</sup>
 
-[<sup>1</sup>] Wing, Jeannette. (2006). Computational Thinking. Communications of the ACM. 49. 33-35. 10.1145/1118178.1118215.
-[<sup>2</sup>] Chen, Alyssia & Wong, Carol & Sharif, Bonita & Peruma, Anthony. (2025). Exploring Code Comprehension in Scientific Programming: Preliminary Insights from Research Scientists. 10.48550/arXiv.2501.10037.
-[<sup>3a</sup>] Hamilton, D. G., Page, M. J., Finch, S., Everitt, S., & Fidler, F. (2022). How often do cancer researchers make their data and code available and what factors are associated with sharing?. BMC medicine, 20(1), 438. https://doi.org/10.1186/s12916-022-02644-2
-[<sup>3b</sup>] Trisovic, A., Lau, M.K., Pasquier, T. et al. A large-scale study on research code quality and execution. Sci Data 9, 60 (2022). https://doi.org/10.1038/s41597-022-01143-6
+2. A preliminary study on code comprehension in a cohort of 57 scientific researchers, 51 of whom hold a PhD, found that "most participants learn programming through **self-study or on-the-job training**, with 57.9% lacking formal instruction" <sup>2</sup>
+
+3. **Data and code sharing** is absolutely essential for scientific research. A study in cancer research, observing "306 cancer-related articles indexed in PubMed in 2019" show that 59/306, or only 19%, provided publicly available data <sup>3a</sup>. Published and publicly available data and code is imperative for "scientific transparency, reproducibility, reuse, or compliance with funding bodies, journals, and academic institutions" <sup>3b</sup>
+
+<sup>1</sup> Wing, Jeannette. (2006). Computational Thinking. Communications of the ACM. 49. 33-35. 10.1145/1118178.1118215.
+
+<sup>2</sup> Chen, Alyssia & Wong, Carol & Sharif, Bonita & Peruma, Anthony. (2025). Exploring Code Comprehension in Scientific Programming: Preliminary Insights from Research Scientists. 10.48550/arXiv.2501.10037.
+
+<sup>3a</sup> Hamilton, D. G., Page, M. J., Finch, S., Everitt, S., & Fidler, F. (2022). How often do cancer researchers make their data and code available and what factors are associated with sharing?. BMC medicine, 20(1), 438. https://doi.org/10.1186/s12916-022-02644-2
+
+<sup>3b</sup> Trisovic, A., Lau, M.K., Pasquier, T. et al. A large-scale study on research code quality and execution. Sci Data 9, 60 (2022). https://doi.org/10.1038/s41597-022-01143-6
 
 ## Goals
 
