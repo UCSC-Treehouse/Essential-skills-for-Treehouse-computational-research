@@ -37,6 +37,7 @@ Here are some (peer reviewed) reasons why computational research matters:
 To get a local (ie on *your* computer) copy of this project:
 
 0. Follow above prerequisites
+
 1. Open Terminal
 - **Windows**: Press `Win + R`, type `cmd`, hit Enter
 - **Mac**: Press `Cmd + Space`, type "Terminal", hit Enter
@@ -44,6 +45,7 @@ You'll see a blinking cursor like this:
 ```bash
 username@computer-name ~ %
 ```
+
 2. Create and navigate to new project folder
 - first create a folder for Vaske-Lab or Treehouse by copying the following into Terminal
 ```bash
@@ -51,6 +53,7 @@ mkdir Vaske-Lab
 cd Vaske-Lab
 ```
 *This makes a "Vaske-Lab" folder in your home directory and enters it*
+
 3. Clone this repository by copying the following into Terminal
 ```bash
    git clone https://github.com/your-username/Intro-to-Computational-Research.git
@@ -63,6 +66,7 @@ remote: Enumerating objects: 100, done.
 remote: Counting objects: 100% (100/100), done.
 Receiving objects: 100% (100/100), 1.23 MiB | 2.45 MiB/s, done.
 ```
+
 4. Enter the new repository folder by copying the following into Terminal
 ```bash
 cd Intro-to-Computational-Research
@@ -72,6 +76,7 @@ Your terminal prompt should now show:
 username@computer-name Intro-to-Computational-Research %
 ``` 
 *username and computer-name will be your local computer names*
+
 5. Confirm changes
 List all files to confirm cloning worked:
 ```bash
