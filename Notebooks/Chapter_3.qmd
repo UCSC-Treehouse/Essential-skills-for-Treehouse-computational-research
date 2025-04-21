@@ -1,0 +1,10 @@
+---
+title: "Chapter 3"
+format: html
+---
+
+## Exercises
+
+```{r}
+# Your code here
+```

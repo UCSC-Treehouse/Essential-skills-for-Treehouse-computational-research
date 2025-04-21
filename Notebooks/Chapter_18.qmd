@@ -1,0 +1,10 @@
+---
+title: "Chapter 18"
+format: html
+---
+
+## Exercises
+
+```{r}
+# Your code here
+```
