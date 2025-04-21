@@ -1,37 +1,25 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Intro to Computational Research
 
 #### *Onboarding Repository*
 
 Welcome to your introductory guide to computational research!
 
-This guide has been created to walk you through basic software downloads
-and installations as well as highlighted chapters of the ["R for Data
-Science"](https://r4ds.hadley.nz) book.
+This guide has been created to walk you through basic software downloads and installations as well as highlighted chapters of the ["R for Data Science"](https://r4ds.hadley.nz) book.
 
-This guide was created by the [Vaske Lab](https://vaskelab.ucsc.edu) at
-UC Santa Cruz; all software links reflect current version as of Q2
-2024).
+This guide was created by the [Vaske Lab](https://vaskelab.ucsc.edu) at UC Santa Cruz; all software links reflect current version as of Q2 2024).
 
 ------------------------------------------------------------------------
 
 ## Background
 
-Read more about our research here: [Treehouse Childhood Cancer
-Initiative](https://treehousegenomics.ucsc.edu)
+Read more about our research here: [Treehouse Childhood Cancer Initiative](https://treehousegenomics.ucsc.edu)
 
 ## Goals
 
 -   Using Terminal, GitHub, RStudio, renv, and Quarto notebooks
 -   Building repositories, files, and pipelines
 -   Getting a hang of research computing workflows
--   Learning computational research skills in R including: data
-    visualization, data transformation, and program iteration
+-   Learning computational research skills in R including: data visualization, data transformation, and program iteration
 
 ------------------------------------------------------------------------
 
@@ -39,17 +27,14 @@ Initiative](https://treehousegenomics.ucsc.edu)
 
 0.  Prerequisites/Installations
 
--   Create a [GitHub
-    account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)
-    with your UCSC email and join UCSC-Treehouse organization
+-   Create a [GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) with your UCSC email and join UCSC-Treehouse organization
 -   Install [Git](https://git-scm.com/downloads)
 -   Install [R](https://www.r-project.org)
 -   Install [RStudio](https://posit.co/download/rstudio-desktop/)
 -   Install Quarto and renv (*instructions below*)
 
 1.  Clone this repository (*instructions below*)
-2.  Explore the chapters of "R for Data Science" in order of Quarto
-    notebooks
+2.  Explore the chapters of "R for Data Science" in order of Quarto notebooks
 
 ------------------------------------------------------------------------
 
@@ -62,8 +47,7 @@ To get a local (ie on *your* computer) copy of this project:
 1.  Open Terminal
 
 -   **Windows**: Press `Win + R`, type `cmd`, hit Enter
--   **Mac**: Press `Cmd + Space`, type "Terminal", hit Enter You'll see
-    a blinking cursor like this:
+-   **Mac**: Press `Cmd + Space`, type "Terminal", hit Enter You'll see a blinking cursor like this:
 
 ``` bash
 username@computer-name ~ %
@@ -71,8 +55,7 @@ username@computer-name ~ %
 
 2.  Create and navigate to new project folder
 
--   First create a folder for Vaske-Lab or Treehouse by copying the
-    following into Terminal
+-   First create a folder for Vaske-Lab or Treehouse by copying the following into Terminal
 -   Then enter the new folder
 
 ``` bash
@@ -95,8 +78,7 @@ remote: Counting objects: 100% (100/100), done.
 Receiving objects: 100% (100/100), 1.23 MiB | 2.45 MiB/s, done.
 ```
 
-4.  Enter the new repository folder by copying the following into
-    Terminal
+4.  Enter the new repository folder by copying the following into Terminal
 
 ``` bash
 cd Intro-to-Computational-Research
@@ -122,8 +104,7 @@ You should see `README.md` and other project files.
 
 **If you get errors**:
 
-1.  `git: command not found` → [Install
-    Git](https://git-scm.com/downloads) first
+1.  `git: command not found` → [Install Git](https://git-scm.com/downloads) first
 
 2.  `Permission denied` → Try the HTTPS URL instead of SSH
 
