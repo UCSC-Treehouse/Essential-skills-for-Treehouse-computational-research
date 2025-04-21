@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rproj
+.Rhistory
+.RData
+R-*.pkg
+.DS_Store
