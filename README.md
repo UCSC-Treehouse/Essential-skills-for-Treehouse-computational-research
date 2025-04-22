@@ -16,6 +16,12 @@ Read more about our research here: [Treehouse Childhood Cancer Initiative](https
 
 ## Goals
 
+In order for science to be valid, it has to be reproducible. 
+Luckily, this can be easier for computational biology experiments than in wet lab experiments. 
+
+Before you can work on a Treehouse computational project, you must demonstrate that you know how to perform reproducible experiments. 
+When you have completed the work described in this repo, please reach out to your mentor so you can proceed with your project. 
+
 -   Using Terminal, GitHub, RStudio, renv, and Quarto notebooks
 -   Building repositories, files, and pipelines
 -   Getting a hang of research computing workflows
@@ -27,7 +33,8 @@ Read more about our research here: [Treehouse Childhood Cancer Initiative](https
 
 0.  Prerequisites/Installations
 
--   Create a [GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) with your UCSC email and join UCSC-Treehouse organization
+-   Create a [GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)
+-   Ask your mentor, Holly, or Ellen to add you to the UCSC-Treehouse GitHub organization
 -   Install [Git](https://git-scm.com/downloads)
 -   Install [R](https://www.r-project.org)
 -   Install [RStudio](https://posit.co/download/rstudio-desktop/)
