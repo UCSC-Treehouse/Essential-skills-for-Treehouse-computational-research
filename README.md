@@ -40,12 +40,12 @@ When you have completed the work described in this repo, please reach out to you
 -   Install [RStudio](https://posit.co/download/rstudio-desktop/)
 -   Install Quarto and renv (*instructions below*)
 
-1.  Create a directory (*instructions below*)
-2.  Explore the chapters (ch. 1-19, 26) of "R for Data Science" in order, creating a Quarto notebook for each
+1.  Create a directory with quarto notebooks (*instructions below*)
+2.  Explore the chapters (ch. 1-19, 26) of "R for Data Science" in order
 
 ------------------------------------------------------------------------
 
-### Creating a Directory:
+### Creating a Directory and Adding Quarto Notebooks:
 
 0.  Follow above prerequisites
 
@@ -75,9 +75,7 @@ username@computer-name Vaske-Lab %
 ```
 
 *username and computer-name will be your local computer info*
-
-### Install Quarto and renv
-
+3. Install Quarto and renv
 Run these commands in **RStudio's console**
 
 ``` r
@@ -87,4 +85,13 @@ install.packages("quarto")
 install.packages("renv")
 # initialize project-specific environment (do this ONCE per project)
 renv::init()
+```
+4. Create quarto notebooks for each textbook chapter (Ch. 1-19, 26)
+Run these commands back in your **Terminal**
+
+``` bash
+# Create properly numbered quarto notebook for each of chapters 1-19, 26
+for i in {01..19} 26; do
+  touch Chapter_$i.qmd
+done
 ```
