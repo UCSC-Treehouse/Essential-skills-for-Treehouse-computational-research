@@ -33,14 +33,12 @@ Read more about our research here: [Treehouse Childhood Cancer Initiative](https
 -   Install [RStudio](https://posit.co/download/rstudio-desktop/)
 -   Install Quarto and renv (*instructions below*)
 
-1.  Clone this repository (*instructions below*)
-2.  Explore the chapters of "R for Data Science" in order of Quarto notebooks
+1.  Create a directory (*instructions below*)
+2.  Explore the chapters (ch. 1-19, 26) of "R for Data Science" in order, creating a Quarto notebook for each
 
 ------------------------------------------------------------------------
 
-### Cloning a Repository:
-
-To get a local (ie on *your* computer) copy of this project:
+### Creating a Directory:
 
 0.  Follow above prerequisites
 
@@ -63,52 +61,13 @@ mkdir Vaske-Lab # make directory
 cd Vaske-Lab # enter directory
 ```
 
-3.  Clone this repository by copying the following into Terminal
-
-``` bash
-git clone https://github.com/UCSC-Treehouse/Intro-to-Computational-Research.git
-```
-
-You should see:
-
-``` bash
-Cloning into 'Intro-to-Computational-Research'...
-remote: Enumerating objects: 100, done.
-remote: Counting objects: 100% (100/100), done.
-Receiving objects: 100% (100/100), 1.23 MiB | 2.45 MiB/s, done.
-```
-
-4.  Enter the new repository folder by copying the following into Terminal
-
-``` bash
-cd Intro-to-Computational-Research
-```
-
 Your terminal prompt should now show:
 
 ``` bash
-username@computer-name Intro-to-Computational-Research %
+username@computer-name Vaske-Lab %
 ```
 
 *username and computer-name will be your local computer info*
-
-5.  List all files to confirm cloning worked:
-
-``` bash
-ls
-```
-
-You should see `README.md` and other project files.
-
-#### Troubleshooting
-
-**If you get errors**:
-
-1.  `git: command not found` → [Install Git](https://git-scm.com/downloads) first
-
-2.  `Permission denied` → Try the HTTPS URL instead of SSH
-
-3.  Wrong folder? Run `cd ..` to go back, then retry
 
 ### Install Quarto and renv
 
