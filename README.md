@@ -81,12 +81,12 @@ username@computer-name Vaske-Lab %
 Run these commands in **RStudio's console**
 
 ``` r
-# install the Quarto R package
+# install the Quarto R package (do this once EVER)
 install.packages("quarto")
-# install renv R package for reproducibility
+# install renv R package for reproducibility (do this once EVER)
 install.packages("renv")
-# initialize project-specific environment (do this ONCE per project)
-renv::init()
+# initialize project-specific environment (do this once PER PROJECT)
+renv::init(force = TRUE)
 ```
 
 4. Create quarto notebooks for each textbook chapter (Ch. 1-19, 26)
