@@ -1,0 +1,33 @@
+---
+title: "Chapter 1, Data Visualization"
+format: html
+---
+
+In this first chapter we will explore data visualization with **ggplot2**; navigating variables, distribution, plots, and varying aesthetic options.
+
+## Prerequisites
+Install necessary packages to access datasets and plotting functions --> **just copy the commands into your own quarto notebook**
+
+```{r prerequisites}
+# install tidyverse package (only need to do once)
+install.packages("tidyverse")
+# run tidyverse package (need to run every time code is being run)
+library(tidyverse)
+
+# install and load palmerpenguins package which includes example datasets
+install.packages("palmerpenguins")
+library(palmerpenguins)
+
+# install and load ggthemes package which offers colorblind safe color palette
+install.packages("ggthemes")
+library(ggthemes)
+```
+
+## Background Info
+
+- A data frame is a rectangular collection of variables (in the columns) and observations (in the rows). In the context of **palmerpenguins**, a variable refers to an attribute of all the penguins, and an observation refers to all the attributes of a single penguin.
+- In the tidyverse, we use special data frames called **tibbles**
+
+## Creating a ggplot
+*end goal*:
+![Penguin Flipper vs Mass Plot](Images/penguin_flipper_to_mass_ggplot2.png){width="80%"}

@@ -100,6 +100,9 @@ for i in {01..19} 26; do
 done
 ```
 
+------------------------------------------------------------------------
+
 ## NOW...
 **Navigate to your Chapter_01.qmd file on RStudio**
+
 **Follow along with the instructions in the corresponding repo chapter**
