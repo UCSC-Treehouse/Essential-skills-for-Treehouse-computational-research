@@ -75,7 +75,9 @@ username@computer-name Vaske-Lab %
 ```
 
 *username and computer-name will be your local computer info*
+
 3. Install Quarto and renv
+
 Run these commands in **RStudio's console**
 
 ``` r
@@ -86,7 +88,9 @@ install.packages("renv")
 # initialize project-specific environment (do this ONCE per project)
 renv::init()
 ```
+
 4. Create quarto notebooks for each textbook chapter (Ch. 1-19, 26)
+
 Run these commands back in your **Terminal**
 
 ``` bash
