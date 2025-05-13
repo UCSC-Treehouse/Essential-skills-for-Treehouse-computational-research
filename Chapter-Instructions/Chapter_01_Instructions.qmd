@@ -140,6 +140,7 @@ Now we have a beautifully labeled scatterplot of penguins' data that matches our
 ------------------------------------------------------------------------
 
 ## Exercises pt 1 of 3
+
 1. How many rows are in penguins? How many columns?
 
 2. What does the bill_depth_mm variable in the penguins data frame describe? Read the help for ?penguins to find out.
