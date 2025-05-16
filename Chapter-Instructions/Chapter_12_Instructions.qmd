@@ -1,10 +1,35 @@
 ---
-title: "Chapter 12"
+title: "Chapter 12, Logical "
 format: html
 ---
 
-## Exercises
+In this chapter, you’ll learn tools for working with logical vectors. **Logical vectors** are the simplest type of vector because each element can only be one of three possible values: TRUE, FALSE, and NA. It’s relatively rare to find logical vectors in your raw data, but you’ll create and manipulate them in the course of almost every analysis.
 
-```{r}
-# Your code here
+We’ll begin by discussing the most common way of creating logical vectors: with *numeric comparisons*. Then you’ll learn about how you can use Boolean algebra to combine different logical vectors, as well as some useful summaries. We’ll finish off with if_else() and case_when(), two useful functions for making conditional changes powered by logical vectors.
+
+------------------------------------------------------------------------
+
+## Prerequisites
+
+```{r libraries}
+library(tidyverse)
+library(nycflights13)
 ```
+
+Let's also make up some dummy data with c():
+```{r dummy data}
+x <- c(1, 2, 3, 5, 7, 11, 13)
+x * 2
+```
+
+Just remember that any manipulation we do to a free-floating vector, you can do to a variable inside a data frame with mutate() and friends.
+```{r dummy data tibble}
+df <- tibble(x)
+df |> 
+  mutate(y = x * 2)
+```
+
+------------------------------------------------------------------------
+
+## Comparisons
+
