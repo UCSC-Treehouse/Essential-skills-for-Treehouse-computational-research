@@ -1,6 +1,6 @@
 ---
 title: "Chapter 1, Data Visualization"
-format: html
+format: md
 ---
 
 In this first chapter we will explore data visualization with **ggplot2**: navigating variables, distribution, plots, and varying aesthetic options.
