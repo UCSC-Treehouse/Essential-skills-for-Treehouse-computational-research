@@ -31,7 +31,8 @@ library(ggthemes)
 
 ## Background Info
 
-- A **data frame** is a rectangular collection of **variables** (in the columns) and **observations** (in the rows). In the context of **palmerpenguins**, a variable refers to an attribute of all the penguins, and an observation refers to all the attributes of a single penguin.
+- A **data frame** is a rectangular collection of **variables** (in the columns) and **observations** (in the rows). 
+In the context of **palmerpenguins**, a variable refers to an attribute of all the penguins, and an observation refers to all the attributes of a single penguin.
 - In the **tidyverse**, we use special data frames called **tibbles**
 
 ------------------------------------------------------------------------
