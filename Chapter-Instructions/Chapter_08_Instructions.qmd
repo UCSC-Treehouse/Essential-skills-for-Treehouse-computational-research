@@ -1,42 +1,59 @@
 ---
 title: "Chapter 8, Workflow: Getting Help"
-format: html
+format:
+  gfm:
+    self-contained: true
 ---
 
-We can't answer everything here in this intro... maybe you have had to look something up already. This section describes a few tips on how to get help and to help you keep learning.
+We can't answer everything here in this intro... maybe you have had to look something up already.
+This section describes a few tips on how to get help and to help you keep learning.
 
 ------------------------------------------------------------------------
 
 ## Google is Your Friend
 
-If you get stuck, start with Google. Typically adding “R” to a query is enough to restrict it to relevant results: if the search isn’t useful, it often means that there aren’t any R-specific results available. Additionally, adding package names like “tidyverse” or “ggplot2” will help narrow down the results to code that will feel more familiar to you as well, e.g., “how to make a boxplot in R” vs. “how to make a boxplot in R with ggplot2”.
+If you get stuck, start with Google.
+Typically adding “R” to a query is enough to restrict it to relevant results: if the search isn’t useful, it often means that there aren’t any R-specific results available.
+Additionally, adding package names like “tidyverse” or “ggplot2” will help narrow down the results to code that will feel more familiar to you as well, e.g., “how to make a boxplot in R” vs. “how to make a boxplot in R with ggplot2”.
 
 Google is particularly useful for error messages.
 
-If Google doesn’t help, try Stack Overflow. Start by spending a little time searching for an existing answer, including [R], to restrict your search to questions and answers that use R.
+If Google doesn’t help, try Stack Overflow.
+Start by spending a little time searching for an existing answer, including [R], to restrict your search to questions and answers that use R.
 
 ------------------------------------------------------------------------
 
 ## Making a reprex
 
-If your googling doesn’t find anything useful, it’s a really good idea to prepare a **reprex**, short for minimal **repr**oducible **ex**ample. A good reprex makes it easier for other people to help you, and often you’ll figure out the problem yourself in the course of making it. There are two parts to creating a reprex:
+If your googling doesn’t find anything useful, it’s a really good idea to prepare a **reprex**, short for minimal **repr**oducible **ex**ample.
+A good reprex makes it easier for other people to help you, and often you’ll figure out the problem yourself in the course of making it.
+There are two parts to creating a reprex:
 
-1. You need to make your code reproducible. This means that you need to capture everything, i.e. include any library() calls and create all necessary objects. The easiest way to make sure you’ve done this is using the reprex package.
+1. You need to make your code reproducible.
+This means that you need to capture everything, i.e. include any library() calls and create all necessary objects.
+The easiest way to make sure you’ve done this is using the reprex package.
 
-2. You need to make it minimal. Strip away everything that is not directly related to your problem. This usually involves creating a much smaller and simpler R object than the one you’re facing in real life or even using built-in data.
+2. You need to make it minimal.
+Strip away everything that is not directly related to your problem.
+This usually involves creating a much smaller and simpler R object than the one you’re facing in real life or even using built-in data.
 
-When creating a reprex by hand, it’s easy to accidentally miss something, meaning your code can’t be run on someone else’s computer. Avoid this problem by using the reprex package, which is installed as part of the tidyverse. Let’s say you copy this code onto your clipboard (or, on RStudio Server or Cloud, select it):
+When creating a reprex by hand, it’s easy to accidentally miss something, meaning your code can’t be run on someone else’s computer.
+Avoid this problem by using the reprex package, which is installed as part of the tidyverse.
+Let’s say you copy this code onto your clipboard (or, on RStudio Server or Cloud, select it):
 ```{r make simple math reproducible}
+#| eval: false
 y <- 1:4
 mean(y)
 ```
 
 Then call reprex(), where the default output is formatted for GitHub:
 ```{r call reprex}
+#| eval: false
 reprex::reprex()
 ```
 
-A nicely rendered HTML preview will display in RStudio’s Viewer (if you’re in RStudio) or your default browser otherwise. The reprex is automatically copied to your clipboard (on RStudio Server or Cloud, you will need to copy this yourself):
+A nicely rendered HTML preview will display in RStudio’s Viewer (if you’re in RStudio) or your default browser otherwise.
+The reprex is automatically copied to your clipboard (on RStudio Server or Cloud, you will need to copy this yourself):
 
   ``` r
   y <- 1:4
@@ -44,17 +61,22 @@ A nicely rendered HTML preview will display in RStudio’s Viewer (if you’re i
   #> [1] 2.5
   ```
 
-This text is formatted in a special way, called Markdown, which can be pasted to sites like StackOverflow or Github and they will automatically render it to look like code. Here’s what that Markdown would look like rendered on GitHub:
+This text is formatted in a special way, called Markdown, which can be pasted to sites like StackOverflow or Github and they will automatically render it to look like code.
+Here’s what that Markdown would look like rendered on GitHub:
 ```{r}
+#| eval: false
 y <- 1:4
 mean(y)
 ```
 
 There are three things you need to include to make your example reproducible: required packages, data, and code.
 
-1. **Packages** should be loaded at the top of the script so it’s easy to see which ones the example needs. This is a good time to check that you’re using the latest version of each package; you may have discovered a bug that’s been fixed since you installed or last updated the package. For packages in the tidyverse, the easiest way to check is to run tidyverse_update().
+1. **Packages** should be loaded at the top of the script so it’s easy to see which ones the example needs.
+This is a good time to check that you’re using the latest version of each package; you may have discovered a bug that’s been fixed since you installed or last updated the package.
+For packages in the tidyverse, the easiest way to check is to run tidyverse_update().
 
-2. The easiest way to include **data** is to use dput() to generate the R code needed to recreate it. For example, to recreate the mtcars dataset in R, perform the following steps:
+2. The easiest way to include **data** is to use dput() to generate the R code needed to recreate it.
+For example, to recreate the mtcars dataset in R, perform the following steps:
 
   a. Run dput(mtcars) in R
   b. Copy the output

@@ -1,15 +1,21 @@
 ---
 title: "Chapter 4, Code Style"
-format: html
+format:
+  gfm:
+    self-contained: true
 ---
 
-A consistent coding style makes it easier for others (including future-you!) to read your work and is particularly important if you need to get help from someone else. This chapter will introduce the most important points of the tidyverse style guide, which is used throughout our Intro to Computational Research.
+A consistent coding style makes it easier for others (including future-you!) to read your work and is particularly important if you need to get help from someone else.
+This chapter will introduce the most important points of the tidyverse style guide, which is used throughout our Essential Skills to Computational Research.
 
 ------------------------------------------------------------------------
 
 ## Prerequisites
 
-You can restyle existing code with packages like **styler**. Install this package and then find it in RStudio's **command palette**. The command palette lets you use any built-in RStudio command and many addins provided by packages. Open the palette by pressing Cmd/Ctrl + Shift + P, then type “styler” to see all the shortcuts offered.
+You can restyle existing code with packages like **styler**.
+Install this package and then find it in RStudio's **command palette**.
+The command palette lets you use any built-in RStudio command and many addins provided by packages.
+Open the palette by pressing Cmd/Ctrl + Shift + P, then type “styler” to see all the shortcuts offered.
 
 We will again be using the tidyverse and nycflights13 packages.
 ```{r libraries}
@@ -21,9 +27,12 @@ library(nycflights13)
 
 ## Names
 
-Remember that variable names (those created by <- and those created by mutate()) should use only lowercase letters, numbers, and "_". Use "_" to separate words within a name. As a general rule of thumb, it’s better to prefer long, descriptive names that are easy to understand rather than concise names that are fast to type.
+Remember that variable names (those created by <- and those created by mutate()) should use only lowercase letters, numbers, and "_". Use "_" to separate words within a name.
+As a general rule of thumb, it’s better to prefer long, descriptive names that are easy to understand rather than concise names that are fast to type.
 
-If you have a bunch of names for related things, do your best to be consistent. It’s easy for inconsistencies to arise when you forget a previous convention, so don’t feel bad if you have to go back and rename things. In general, if you have a bunch of variables that are a variation on a theme, you’re better off giving them a common prefix rather than a common suffix because autocomplete works best on the start of a variable.
+If you have a bunch of names for related things, do your best to be consistent.
+It’s easy for inconsistencies to arise when you forget a previous convention, so don’t feel bad if you have to go back and rename things.
+In general, if you have a bunch of variables that are a variation on a theme, you’re better off giving them a common prefix rather than a common suffix because autocomplete works best on the start of a variable.
 
 ------------------------------------------------------------------------
 
@@ -37,10 +46,14 @@ Put spaces on either side of mathematical operators apart from ^ (i.e. +, -, ==,
   Avoid...
   z<-( a + b ) ^ 2/d
 
-Don’t put spaces inside or outside parentheses for regular function calls. Always put a space after a comma, just like in standard English.
+Don’t put spaces inside or outside parentheses for regular function calls.
+Always put a space after a comma, just like in standard English.
 
-It’s OK to add extra spaces if it improves alignment. For example, if you’re creating multiple variables in mutate(), you might want to add spaces so that all the = line up. This makes it easier to skim the code.
+It’s OK to add extra spaces if it improves alignment.
+For example, if you’re creating multiple variables in mutate(), you might want to add spaces so that all the = line up.
+This makes it easier to skim the code.
 ```{r example spacing}
+#| eval: false
 flights |> 
     mutate(
       speed      = distance / air_time,
@@ -55,6 +68,7 @@ flights |>
 
 |> should always have a space before it and should typically be the last thing on a line.
 ```{r example pipes}
+#| eval: false
 #Strive for...
 flights |>  
   filter(!is.na(arr_delay), !is.na(tailnum)) |> 
@@ -64,8 +78,11 @@ flights |>
 flights|>filter(!is.na(arr_delay), !is.na(tailnum))|>count(dest)
 ```
 
-After the first step of the pipeline, indent each line by two spaces. RStudio will automatically put the spaces in for you after a line break following a |> . If you’re putting each argument on its own line, indent by an extra two spaces. Make sure ) is on its own line, and un-indented to match the horizontal position of the function name.
+After the first step of the pipeline, indent each line by two spaces.
+RStudio will automatically put the spaces in for you after a line break following a |> .
+If you’re putting each argument on its own line, indent by an extra two spaces. Make sure ) is on its own line, and un-indented to match the horizontal position of the function name.
 ```{r example pipe and spacing}
+#| eval: false
 #Strive for...
 flights |>  
   group_by(tailnum) |> 
@@ -91,7 +108,8 @@ flights|>
   )
 ```
 
-Finally, be wary of writing very long pipes, say longer than 10-15 lines. Try to break them up into smaller sub-tasks, giving each task an informative name.
+Finally, be wary of writing very long pipes, say longer than 10-15 lines.
+Try to break them up into smaller sub-tasks, giving each task an informative name.
 
 ------------------------------------------------------------------------
 
@@ -109,7 +127,8 @@ flights |>
     geom_line()
 ```
     
-Watch for the transition from |> to +. We wish this transition wasn’t necessary, but unfortunately, ggplot2 was written before the pipe was discovered.
+Watch for the transition from |> to +.
+We wish this transition wasn’t necessary, but unfortunately, ggplot2 was written before the pipe was discovered.
 
 ------------------------------------------------------------------------
 
@@ -130,6 +149,7 @@ RStudio provides a keyboard shortcut to create these headers (Cmd/Ctrl + Shift +
 
 1. Restyle the following pipelines following the guidelines above.
 ```{r ch 4 exercise pt 1 #1}
+#| eval: false
 flights|>filter(dest=="IAH")|>group_by(year,month,day)|>summarize(n=n(),
 delay=mean(arr_delay,na.rm=TRUE))|>filter(n>10)
 
