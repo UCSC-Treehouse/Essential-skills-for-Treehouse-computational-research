@@ -1,4 +1,4 @@
-# Intro to Computational Research
+# Essential Skills in Computational Research
 
 #### *Onboarding Repository*
 
