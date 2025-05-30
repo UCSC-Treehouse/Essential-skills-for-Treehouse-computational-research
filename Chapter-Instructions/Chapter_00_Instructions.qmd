@@ -1,9 +1,6 @@
 ---
 title: "Chapter_00_Instructions"
-format: md
-editor: 
-  markdown: 
-    wrap: 72
+format: gfm
 ---
 
 In this chapter, you will set up: 

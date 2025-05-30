@@ -27,7 +27,7 @@ renv::install(c("tidyverse", "palmerpenguins", "ggthemes"))
     - Installing tidyverse ...                      OK [copied from cache]
     - Installing palmerpenguins ...                 OK [copied from cache]
     - Installing ggthemes ...                       OK [copied from cache]
-    Successfully installed 3 packages in 77 milliseconds.
+    Successfully installed 3 packages in 87 milliseconds.
 
 Load libraries from installed packages (*run every session*) –\> copy
 the commands into your own **quarto notebook (.qmd file)**
