@@ -148,10 +148,14 @@ fig-alt="Image showing how to create a new branch on GitHub Desktop"}
 
 -   Commit changes to 'chapter-01' branch
 
+<<<<<<< Updated upstream
 ![Commit New Changes to New chapter-01 Branch](Images/push_new_changes_to_new_branch.png){.border fig-alt="Image showing how to push new files changes to new chapter 01 branch"}
 
 **Note:** Your number of files to commit, as well as the changes on the file on the right (highlighted in red and green) will be different.
 What you *should* see is 'Current Branch' chapter-01 (which you should have just created) on the top black bar and 'Commit _ file(s) to chapter-01' on the bottom left blue button. 
+=======
+![Push New Changes to New chapter-01 Branch](Images/.png){.border fig-alt="Image showing how to push newest files changes to new chapter 01 branch"}
+>>>>>>> Stashed changes
 
 3.  Request Review (**once per chapter**)
 
@@ -161,6 +165,14 @@ Upon completion of each chapter, you will 'submit' your work to be reviewed by a
 
 ![Create a Pull Request](Images/create_pull_request.png){.border fig-alt="Image showing how to create a new pull request"}
 
+<<<<<<< Updated upstream
+=======
+You will be moved to the GitHub browser, where you will add your reviewer and finalize the pull request.
+
+-   Assign your mentor as reviewer
+
+
+>>>>>>> Stashed changes
 -   Assign your mentor as reviewer.
 You will need their GitHub id.
 Here I use Holly Beale as an example reviewer.
