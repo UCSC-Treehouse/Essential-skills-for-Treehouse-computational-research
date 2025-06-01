@@ -7,3 +7,4 @@
 .RData
 R-*.pkg
 .DS_Store
+*.Rproj
