@@ -36,18 +36,20 @@ In this chapter, you will set up:
 
 1.  In RStudio:
 
--   File --\> New Project --\> New Directory --\> Quarto Project
+-   File --\> New Project --\> Quarto Project --\> New Directory 
 
-![Create New Project in Github Desktop](Images/create_new_project.png){fig-alt="Image showing file button to create 'New Project'" .border}
-
-![Create New Project in New Directory](Images/project_in_new_directory.png){fig-alt="Image showing button on RStudio to 'Create New Project' within 'New Directory'" .border}
+![Create New Project](Images/create_new_project.png){.border fig-alt="Image showing how to open a new project from the file tab"}
 
 ![Create New Quarto Project](Images/new_quarto_project.png){fig-alt="Image showing new Quarto Project button" .border}
 
+![Create New Quarto Project in New Directory](Images/project_in_new_directory.png){fig-alt="Image showing button on RStudio to 'Create New Project' within 'New Directory'" .border}
+
 -   When creating your new Quarto project, you want to name it in the following format: **YourName_essential_skills_in_computational_research**
+
 -   Create the project in your desktop, unless you want it to be a subdirectory of a Vaske Lab or Treehouse folder.
 In this case, create this folder and browse to select it.
 In the example below, my new project will be created as a subdirectory of my lab folder titled "Vaske_Lab_Treehouse".
+
 -   Make sure to select **"Use renv with this project"**
 
 ![Name New Project](Images/name_quarto_project.png){.border
@@ -137,9 +139,9 @@ However, if you forget this, you can always come back to take a current snapshot
 ![Commit changes to Git](Images/commit_changes_to_git.png){.border
 fig-alt="Image showing how to commit changes to Git on GitHub Desktop"}
 
-*note: your \# of files will be different than mine*
+**Note:** your \# of files will be different than mine
 
--   Create new branch: 'chapter-01' (Branch --\> New Branch --\> Create Branch)
+-   Create a new branch: 'chapter-01' (Branch --\> New Branch --\> Create Branch)
 
 ![Create a new branch on GitHub Desktop](Images/create_new_branch.png){.border
 fig-alt="Image showing how to create a new branch on GitHub Desktop"}
@@ -148,14 +150,10 @@ fig-alt="Image showing how to create a new branch on GitHub Desktop"}
 
 -   Commit changes to 'chapter-01' branch
 
-<<<<<<< Updated upstream
 ![Commit New Changes to New chapter-01 Branch](Images/push_new_changes_to_new_branch.png){.border fig-alt="Image showing how to push new files changes to new chapter 01 branch"}
 
 **Note:** Your number of files to commit, as well as the changes on the file on the right (highlighted in red and green) will be different.
-What you *should* see is 'Current Branch' chapter-01 (which you should have just created) on the top black bar and 'Commit _ file(s) to chapter-01' on the bottom left blue button. 
-=======
-![Push New Changes to New chapter-01 Branch](Images/.png){.border fig-alt="Image showing how to push newest files changes to new chapter 01 branch"}
->>>>>>> Stashed changes
+What you *should* see is 'Current Branch' chapter-01 (which you should have just created) on the top black bar and 'Commit _ file(s) to chapter-01' on the bottom left blue button.
 
 3.  Request Review (**once per chapter**)
 
