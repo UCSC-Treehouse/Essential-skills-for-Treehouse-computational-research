@@ -1,4 +1,4 @@
-# Essential Skills in Computational Research
+# Essential Skills for Treehouse Computational Research
 
 #### *Onboarding Repository*
 
@@ -26,3 +26,13 @@ When you have completed the work described in this repo, please reach out to you
 -   Building repositories, files, and pipelines
 -   Getting a hang of research computing workflows
 -   Learning computational research skills in R including: data visualization, data transformation, and program iteration
+
+------------------------------------------------------------------------
+
+## Next...
+
+Go to [Chapter_00_Instructions]().
+
+As you may quickly notice, there are *two* files for each chapter: .qmd and .md
+
+For readability, you will likely want to follow along with the .md version.

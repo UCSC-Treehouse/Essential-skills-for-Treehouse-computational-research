@@ -1,8 +1,7 @@
 ---
 title: "Chapter 1, Data Visualization"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 In this first chapter we will explore data visualization with **ggplot2**: navigating variables, distribution, plots, and varying aesthetic options.
@@ -14,8 +13,9 @@ In this first chapter we will explore data visualization with **ggplot2**: navig
 Install necessary packages to access datasets and plotting functions --\> copy the commands into your own **R Console**
 
 ```{r R CONSOLE prerequisites}
-# install core packages (run once)
-renv::install(c("tidyverse", "palmerpenguins", "ggthemes"))
+# install core packages (run once) using renv
+# as mentioned in Chapter 00, if you only run 'install.packages()' you can always run 'renv::snapshot()' to save current packages & versions.
+renv::install(c("palmerpenguins", "ggthemes"))
 ```
 
 Load libraries from installed packages (*run every session*) --\> copy the commands into your own **quarto notebook (.qmd file)**

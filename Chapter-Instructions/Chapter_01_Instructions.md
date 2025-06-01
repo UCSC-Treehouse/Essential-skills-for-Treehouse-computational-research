@@ -21,13 +21,13 @@ renv::install(c("tidyverse", "palmerpenguins", "ggthemes"))
     - ggthemes       [5.1.0]
     - palmerpenguins [0.1.1]
     - tidyverse      [2.0.0]
-    These packages will be installed into "/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library".
+    These packages will be installed into "~/Desktop/Vaske_Lab_Treehouse/Essential-skills-for-Treehouse-computational-research/Chapter-Instructions/renv/library/macos/R-4.4/aarch64-apple-darwin20".
 
     # Installing packages --------------------------------------------------------
-    - Installing tidyverse ...                      OK [copied from cache]
-    - Installing palmerpenguins ...                 OK [copied from cache]
-    - Installing ggthemes ...                       OK [copied from cache]
-    Successfully installed 3 packages in 87 milliseconds.
+    - Installing tidyverse ...                      OK [linked from cache]
+    - Installing palmerpenguins ...                 OK [linked from cache]
+    - Installing ggthemes ...                       OK [linked from cache]
+    Successfully installed 3 packages in 6.6 milliseconds.
 
 Load libraries from installed packages (*run every session*) –\> copy
 the commands into your own **quarto notebook (.qmd file)**
