@@ -165,14 +165,8 @@ Upon completion of each chapter, you will 'submit' your work to be reviewed by a
 
 ![Create a Pull Request](Images/create_pull_request.png){.border fig-alt="Image showing how to create a new pull request"}
 
-<<<<<<< Updated upstream
-=======
 You will be moved to the GitHub browser, where you will add your reviewer and finalize the pull request.
 
--   Assign your mentor as reviewer
-
-
->>>>>>> Stashed changes
 -   Assign your mentor as reviewer.
 You will need their GitHub id.
 Here I use Holly Beale as an example reviewer.
