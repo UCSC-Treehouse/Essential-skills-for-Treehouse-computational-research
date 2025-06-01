@@ -150,37 +150,17 @@ fig-alt="Image showing how to create a new branch on GitHub Desktop"}
 
 Upon completion of each chapter, you will 'submit' your work to be reviewed by a mentor.
 
-<<<<<<< Updated upstream
 -   Create Pull Request (GitHub Desktop --\> Branch --\> chapter-01 --\> Create Pull Request)
 
 ![Create a Pull Request](Images/create_pull_request.png){.border fig-alt="Image showing how to create a new pull request"}
 
 You will be moved to the GitHub browser, where you will add your reviewer and finalize the pull request.
 
--   Assign your mentor as reviewer
-=======
--   Create Pull Request (GitHub Desktop --\> Branch --\> Create Pull
-    Request)
-    
-![Create New Pull Request](Images/create_pull_request.png){.border fig-alt="Image showing how to create a new pull request"}
-You will be moved to the GitHub browser, where you will add your reviewer and finalize the pull request.
-
 -   Assign your mentor as reviewer.
 You will need their GitHub id.
 Here I use Holly Beale as an example reviewer.
 
 ![Assign your Mentor as Reviewer](Images/add_reviewer_to_pull_request.png){.border fig-alt="Image showing GitHub browser where you will add a reviewer to your new pull request"}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-
-
--   Assign your mentor as reviewer.
-You will need their GitHub id.
-Here I use Holly Beale as an example reviewer.
-
-![Assign your Mentor as Reviewer](Images/add_reviewer_to_pull_request.png){.border fig-alt="Image showing GitHub browser where you will add a reviewer to your new pull request"}
-=======
->>>>>>> Stashed changes
 
 ------------------------------------------------------------------------
 
