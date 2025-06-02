@@ -31,7 +31,7 @@ When you have completed the work described in this repo, please reach out to you
 
 ## Next...
 
-Go to [Chapter_00_Instructions]().
+Go to [Chapter_00_Instructions](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_00_Instructions.md).
 
 As you may quickly notice, there are *two* files for each chapter: .qmd and .md
 
