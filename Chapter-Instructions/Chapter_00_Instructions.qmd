@@ -1,8 +1,6 @@
 ---
-title: "Chapter_00_Instructions"
-output: 
-  md_document:
-    variant: gfm
+title: Chapter 00 Instructions
+format: gfm
 ---
 
 In this chapter, you will set up:
@@ -83,12 +81,10 @@ Next, you will want to clear all of that automatic existing code & text.
 (hint: if you click 'Create Empty Document' instead of just 'Create', you can omit this additional information).
 Then, change your YAML heading to the following format:
 
----
 title: "chapter 01"
 output: 
   md_document:
     variant: gfm
----
 
 ![Change Your YAML Header](Images/yaml_header.png){.border fig-alt="Image showing clear quarto document with corrected YAML header for markdown output"}
 
