@@ -24,9 +24,8 @@ In this chapter, you will set up:
 
 2.  **Organization Access**
 
--   Ask your mentor, Holly, or Ellen to add you to the 'UCSC-Treehouse'
-    GitHub organization.
-    Please include your GitHub id in your request.
+-   Ask your mentor, Holly, or Ellen to add you to the 'UCSC-Treehouse' GitHub organization.
+Please include your GitHub id in your request.
 
 ------------------------------------------------------------------------
 
@@ -54,12 +53,14 @@ In the example below, my new project will be created as a subdirectory of my lab
 ![Name New Project](Images/name_quarto_project.png){.border
 fig-alt="Image showing how to name new Quarto project, put in Vaske or Treehouse folder, and initialize with renv"}
 
+Now that you have created your first project, you have a *workspace* to add all of your computational research to.
+Next, let's create notebooks where you can add work to your space.
+
 2.  Create your first Quarto notebook:
 
 -   File --\> New File --\> Quarto Document
 
-![Create New Quarto File in Project](Images/create_new_quarto_file.png){.border fig-alt="Image showing how to create a new quarto file in RStudio"
-fig-align="center"}
+![Create New Quarto File in Project](Images/create_new_quarto_file.png){.border fig-alt="Image showing how to create a new quarto file in RStudio"}
 
 -   Title and save as 'Chapter_01'
 
@@ -70,16 +71,20 @@ This is what your new document will look like...
 ![New Quarto Document](Images/quarto_document.png){.border
 fig-alt="Image showing what a newly created quarto document looks like."}
 
+This viewing method is called 'Visual'.
+It can give you a nice preview of what the output document of your code will look like, but it is not very good for raw text and code.
+
 On the top left, you will want to select "Source" view.
 
 ![Change to Source View](Images/source_view.png){.border
 fig-alt="Switch to source view"}
 
-Next, you will want to clear the existing code & text.
+Next, you will want to clear all of that automatic existing code & text.
+(hint: if you click 'Create Empty Document' instead of just 'Create', you can omit this additional information).
 Then, change your YAML heading to the following format:
 
 ---
-title: "example title"
+title: "chapter 01"
 output: 
   md_document:
     variant: gfm
@@ -135,8 +140,7 @@ fig-alt="Image showing how to commit changes to Git on GitHub Desktop"}
 
 -   Create new branch: 'chapter-01' (Branch --\> New Branch --\> Create Branch)
 
-![Create a new branch on GitHub
-Desktop](Images/create_new_branch.png){.border
+![Create a new branch on GitHub Desktop](Images/create_new_branch.png){.border
 fig-alt="Image showing how to create a new branch on GitHub Desktop"}
 
 2.  Push to GitHub:
@@ -144,32 +148,34 @@ fig-alt="Image showing how to create a new branch on GitHub Desktop"}
 -   Publish repository (first time only)
 -   Push changes to 'chapter-01' branch
 
-![Push New Changes to Main](Images/.png){.border fig-alt="Image showing how to push newest files changes to main branch"}
+![Push New Changes to New Chapter 01 Branch](Images/push_new_changes_to_new_branch.png){.border fig-alt="Image showing how to push newest files changes to main branch"}
+
+**Note:** Your changed files will be *different* than mine. What you *should* see is what is circled in red. Please make sure you are pushing your new work to a *new* branch.
 
 3.  Request Review (**once per chapter**)
 
 Upon completion of each chapter, you will 'submit' your work to be reviewed by a mentor.
 
--   Create Pull Request (GitHub Desktop --\> Branch --\> chapter-01 --\> Create Pull Request)
+-   Create Pull Request (GitHub Desktop --\> Current Branch --\> chapter-01 --\> Create Pull Request)
 
 ![Create a Pull Request](Images/create_pull_request.png){.border fig-alt="Image showing how to create a new pull request"}
 
-You will be moved to the GitHub browser, where you will add your reviewer and finalize the pull request.
+You will be moved to the GitHub browser, where you will add your reviewer and finalize the pull request. Please write any relevant description here.
 
--   Assign your mentor as reviewer.
+-   Assign your mentor as a reviewer.
 You will need their GitHub id.
 Here I use Holly Beale as an example reviewer.
 
-![Assign your Mentor as Reviewer](Images/add_reviewer_to_pull_request.png){.border fig-alt="Image showing GitHub browser where you will add a reviewer to your new pull request"}
+![Assign your Mentor as Reviewer](Images/request_reviewer.png){.border fig-alt="Image showing GitHub browser where you will add a reviewer to your new pull request"}
 
 ------------------------------------------------------------------------
 
 ## Next Steps:
 
--   Repeat this workflow for **each** chapter
+Repeat this workflow for **each** chapter
 
-1.  Create a '.qmd.' file
-2.  Work on examples, take notes where relevant, complete exercises
+1.  Create a Quarto document, changing the YAML header as described above
+2.  Work on examples, take notes where relevant, & complete the exercises
 3.  Run 'renv::snapshot()' if adding packages
-4.  Commit changes to a new branch ('chapter-N')
+4.  Commit changes to a *new* branch ('chapter-N')
 5.  Create a pull request for mentor review
