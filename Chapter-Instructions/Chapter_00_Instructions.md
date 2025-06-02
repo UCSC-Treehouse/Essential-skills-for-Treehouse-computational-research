@@ -99,7 +99,9 @@ Next, you will want to clear all of that automatic existing code & text.
 you can omit this additional information). Then, change your YAML
 heading to the following format:
 
-title: “chapter 01” format: gfm
+title: “chapter 01”
+
+format: gfm
 
 Let’s break down this header. Later, when we “render” our document, we
 *combine* the raw data, code, and text in our .qmd file into a finished

@@ -82,6 +82,7 @@ Next, you will want to clear all of that automatic existing code & text.
 Then, change your YAML heading to the following format:
 
 title: "chapter 01"
+
 format: gfm
 
 Let's break down this header.
