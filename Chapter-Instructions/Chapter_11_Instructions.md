@@ -1014,3 +1014,6 @@ Figure 2: Chapter 11 Exercise pt 5 \#2: Three plots of mpg dataset
 For the next 8 chapters (12-19) you’ll learn about the most important
 types of variables that you’ll encounter inside a data frame and learn
 the tools you can use to work with them.
+
+**NEXT UP:** [Chapter
+12](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_12_Instructions.md)
