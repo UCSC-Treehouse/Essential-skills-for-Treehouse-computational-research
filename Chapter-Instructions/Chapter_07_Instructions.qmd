@@ -1,8 +1,7 @@
 ---
 title: "Chapter 7, Data Import"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 Working with data provided by R packages is a great way to learn data science tools, but you want to apply what you’ve learned to your own data at some point.
@@ -438,3 +437,5 @@ tribble(
   5, "g", 0.60
 )
 ```
+
+**NEXT UP:** [Chapter 8](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_08_Instructions.md)

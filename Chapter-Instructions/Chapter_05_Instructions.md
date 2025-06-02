@@ -34,7 +34,7 @@ core tidyverse.
     ✖ dplyr::lag()    masks stats::lag()
     ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
-------------------------------------------------------------------------
+## **NEXT UP:** [Chapter 6](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_06_Instructions.md)
 
 ## Tidy Data
 
@@ -503,3 +503,6 @@ df |>
 What’s gone wrong? Repair the underlying damage or use your grouping and
 summarizing skills to ensure that each combination of row and column
 values only has a single row.
+
+**NEXT UP:** [Chapter
+6](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_06_Instructions.md)

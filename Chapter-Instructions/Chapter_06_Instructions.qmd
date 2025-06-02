@@ -1,8 +1,7 @@
 ---
 title: "Chapter 6, Workflow: Scripts and Projects"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 So far, you have been using **Quarto notebooks** (.qmd files)- computational notebooks that blend code, text, and outputs into a single document.
@@ -118,3 +117,5 @@ There’s another important difference between operating systems: how you separa
 Mac and Linux uses slashes (e.g., data/diamonds.csv) and Windows uses backslashes (e.g., data\diamonds.csv).
 R can work with either type (no matter what platform you’re currently using), but unfortunately, backslashes mean something special to R, and to get a single backslash in the path, you need to type two backslashes!
 That makes life frustrating, so we recommend always using the Linux/Mac style with forward slashes.
+
+**NEXT UP:** [Chapter 7](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_07_Instructions.md)

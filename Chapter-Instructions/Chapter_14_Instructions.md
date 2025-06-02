@@ -570,3 +570,6 @@ babynames |>
 
 3.  Are there any major trends in the length of babynames over time?
     What about the popularity of first and last letters?
+
+**NEXT UP:** [Chapter
+15](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_15_Instructions.md)

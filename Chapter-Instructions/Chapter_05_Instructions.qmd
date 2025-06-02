@@ -1,8 +1,7 @@
 ---
 title: "Chapter 5, Data Tidying"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 In this chapter, you will learn a consistent way to organize your data in R using a system called **tidy data**.
@@ -23,6 +22,7 @@ tidyr is a member of the core tidyverse.
  library(tidyverse)
 ```
 
+**NEXT UP:** [Chapter 6](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_06_Instructions.md)
 ------------------------------------------------------------------------
 
 ## Tidy Data
@@ -410,3 +410,5 @@ df |>
 
 What’s gone wrong?
 Repair the underlying damage or use your grouping and summarizing skills to ensure that each combination of row and column values only has a single row.
+
+**NEXT UP:** [Chapter 6](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_06_Instructions.md)

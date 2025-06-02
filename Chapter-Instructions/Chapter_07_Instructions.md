@@ -516,3 +516,6 @@ tribble(
   5, "g", 0.60
 )
 ```
+
+**NEXT UP:** [Chapter
+8](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_08_Instructions.md)

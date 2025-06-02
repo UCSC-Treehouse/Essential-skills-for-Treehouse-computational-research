@@ -141,3 +141,6 @@ but unfortunately, backslashes mean something special to R, and to get a
 single backslash in the path, you need to type two backslashes! That
 makes life frustrating, so we recommend always using the Linux/Mac style
 with forward slashes.
+
+**NEXT UP:** [Chapter
+7](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_07_Instructions.md)

@@ -485,3 +485,6 @@ sentences |>
 5.  ......
 6.  (.)\1\1
 7.  “(..)\1”
+
+**NEXT UP:** [Chapter
+16](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_16_Instructions.md)

@@ -1,8 +1,7 @@
 ---
 title: "Chapter 15, Regular Expressions"
 format:
-  gfm: 
-    self-contained: true
+  gfm
 ---
 
 This chapter will focus on functions that use **regular expressions**, a concise and powerful language for describing patterns within strings.
@@ -402,3 +401,5 @@ Which of those strings are still words?
   e. \..\..\..
   f. (.)\1\1
   g. "(..)\\1"
+  
+**NEXT UP:** [Chapter 16](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_16_Instructions.md)

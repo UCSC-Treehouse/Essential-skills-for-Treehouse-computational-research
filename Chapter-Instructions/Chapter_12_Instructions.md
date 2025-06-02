@@ -614,3 +614,6 @@ Here are the most important cases that are compatible:
     create a logical column that is either TRUE or FALSE, and then
     create a character column that either gives the name of the holiday
     or is NA.
+
+**NEXT UP:** [Chapter
+13](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_13_Instructions.md)

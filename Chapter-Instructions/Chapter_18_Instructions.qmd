@@ -1,8 +1,7 @@
 ---
 title: "Chapter 18, Missing Values"
 format:
-  gfm: 
-    self-contained: true
+  gfm
 ---
 
 You’ve already learned the basics of missing values earlier in the book.
@@ -279,3 +278,5 @@ health |>
 ```
 
 The main drawback of this approach is that you get an NA for the count, even though you know that it should be zero.
+
+**NEXT UP:** [Chapter 19](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_19_Instructions.md)

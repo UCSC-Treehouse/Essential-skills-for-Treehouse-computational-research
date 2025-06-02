@@ -13,21 +13,20 @@ Install necessary packages to access datasets and plotting functions –\>
 copy the commands into your own **R Console**
 
 ``` r
-# install core packages (run once)
-renv::install(c("tidyverse", "palmerpenguins", "ggthemes"))
+# install core packages (run once) using renv
+# as mentioned in Chapter 00, if you only run 'install.packages()' you can always run 'renv::snapshot()' to save current packages & versions.
+renv::install(c("palmerpenguins", "ggthemes"))
 ```
 
     The following package(s) will be installed:
     - ggthemes       [5.1.0]
     - palmerpenguins [0.1.1]
-    - tidyverse      [2.0.0]
     These packages will be installed into "~/Desktop/Vaske_Lab_Treehouse/Essential-skills-for-Treehouse-computational-research/Chapter-Instructions/renv/library/macos/R-4.4/aarch64-apple-darwin20".
 
     # Installing packages --------------------------------------------------------
-    - Installing tidyverse ...                      OK [linked from cache]
     - Installing palmerpenguins ...                 OK [linked from cache]
     - Installing ggthemes ...                       OK [linked from cache]
-    Successfully installed 3 packages in 6.6 milliseconds.
+    Successfully installed 2 packages in 5.6 milliseconds.
 
 Load libraries from installed packages (*run every session*) –\> copy
 the commands into your own **quarto notebook (.qmd file)**
@@ -92,8 +91,6 @@ creates an empty graph that is primed to display the penguins dataset.
 ggplot(data = penguins)
 ```
 
-![](Chapter_01_Instructions_files/figure-commonmark/empty%20ggplot-1.png)
-
 Now we can tell ggplot() how we want to visualize our penguins data. Our
 next argument is mapping, where we define how the variables in our
 dataset are mapped to visual properties (ie **aesthetics**) of the plot.
@@ -110,8 +107,6 @@ ggplot(
 )
 ```
 
-![](Chapter_01_Instructions_files/figure-commonmark/mapped%20ggplot-1.png)
-
 But how will our data be displayed in this now structured graph? First,
 we need to define a **geom**: a geometrical object that a plot uses to
 represent data. For example, bar charts use bar geoms with geom_bar(),
@@ -126,11 +121,6 @@ ggplot(
 ) +
   geom_point()
 ```
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/scatterplot-1.png)
 
 You may have noticed the warning message “Warning: Removed 2 rows
 containing missing values or values outside the scale range
@@ -154,11 +144,6 @@ ggplot(
   geom_point()
 ```
 
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/species%20specific%20scatterplot-1.png)
-
 When a categorical variable is mapped to an aesthetic, ggplot2 will
 automatically assign a unique value of the aesthetic (here a unique
 color) to each unique level of the variable (each of the three species),
@@ -181,16 +166,6 @@ ggplot(
   geom_smooth(method = "lm")
 ```
 
-    `geom_smooth()` using formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_smooth()`).
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/line%20of%20best%20fit-1.png)
-
 WAIT! This doesn’t look like our *end result* plot… think about why this
 may have happened.
 
@@ -208,16 +183,6 @@ ggplot(
   geom_smooth(method = "lm")
 ```
 
-    `geom_smooth()` using formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_smooth()`).
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/one%20line%20of%20best%20fit-1.png)
-
 Since people have different color perception, let’s also use different
 shapes to represent each species of penguin.
 
@@ -229,16 +194,6 @@ ggplot(
   geom_point(mapping = aes(color = species, shape = species)) +
   geom_smooth(method = "lm")
 ```
-
-    `geom_smooth()` using formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_smooth()`).
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/shape%20aesthetic-1.png)
 
 For our final touches, let’s improve our labeling using the labs()
 function in a new layer. Arguments within labs() include “title”,
@@ -262,16 +217,6 @@ ggplot(
   ) +
   scale_color_colorblind()
 ```
-
-    `geom_smooth()` using formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_smooth()`).
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/improved%20labels-1.png)
 
 Now we have a beautifully labeled scatterplot of penguins’ data that
 matches our *end goal*!
@@ -335,16 +280,6 @@ ggplot(
   geom_smooth(se = FALSE)
 ```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_smooth()`).
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%201%20#9-1.png)
-
 10. Will these two graphs look different? Why/why not?
 
 ``` r
@@ -354,19 +289,7 @@ ggplot(
 ) +
   geom_point() +
   geom_smooth()
-```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_smooth()`).
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%201%20#10-1.png)
-
-``` r
 ggplot() +
   geom_point(
     data = penguins,
@@ -377,14 +300,6 @@ ggplot() +
     mapping = aes(x = flipper_length_mm, y = body_mass_g)
   )
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite outside the scale range (`stat_smooth()`).
-    Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%201%20#10-2.png)
 
 ------------------------------------------------------------------------
 
@@ -406,22 +321,12 @@ ggplot(
   geom_point()
 ```
 
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/expanded%20code-1.png)
-
 … we can now more concisely write…
 
 ``` r
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + 
   geom_point()
 ```
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/concise%20code-1.png)
 
 Which still shows the same result… with less typing! (hint: \*in the
 future, you’ll also learn about the pipe, another concise method).
@@ -443,8 +348,6 @@ ggplot(penguins, aes(x = species)) +
   geom_bar()
 ```
 
-![](Chapter_01_Instructions_files/figure-commonmark/categorical%20bar%20plot-1.png)
-
 In bar plots of categorical variables with non-ordered levels, like the
 penguin species above, it’s often preferable to reorder the bars based
 on their frequencies. Doing so requires transforming the variable to a
@@ -454,8 +357,6 @@ factor and then reordering the levels of that factor.
 ggplot(penguins, aes(x = fct_infreq(species))) +
   geom_bar()
 ```
-
-![](Chapter_01_Instructions_files/figure-commonmark/ordered%20categorical%20bar%20plot-1.png)
 
 A variable is **numerical** (or quantitative) if it can take on a wide
 range of numerical values, and it is sensible to add, subtract, or take
@@ -470,11 +371,6 @@ ggplot(penguins, aes(x = body_mass_g)) +
   geom_histogram(binwidth = 200)
 ```
 
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_bin()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/numerical%20histogram-1.png)
-
 You can set the width of the intervals in a histogram with the binwidth
 argument, which is measured in the units of the x variable. *You should
 always explore a variety of binwidths when working with histograms, as
@@ -483,22 +379,9 @@ different binwidths can reveal different patterns.*
 ``` r
 ggplot(penguins, aes(x = body_mass_g)) +
   geom_histogram(binwidth = 20)
-```
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_bin()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/binwidth%20exploration-1.png)
-
-``` r
 ggplot(penguins, aes(x = body_mass_g)) +
   geom_histogram(binwidth = 2000)
 ```
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_bin()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/binwidth%20exploration-2.png)
 
 An alternative visualization for distributions of numerical variables is
 a **density plot**.
@@ -514,11 +397,6 @@ ggplot(penguins, aes(x = body_mass_g)) +
   geom_density()
 ```
 
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_density()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/density%20plot-1.png)
-
 ------------------------------------------------------------------------
 
 ## Exercises pt 2 of 3
@@ -532,16 +410,10 @@ ggplot(penguins, aes(x = body_mass_g)) +
 ``` r
 ggplot(penguins, aes(x = species)) +
   geom_bar(color = "red")
-```
 
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%202%20#2-1.png)
-
-``` r
 ggplot(penguins, aes(x = species)) +
   geom_bar(fill = "red")
 ```
-
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%202%20#2-2.png)
 
 3.  What does the bins argument in geom_histogram() do?
 
@@ -571,22 +443,12 @@ ggplot(penguins, aes(x = species, y = body_mass_g)) +
   geom_boxplot()
 ```
 
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_boxplot()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/multivariable%20boxplot-1.png)
-
 Alternatively, we can make density plots with geom_density().
 
 ``` r
 ggplot(penguins, aes(x = body_mass_g, color = species)) +
   geom_density(linewidth = 0.75)
 ```
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_density()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/multivariable%20density%20plot-1.png)
 
 We also customized the width of the lines using the linewidth argument.
 Additionally, we can map species to both color and fill aesthetics and
@@ -598,11 +460,6 @@ and 1 (completely opaque).
 ggplot(penguins, aes(x = body_mass_g, color = species, fill = species)) +
   geom_density(alpha = 0.5)
 ```
-
-    Warning: Removed 2 rows containing non-finite outside the scale range
-    (`stat_density()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/filled%20density%20plot-1.png)
 
 ------------------------------------------------------------------------
 
@@ -624,8 +481,6 @@ ggplot(penguins, aes(x = island, fill = species)) +
   geom_bar()
 ```
 
-![](Chapter_01_Instructions_files/figure-commonmark/frequency%20plot-1.png)
-
 We can plot relative frequency by setting position = “fill” in the geom,
 which is more useful for comparing species distributions across islands
 since it’s not affected by the unequal numbers of penguins across the
@@ -635,8 +490,6 @@ islands.
 ggplot(penguins, aes(x = island, fill = species)) +
   geom_bar(position = "fill")
 ```
-
-![](Chapter_01_Instructions_files/figure-commonmark/relative%20frequency%20plot-1.png)
 
 In creating these bar charts, we map the variable that will be separated
 into bars to the x aesthetic, and the variable that will change the
@@ -664,11 +517,6 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(color = species, shape = island))
 ```
 
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/shape%20aesthetic%20scatterplot-1.png)
-
 However, some may view this display as cluttered. Another way, which is
 particularly useful for categorical variables, is to split your plot
 into **facets**, subplots that each display one subset of the data.
@@ -683,11 +531,6 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(color = species, shape = species)) +
   facet_wrap(~island)
 ```
-
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/facet%20wrap-1.png)
 
 ------------------------------------------------------------------------
 
@@ -729,11 +572,6 @@ ggplot(
   labs(color = "Species")
 ```
 
-    Warning: Removed 2 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%203%20#6-1.png)
-
 7.  Create the two following stacked bar plots. Which question can you
     answer with the first one? Which question can you answer with the
     second one?
@@ -741,16 +579,9 @@ ggplot(
 ``` r
 ggplot(penguins, aes(x = island, fill = species)) +
   geom_bar(position = "fill")
-```
-
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%203%20#7-1.png)
-
-``` r
 ggplot(penguins, aes(x = species, fill = island)) +
   geom_bar(position = "fill")
 ```
-
-![](Chapter_01_Instructions_files/figure-commonmark/ch%201%20exercise%20pt%203%20#7-2.png)
 
 ------------------------------------------------------------------------
 
@@ -794,3 +625,6 @@ answer is in the error message, you might not yet know how to understand
 it. Another great tool is **Google**: try googling the error message, as
 it’s likely someone else has had the same problem, and has gotten help
 online.
+
+**NEXT UP:** [Chapter
+2](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_02_Instructions.md)

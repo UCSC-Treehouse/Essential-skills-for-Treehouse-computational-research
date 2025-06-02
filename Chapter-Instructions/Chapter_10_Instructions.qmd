@@ -1,8 +1,7 @@
 ---
 title: "Chapter 10, Exploratory Data Analysis"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 This chapter will show you how to use visualization and transformation to explore your data in a systematic way, a task that statisticians call **exploratory data analysis**, or **EDA** for short.
@@ -53,6 +52,7 @@ Every variable has its own pattern of variation, which can reveal interesting in
 We’ll start our exploration by visualizing the distribution of weights (carat) of ~54,000 diamonds from the diamonds dataset.
 Since carat is a numerical variable, we can use a histogram:
 ```{r distribution of diamond weights}
+#| eval: false
 ggplot(diamonds, aes(x = carat)) +
   geom_histogram(binwidth = 0.5)
 ```
@@ -80,6 +80,7 @@ What might explain them?
 
 Let’s take a look at the distribution of carat for smaller diamonds.
 ```{r distribution of small diamond weights}
+#| eval: false
 smaller <- diamonds |> 
   filter(carat < 3)
 
@@ -114,6 +115,7 @@ When you have a lot of data, outliers are sometimes difficult to see in a histog
 For example, take the distribution of the y variable from the diamonds dataset.
 The only evidence of outliers is the unusually wide limits on the x-axis.
 ```{r variation of y values in diamond dataset}
+#| eval: false
 ggplot(diamonds, aes(x = y)) + 
   geom_histogram(binwidth = 0.5)
 ```
@@ -121,6 +123,7 @@ ggplot(diamonds, aes(x = y)) +
 There are so many observations in the common bins that the rare bins are very short, making it very difficult to see them (although maybe if you stare intently at 0 you’ll spot something).
 To make it easy to see the unusual values, we need to zoom to small values of the y-axis with coord_cartesian():
 ```{r zoom in to small values on y axis}
+#| eval: false
 ggplot(diamonds, aes(x = y)) + 
   geom_histogram(binwidth = 0.5) +
   coord_cartesian(ylim = c(0, 50))
@@ -210,6 +213,7 @@ For example, in nycflights13::flights, missing values in the dep_time variable i
 So you might want to compare the scheduled departure times for cancelled and non-cancelled times.
 You can do this by making a new variable, using is.na() to check if dep_time is missing.
 ```{r cancelled and non-cancelled flights}
+#| eval: false
 nycflights13::flights |> 
   mutate(
     cancelled = is.na(dep_time),
@@ -251,6 +255,7 @@ The best way to spot covariation is to visualize the relationship between two or
 
 Let’s explore how the price of a diamond varies with its quality (measured by cut) using geom_freqpoly():
 ```{r price of diamond v cut quality}
+#| eval: false
 ggplot(diamonds, aes(x = price)) + 
   geom_freqpoly(aes(color = cut), binwidth = 500, linewidth = 0.75)
 ```
@@ -262,6 +267,7 @@ The default appearance of geom_freqpoly() is not that useful here because the he
 To make the comparison easier we need to swap what is displayed on the y-axis.
 Instead of displaying count, we’ll display the **density**, which is the count standardized so that the area under each frequency polygon is one.
 ```{r price of diamond v density}
+#| eval: false
 ggplot(diamonds, aes(x = price, y = after_stat(density))) + 
   geom_freqpoly(aes(color = cut), binwidth = 500, linewidth = 0.75)
 ```
@@ -274,6 +280,7 @@ But maybe that’s because frequency polygons are a little hard to interpret - t
 
 A visually simpler plot for exploring this relationship is using side-by-side boxplots.
 ```{r price v diamond density boxplot}
+#| eval: false
 ggplot(diamonds, aes(x = cut, y = price)) +
   geom_boxplot()
 ```
@@ -287,12 +294,14 @@ Many categorical variables don’t have such an intrinsic order, so you might wa
 One way to do that is with fct_reorder(). For example, take the class variable in the mpg dataset.
 You might be interested to know how highway mileage varies across classes:
 ```{r highway mileage variation across classes}
+#| eval: false
 ggplot(mpg, aes(x = class, y = hwy)) +
   geom_boxplot()
 ```
 
 To make the trend easier to see, we can reorder class based on the median value of hwy:
 ```{r reorder boxplots off median values}
+#| eval: false
 ggplot(mpg, aes(x = fct_reorder(class, hwy, median), y = hwy)) +
   geom_boxplot()
 ```
@@ -300,6 +309,7 @@ ggplot(mpg, aes(x = fct_reorder(class, hwy, median), y = hwy)) +
 If you have long variable names, geom_boxplot() will work better if you flip it 90°.
 You can do that by exchanging the x and y aesthetic mappings.
 ```{r flip x y axes}
+#| eval: false
 ggplot(mpg, aes(x = hwy, y = fct_reorder(class, hwy, median))) +
   geom_boxplot()
 ```
@@ -337,6 +347,7 @@ List them and briefly describe what each one does.
 To visualize the covariation between categorical variables, you’ll need to count the number of observations for each combination of levels of these categorical variables.
 One way to do that is to rely on the built-in geom_count():
 ```{r count categorical values}
+#| eval: false
 ggplot(diamonds, aes(x = cut, y = color)) +
   geom_count()
 ```
@@ -353,6 +364,7 @@ diamonds |>
 
 Then visualize with geom_tile() and the fill aesthetic:
 ```{r diamonds tile plot}
+#| eval: false
 diamonds |> 
   count(color, cut) |>  
   ggplot(aes(x = color, y = cut)) +
@@ -384,6 +396,7 @@ You can see covariation as a pattern in the points.
 For example, you can see a positive relationship between the carat size and price of a diamond: diamonds with more carats have a higher price.
 The relationship is exponential.
 ```{r carat v price diamonds}
+#| eval: false
 ggplot(smaller, aes(x = carat, y = price)) +
   geom_point()
 ```
@@ -391,6 +404,7 @@ ggplot(smaller, aes(x = carat, y = price)) +
 Scatterplots become less useful as the size of your dataset grows, because points begin to overplot, and pile up into areas of uniform black, making it hard to judge differences in the density of the data across the 2-dimensional space as well as making it hard to spot the trend.
 You’ve already seen one way to fix the problem: using the alpha aesthetic to add transparency.
 ```{r carat v price diamonds transparent}
+#| eval: false
 ggplot(smaller, aes(x = carat, y = price)) + 
   geom_point(alpha = 1 / 100)
 ```
@@ -404,7 +418,8 @@ geom_bin2d() and geom_hex() divide the coordinate plane into 2d bins and then us
 geom_bin2d() creates rectangular bins.
 geom_hex() creates hexagonal bins.
 You will need to install the hexbin package to use geom_hex().
-```{r carat v price diamonds 2d bin and hexagon plot }
+```{r carat v price diamonds 2d bin and hexagon plot}
+#| eval: false
 ggplot(smaller, aes(x = carat, y = price)) +
   geom_bin2d()
 
@@ -417,6 +432,7 @@ Another option is to bin one continuous variable so it acts like a categorical v
 Then you can use one of the techniques for visualizing the combination of a categorical and a continuous variable that you learned about.
 For example, you could bin carat and then for each group, display a boxplot:
 ```{r bin carat v price diamonds boxplot}
+#| eval: false
 ggplot(smaller, aes(x = carat, y = price)) + 
   geom_boxplot(aes(group = cut_width(carat, 0.1)))
 ```
@@ -444,6 +460,7 @@ Is it as you expect, or does it surprise you?
 For example, some points in the following plot have an unusual combination of x and y values, which makes the points outliers even though their x and y values appear normal when examined separately.
 Why is a scatterplot a better display than a binned plot for this case?
 ```{r ch 10 exercises pt 5 #5}
+#| eval: false
 diamonds |> 
   filter(x >= 4) |> 
   ggplot(aes(x = x, y = y)) +
@@ -454,6 +471,7 @@ diamonds |>
 6. Instead of creating boxes of equal width with cut_width(), we could create boxes that contain roughly equal number of points with cut_number().
 What are the advantages and disadvantages of this approach?
 ```{r ch 10 exercises pt 5 #6}
+#| eval: false
 ggplot(smaller, aes(x = carat, y = price)) + 
   geom_boxplot(aes(group = cut_number(carat, 20)))
 ```
@@ -489,9 +507,8 @@ The residuals give us a view of the price of the diamond, once the effect of car
 Note that instead of using the raw values of price and carat, we log transform them first, and fit a model to the log-transformed values.
 Then, we exponentiate the residuals to put them back in the scale of raw prices.
 ```{r log transform and model price v carat diamond}
-library(tidymodels)
-
 #| eval: false
+library(tidymodels)
 
 diamonds <- diamonds |>
   mutate(
@@ -511,6 +528,9 @@ ggplot(diamonds_aug, aes(x = carat, y = .resid)) +
 
 Once you’ve removed the strong relationship between carat and price, you can see what you expect in the relationship between cut and price: relative to their size, better quality diamonds are more expensive.
 ```{r remove carat v price to focus on cut v price}
+#| eval: false
 ggplot(diamonds_aug, aes(x = cut, y = .resid)) + 
   geom_boxplot()
 ```
+
+**NEXT UP:** [Chapter 11](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_11_Instructions.md)

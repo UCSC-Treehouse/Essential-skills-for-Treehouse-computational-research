@@ -803,3 +803,6 @@ of group standardization. For example:
 3.  Create a plot to further explore the adventures of EGE. Can you find
     any evidence that the airport moved locations? Can you find another
     variable that might explain the difference?
+
+**NEXT UP:** [Chapter
+14](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_14_Instructions.md)

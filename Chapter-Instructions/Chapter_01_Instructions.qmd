@@ -49,6 +49,7 @@ In the context of **palmerpenguins**, a variable refers to an attribute of all t
 The first argument of ggplot() is the dataset to be used in the graph: ggplot(data = penguins) creates an empty graph that is primed to display the penguins dataset.
 
 ```{r empty ggplot}
+#| eval: false
 ggplot(data = penguins)
 ```
 
@@ -59,6 +60,7 @@ Let's map flipper length to the x axis and body mass to the y axis.
 (*as you type in variable names, you might notice them populate... select the correct name and press tab to autofill*)
 
 ```{r mapped ggplot}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)
@@ -71,6 +73,7 @@ For example, bar charts use bar geoms with geom_bar(), line charts can be displa
 Let's create a scatterplot using a point geom with geom_point():
 
 ```{r scatterplot}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)
@@ -88,6 +91,7 @@ For example, does the relationship between flipper length and body mass differ b
 Next, let's incorporate species into our plot.
 
 ```{r species specific scatterplot}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
@@ -103,6 +107,7 @@ Since this is a new geometric object representing our data, we will add a new ge
 We will specify that we want to draw the line of best fit based on a linear model with method = "lm".
 
 ```{r line of best fit}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
@@ -117,6 +122,7 @@ Now let's try to match our expected ggplot which has one line of best fit.
 Since we want points to be colored based on species but don’t want the lines to be separated out for them, we should specify color = species for geom_point() only.
 
 ```{r one line of best fit}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)
@@ -128,6 +134,7 @@ ggplot(
 Since people have different color perception, let's also use different shapes to represent each species of penguin.
 
 ```{r shape aesthetic}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)
@@ -141,6 +148,7 @@ Arguments within labs() include "title", "subtitle", axes "x" and "y", and legen
 Finally, we can improve our color palette to be colorblind safe with the scale_color_colorblind() function from the ggthemes package.
 
 ```{r improved labels}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)
@@ -199,6 +207,7 @@ And should it be mapped at the global level or at the geom level?
 Then, run the code in R and check your predictions.
 
 ```{r ch 1 exercise pt 1 #9}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g, color = island)
@@ -211,6 +220,7 @@ ggplot(
 Why/why not?
 
 ```{r ch 1 exercise pt 1 #10}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)
@@ -240,6 +250,7 @@ The first two arguments to ggplot() are "data" and "mapping", which will not be 
 Now, instead of...
 
 ```{r expanded code}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)
@@ -250,6 +261,7 @@ ggplot(
 ... we can now more concisely write...
 
 ```{r concise code}
+#| eval: false
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + 
   geom_point()
 ```
@@ -268,6 +280,7 @@ To examine the distribution of a categorical variable, you can use a bar chart.
 The height of the bars displays how many observations occurred with each x value.
 
 ```{r categorical bar plot}
+#| eval: false
 ggplot(penguins, aes(x = species)) +
   geom_bar()
 ```
@@ -276,6 +289,7 @@ In bar plots of categorical variables with non-ordered levels, like the penguin 
 Doing so requires transforming the variable to a factor and then reordering the levels of that factor.
 
 ```{r ordered categorical bar plot}
+#| eval: false
 ggplot(penguins, aes(x = fct_infreq(species))) +
   geom_bar()
 ```
@@ -286,6 +300,7 @@ Numerical variables can be continuous or discrete.
 One commonly used visualization for distributions of continuous variables is a histogram.
 
 ```{r numerical histogram}
+#| eval: false
 ggplot(penguins, aes(x = body_mass_g)) +
   geom_histogram(binwidth = 200)
 ```
@@ -294,6 +309,7 @@ You can set the width of the intervals in a histogram with the binwidth argument
 *You should always explore a variety of binwidths when working with histograms, as different binwidths can reveal different patterns.*
 
 ```{r binwidth exploration}
+#| eval: false
 ggplot(penguins, aes(x = body_mass_g)) +
   geom_histogram(binwidth = 20)
 ggplot(penguins, aes(x = body_mass_g)) +
@@ -306,6 +322,7 @@ A **density plot** is a smoothed-out version of a histogram and a practical alte
 It shows fewer details than a histogram but can make it easier to quickly glean the shape of the distribution, particularly with respect to modes and skewness.
 
 ```{r density plot}
+#| eval: false
 ggplot(penguins, aes(x = body_mass_g)) +
   geom_density()
 ```
@@ -321,6 +338,7 @@ How is this plot different?
 Which aesthetic, color or fill, is more useful for changing the color of bars?
 
 ```{r ch 1 exercise pt 2 #2}
+#| eval: false
 ggplot(penguins, aes(x = species)) +
   geom_bar(color = "red")
 
@@ -347,6 +365,7 @@ It is also useful for identifying potential outliers.
 Let’s take a look at the distribution of body mass by species using geom_boxplot():
 
 ```{r multivariable boxplot}
+#| eval: false
 ggplot(penguins, aes(x = species, y = body_mass_g)) +
   geom_boxplot()
 ```
@@ -354,6 +373,7 @@ ggplot(penguins, aes(x = species, y = body_mass_g)) +
 Alternatively, we can make density plots with geom_density().
 
 ```{r multivariable density plot}
+#| eval: false
 ggplot(penguins, aes(x = body_mass_g, color = species)) +
   geom_density(linewidth = 0.75)
 ```
@@ -363,6 +383,7 @@ Additionally, we can map species to both color and fill aesthetics and use the a
 This aesthetic takes values between 0 (completely transparent) and 1 (completely opaque).
 
 ```{r filled density plot}
+#| eval: false
 ggplot(penguins, aes(x = body_mass_g, color = species, fill = species)) +
   geom_density(alpha = 0.5)
 ```
@@ -378,6 +399,7 @@ We can plot the frequencies of each species of penguins on each island.
 The plot shows that there are equal numbers of Adelies on each island but we don’t have a good sense of the percentage balance within each island.
 
 ```{r frequency plot}
+#| eval: false
 ggplot(penguins, aes(x = island, fill = species)) +
   geom_bar()
 ```
@@ -385,6 +407,7 @@ ggplot(penguins, aes(x = island, fill = species)) +
 We can plot relative frequency by setting position = "fill" in the geom, which is more useful for comparing species distributions across islands since it’s not affected by the unequal numbers of penguins across the islands.
 
 ```{r relative frequency plot}
+#| eval: false
 ggplot(penguins, aes(x = island, fill = species)) +
   geom_bar(position = "fill")
 ```
@@ -405,6 +428,7 @@ We can incorporate more variables into a plot by mapping them to additional aest
 For example, in the following scatterplot the colors of points represent species and the shapes of points represent islands.
 
 ```{r shape aesthetic scatterplot}
+#| eval: false
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(color = species, shape = island))
 ```
@@ -417,6 +441,7 @@ The first argument of facet_wrap() is a formula, which you create with \~ follow
 The variable that you pass to facet_wrap() should be categorical.
 
 ```{r facet wrap}
+#| eval: false
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(color = species, shape = species)) +
   facet_wrap(~island)
@@ -448,6 +473,7 @@ What about faceting by species?
 How would you fix it to combine the two legends?
 
 ```{r ch 1 exercise pt 3 #6}
+#| eval: false
 ggplot(
   data = penguins,
   mapping = aes(
@@ -464,6 +490,7 @@ Which question can you answer with the first one?
 Which question can you answer with the second one?
 
 ```{r ch 1 exercise pt 3 #7}
+#| eval: false
 ggplot(penguins, aes(x = island, fill = species)) +
   geom_bar(position = "fill")
 ggplot(penguins, aes(x = species, fill = island)) +
@@ -506,3 +533,5 @@ If that doesn’t help, carefully read the **error message**.
 Sometimes the answer will be buried there!
 But when you’re new to R, even if the answer is in the error message, you might not yet know how to understand it.
 Another great tool is **Google**: try googling the error message, as it’s likely someone else has had the same problem, and has gotten help online.
+
+**NEXT UP:** [Chapter 2](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_02_Instructions.md)

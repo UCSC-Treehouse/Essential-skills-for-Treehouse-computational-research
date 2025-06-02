@@ -1,8 +1,7 @@
 ---
 title: "Chapter 17, Dates and Times"
 format:
-  gfm: 
-    self-contained: true
+  gfm
 ---
 
 This chapter will show you how to work with dates and times in R.
@@ -544,3 +543,5 @@ Create a vector of dates giving the first day of every month in the current year
 
 3. Write a function that given your birthday (as a date), returns how old you are in years.
 4. Why can’t (today() %--% (today() + years(1))) / months(1) work?
+
+**NEXT UP:** [Chapter 18](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_18_Instructions.md)

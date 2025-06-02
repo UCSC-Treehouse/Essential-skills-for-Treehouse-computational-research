@@ -1,8 +1,7 @@
 ---
 title: "Chapter 13, Numbers"
 format:
-  gfm: 
-    self-contained: true
+  gfm
 ---
 
 In this chapter, we’ll start by giving you a couple of tools to make numbers if you have strings, and then going into a little more detail of count().
@@ -667,3 +666,5 @@ Why might you want to use data from planes?
 3. Create a plot to further explore the adventures of EGE.
 Can you find any evidence that the airport moved locations?
 Can you find another variable that might explain the difference?
+
+**NEXT UP:** [Chapter 14](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_14_Instructions.md)

@@ -422,3 +422,6 @@ symbols between the factor levels:
 ``` r
 ordered(c("a", "b", "c"))
 ```
+
+**NEXT UP:** [Chapter
+17](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_17_Instructions.md)

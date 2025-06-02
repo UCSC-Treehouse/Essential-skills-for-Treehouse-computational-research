@@ -109,3 +109,6 @@ problem.
 
 Finish by checking that you have actually made a reproducible example by
 starting a fresh R session and copying and pasting your script.
+
+**NEXT UP:** [Chapter
+9](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_09_Instructions.md)

@@ -1,8 +1,7 @@
 ---
 title: "Chapter 3, Data Transformation"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 Visualization is an important tool for generating insight, but it’s rare that you get the data in exactly the right form you need to make the graph you want.
@@ -578,3 +577,5 @@ batters |>
   geom_point(alpha = 1 / 10) + 
   geom_smooth(se = FALSE)
 ```
+
+**NEXT UP:** [Chapter 4](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_04_Instructions.md)

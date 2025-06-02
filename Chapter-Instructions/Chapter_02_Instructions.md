@@ -193,3 +193,6 @@ ggplot(dTA = mpg) +
 my_bar_plot \<- ggplot(mpg, aes(x = class)) + geom_bar() my_scatter_plot
 \<- ggplot(mpg, aes(x = cty, y = hwy)) + geom_point() ggsave(filename =
 “mpg-plot.png”, plot = my_bar_plot)
+
+**NEXT UP:** [Chapter
+3](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_03_Instructions.md)

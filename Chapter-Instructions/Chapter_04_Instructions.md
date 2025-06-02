@@ -38,7 +38,7 @@ library(tidyverse)
 library(nycflights13)
 ```
 
-------------------------------------------------------------------------
+## **NEXT UP:** [Chapter 5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)
 
 ## Names
 
@@ -154,8 +154,6 @@ flights |>
     geom_line()
 ```
 
-![](Chapter_04_Instructions_files/figure-commonmark/example%20ggplot-1.png)
-
 Watch for the transition from \|\> to +. We wish this transition wasn’t
 necessary, but unfortunately, ggplot2 was written before the pipe was
 discovered.
@@ -191,3 +189,6 @@ flights|>filter(carrier=="UA",dest%in%c("IAH","HOU"),sched_dep_time>
 0900,sched_arr_time<2000)|>group_by(flight)|>summarize(delay=mean(
 arr_delay,na.rm=TRUE),cancelled=sum(is.na(arr_delay)),n=n())|>filter(n>10)
 ```
+
+**NEXT UP:** [Chapter
+5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)

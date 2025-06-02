@@ -33,12 +33,12 @@ renv::install(c("nycflights13", "tidyverse"))
     The following package(s) will be installed:
     - nycflights13 [1.0.2]
     - tidyverse    [2.0.0]
-    These packages will be installed into "/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library".
+    These packages will be installed into "~/Desktop/Vaske_Lab_Treehouse/Essential-skills-for-Treehouse-computational-research/Chapter-Instructions/renv/library/macos/R-4.4/aarch64-apple-darwin20".
 
     # Installing packages --------------------------------------------------------
-    - Installing nycflights13 ...                   OK [copied from cache]
-    - Installing tidyverse ...                      OK [copied from cache]
-    Successfully installed 2 packages in 40 milliseconds.
+    - Installing nycflights13 ...                   OK [linked from cache]
+    - Installing tidyverse ...                      OK [linked from cache]
+    Successfully installed 2 packages in 5.2 milliseconds.
 
 Load libraries from installed packages (*run every session*) –\> copy
 the commands into your own **quarto notebook (.qmd file)**
@@ -679,3 +679,6 @@ batters |>
   geom_point(alpha = 1 / 10) + 
   geom_smooth(se = FALSE)
 ```
+
+**NEXT UP:** [Chapter
+4](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_04_Instructions.md)

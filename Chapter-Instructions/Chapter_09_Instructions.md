@@ -61,25 +61,11 @@ categorical variable is mapped to an aesthetic like color or shape.
 # Left
 ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
   geom_point()
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/color%20vs%20shape%20aesthetic%20on%20mpg-1.png)
-
-``` r
 # Right
 ggplot(mpg, aes(x = displ, y = hwy, shape = class)) +
   geom_point()
 ```
-
-    Warning: The shape palette can deal with a maximum of 6 discrete values because more
-    than 6 becomes difficult to discriminate
-    ℹ you have requested 7 values. Consider specifying shapes manually if you need
-      that many of them.
-
-    Warning: Removed 62 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_09_Instructions_files/figure-commonmark/color%20vs%20shape%20aesthetic%20on%20mpg-2.png)
 
 When class is mapped to shape, we get two warnings.
 
@@ -95,21 +81,11 @@ control the size and the transparency of the points, respectively.
 # Left
 ggplot(mpg, aes(x = displ, y = hwy, size = class)) +
   geom_point()
-```
 
-    Warning: Using size for a discrete variable is not advised.
-
-![](Chapter_09_Instructions_files/figure-commonmark/explictly%20choose%20size%20and%20alpha-1.png)
-
-``` r
 # Right
 ggplot(mpg, aes(x = displ, y = hwy, alpha = class)) +
   geom_point()
 ```
-
-    Warning: Using alpha for a discrete variable is not advised.
-
-![](Chapter_09_Instructions_files/figure-commonmark/explictly%20choose%20size%20and%20alpha-2.png)
 
 Both of these produce warnings as well.
 
@@ -135,8 +111,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(color = "blue")
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/blue%20mpg%20plot-1.png)
-
 Here, the color doesn’t convey information about a variable, but only
 changes the appearance of the plot. You’ll need to pick a value that
 makes sense for that aesthetic.
@@ -159,8 +133,6 @@ ggplot(mpg) +
   geom_point(aes(x = displ, y = hwy, color = "blue"))
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%201%20#2-1.png)
-
 3.  What does the stroke aesthetic do? What shapes does it work with?
     (Hint: use ?geom_point)
 
@@ -179,18 +151,10 @@ represent the same data (mpg):
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) + 
   geom_point()
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/unnamed-chunk-1-1.png)
-
-``` r
 ggplot(mpg, aes(x = displ, y = hwy)) + 
   geom_smooth()
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_09_Instructions_files/figure-commonmark/unnamed-chunk-1-2.png)
 
 Every geom function in ggplot2 takes a mapping argument, either defined
 locally in the geom layer or globally in the ggplot() layer. However,
@@ -235,10 +199,6 @@ ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   geom_smooth(aes(linetype = drv))
 ```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_09_Instructions_files/figure-commonmark/overlay%20plot%20with%20original%20data-1.png)
-
 Many geoms, like geom_smooth(), use a single geometric object to display
 multiple rows of data. For these geoms, you can set the group aesthetic
 to a categorical variable to draw multiple objects. ggplot2 will draw a
@@ -252,29 +212,13 @@ the geoms.
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth()
-```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_09_Instructions_files/figure-commonmark/group%20aesthetic%20example-1.png)
-
-``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth(aes(group = drv))
-```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_09_Instructions_files/figure-commonmark/group%20aesthetic%20example-2.png)
-
-``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth(aes(color = drv), show.legend = FALSE)
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_09_Instructions_files/figure-commonmark/group%20aesthetic%20example-3.png)
 
 If you place mappings in a geom function, ggplot2 will treat them as
 local mappings for the layer. It will use these mappings to extend or
@@ -286,10 +230,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class)) + 
   geom_smooth()
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_09_Instructions_files/figure-commonmark/local%20mappings-1.png)
 
 You can use the same idea to specify different data for each layer.
 Here, we use red points as well as open circles to highlight two-seater
@@ -309,8 +249,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   )
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/change%20shape%20for%20specific%20layer-1.png)
-
 Geoms are the fundamental building blocks of ggplot2. You can completely
 transform the look of your plot by changing its geom, and different
 geoms can reveal different features of your data. For example, the
@@ -321,23 +259,13 @@ potential outliers.
 ``` r
 ggplot(mpg, aes(x = hwy)) +
   geom_histogram(binwidth = 2)
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/example%20plots%20for%20skew%20and%20outliers-1.png)
-
-``` r
 ggplot(mpg, aes(x = hwy)) +
   geom_density()
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/example%20plots%20for%20skew%20and%20outliers-2.png)
-
-``` r
 ggplot(mpg, aes(x = hwy)) +
   geom_boxplot()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/example%20plots%20for%20skew%20and%20outliers-3.png)
 
 ggplot2 provides more than 40 geoms but these don’t cover all possible
 plots one could make. If you need a different geom, we recommend looking
@@ -359,10 +287,6 @@ ggplot(mpg, aes(x = hwy, y = drv, fill = drv, color = drv)) +
   geom_density_ridges(alpha = 0.5, show.legend = FALSE)
 ```
 
-    Picking joint bandwidth of 1.28
-
-![](Chapter_09_Instructions_files/figure-commonmark/ggridges%20pkg-1.png)
-
 ------------------------------------------------------------------------
 
 ## Exercises pt 2 of 6
@@ -376,10 +300,6 @@ ggplot(mpg, aes(x = hwy, y = drv, fill = drv, color = drv)) +
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth(aes(color = drv), show.legend = FALSE)
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%202%20#2-1.png)
 
 What does show.legend = FALSE do here? What happens if you remove it?
 Why do you think we used it earlier?
@@ -415,8 +335,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   facet_wrap(~cyl)
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/facet%20car%20plot-1.png)
-
 To facet your plot with the combination of two variables, switch from
 facet_wrap() to facet_grid(). The first argument of facet_grid() is also
 a formula, but now it’s a double sided formula: rows ~ cols.
@@ -426,8 +344,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point() + 
   facet_grid(drv ~ cyl)
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/facet%20grid%20car%20plot-1.png)
 
 By default each of the facets share the same scale and range for x and y
 axes. This is useful when you want to compare data across facets but it
@@ -460,25 +376,17 @@ ggplot(mpg) +
   geom_point(aes(x = drv, y = cyl))
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%203%20#2-1.png)
-
 3.  What plots does the following code make? What does . do?
 
 ``` r
 ggplot(mpg) + 
   geom_point(aes(x = displ, y = hwy)) +
   facet_grid(drv ~ .)
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%203%20#3-1.png)
-
-``` r
 ggplot(mpg) + 
   geom_point(aes(x = displ, y = hwy)) +
   facet_grid(. ~ cyl)
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%203%20#3-2.png)
 
 4.  Take the first faceted plot in this section:
 
@@ -487,8 +395,6 @@ ggplot(mpg) +
   geom_point(aes(x = displ, y = hwy)) + 
   facet_wrap(~ cyl, nrow = 2)
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%203%20#4-1.png)
 
 What are the advantages to using faceting instead of the color
 aesthetic? What are the disadvantages? How might the balance change if
@@ -506,21 +412,11 @@ you had a larger dataset?
 ggplot(mpg, aes(x = displ)) + 
   geom_histogram() + 
   facet_grid(drv ~ .)
-```
 
-    `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%203%20#6-1.png)
-
-``` r
 ggplot(mpg, aes(x = displ)) + 
   geom_histogram() +
   facet_grid(. ~ drv)
 ```
-
-    `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%203%20#6-2.png)
 
 7.  Recreate the following plot using facet_wrap() instead of
     facet_grid(). How do the positions of the facet labels change?
@@ -530,8 +426,6 @@ ggplot(mpg) +
   geom_point(aes(x = displ, y = hwy)) +
   facet_grid(drv ~ .)
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%203%20#7-1.png)
 
 ------------------------------------------------------------------------
 
@@ -549,8 +443,6 @@ cuts.
 ggplot(diamonds, aes(x = cut)) + 
   geom_bar()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/diamond%20histogram-1.png)
 
 On the x-axis, the chart displays cut, a variable from diamonds. On the
 y-axis, it displays count, but count is not a variable in diamonds!
@@ -593,8 +485,6 @@ diamonds |>
   geom_bar(stat = "identity")
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/map%20height%20to%20raw%20values-1.png)
-
 2.  You might want to override the default mapping from transformed
     variables to aesthetics. For example, you might want to display a
     bar chart of proportions, rather than counts:
@@ -603,8 +493,6 @@ diamonds |>
 ggplot(diamonds, aes(x = cut, y = after_stat(prop), group = 1)) + 
   geom_bar()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/proportions%20histogram-1.png)
 
 3.  You might want to draw greater attention to the statistical
     transformation in your code. For example, you might use
@@ -620,8 +508,6 @@ ggplot(diamonds) +
     fun = median
   )
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/summarize%20y%20values-1.png)
 
 ------------------------------------------------------------------------
 
@@ -646,16 +532,9 @@ ggplot(diamonds) +
 ``` r
 ggplot(diamonds, aes(x = cut, y = after_stat(prop))) + 
   geom_bar()
-```
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%204%20#5-1.png)
-
-``` r
 ggplot(diamonds, aes(x = cut, fill = color, y = after_stat(prop))) + 
   geom_bar()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%204%20#5-2.png)
 
 ------------------------------------------------------------------------
 
@@ -667,16 +546,10 @@ usefully, the fill aesthetic:
 ``` r
 ggplot(mpg, aes(x = drv, color = drv)) + 
   geom_bar()
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/outline%20vs%20fill%20color-1.png)
-
-``` r
 ggplot(mpg, aes(x = drv, fill = drv)) + 
   geom_bar()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/outline%20vs%20fill%20color-2.png)
 
 Note what happens if you map the fill aesthetic to another variable,
 like class: the bars are automatically stacked. Each colored rectangle
@@ -686,8 +559,6 @@ represents a combination of drv and class.
 ggplot(mpg, aes(x = drv, fill = class)) + 
   geom_bar()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/fill%20based%20on%20class-1.png)
 
 The stacking is performed automatically using the **position
 adjustment** specified by the position argument. If you don’t want a
@@ -703,16 +574,10 @@ stacked bar chart, you can use one of three other options: “identity”,
 ``` r
 ggplot(mpg, aes(x = drv, fill = class)) + 
   geom_bar(alpha = 1/5, position = "identity")
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/position%20equals%20identity-1.png)
-
-``` r
 ggplot(mpg, aes(x = drv, color = class)) + 
   geom_bar(fill = NA, position = "identity")
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/position%20equals%20identity-2.png)
 
 The identity position adjustment is more useful for 2d geoms, like
 points, where it is the default.
@@ -727,16 +592,10 @@ points, where it is the default.
 ``` r
 ggplot(mpg, aes(x = drv, fill = class)) + 
   geom_bar(position = "fill")
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/position%20equals%20dodge-1.png)
-
-``` r
 ggplot(mpg, aes(x = drv, fill = class)) + 
   geom_bar(position = "dodge")
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/position%20equals%20dodge-2.png)
 
 There’s one other type of adjustment that’s not useful for bar charts,
 but can be very useful for scatterplots. Recall our first scatterplot.
@@ -760,8 +619,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(position = "jitter")
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/position%20equals%20jitter-1.png)
-
 Adding randomness seems like a strange way to improve your plot, but
 while it makes your graph less accurate at small scales, it makes your
 graph more revealing at large scales. Because this is such a useful
@@ -780,23 +637,14 @@ ggplot(mpg, aes(x = cty, y = hwy)) +
   geom_point()
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%205%20#1-1.png)
-
 2.  What, if anything, is the difference between the two plots? Why?
 
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point()
-```
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%205%20#2-1.png)
-
-``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(position = "identity")
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%205%20#2-2.png)
 
 3.  What parameters to geom_jitter() control the amount of jittering?
 
@@ -823,17 +671,11 @@ nz <- map_data("nz")
 
 ggplot(nz, aes(x = long, y = lat, group = group)) +
   geom_polygon(fill = "white", color = "black")
-```
 
-![](Chapter_09_Instructions_files/figure-commonmark/geographic%20maps-1.png)
-
-``` r
 ggplot(nz, aes(x = long, y = lat, group = group)) +
   geom_polygon(fill = "white", color = "black") +
   coord_quickmap()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/geographic%20maps-2.png)
 
 - coord_polar() uses polar coordinates. Polar coordinates reveal an
   interesting connection between a bar chart and a Coxcomb chart.
@@ -848,15 +690,8 @@ bar <- ggplot(data = diamonds) +
   theme(aspect.ratio = 1)
 
 bar + coord_flip()
-```
-
-![](Chapter_09_Instructions_files/figure-commonmark/polar%20coordinates-1.png)
-
-``` r
 bar + coord_polar()
 ```
-
-![](Chapter_09_Instructions_files/figure-commonmark/polar%20coordinates-2.png)
 
 ------------------------------------------------------------------------
 
@@ -877,8 +712,6 @@ ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
   coord_fixed()
 ```
 
-![](Chapter_09_Instructions_files/figure-commonmark/ch%209%20exercises%20pt%206%20#3-1.png)
-
 ------------------------------------------------------------------------
 
 ## The Layered Grammar of Graphics
@@ -894,3 +727,6 @@ Our new template takes seven parameters, the bracketed words that appear
 in the template. In practice, you rarely need to supply all seven
 parameters to make a graph because ggplot2 will provide useful defaults
 for everything except the data, the mappings, and the geom function.
+
+**NEXT UP:** [Chapter
+10](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_10_Instructions.md)

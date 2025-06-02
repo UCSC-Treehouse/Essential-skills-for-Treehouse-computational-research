@@ -1,8 +1,7 @@
 ---
 title: "Chapter 8, Workflow: Getting Help"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 We can't answer everything here in this intro... maybe you have had to look something up already.
@@ -87,3 +86,5 @@ Try to use the smallest subset of your data that still reveals the problem.
 3. Spend a little bit of time ensuring that your **code** is easy for others to read.
 
 Finish by checking that you have actually made a reproducible example by starting a fresh R session and copying and pasting your script.
+
+**NEXT UP:** [Chapter 9](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_09_Instructions.md)

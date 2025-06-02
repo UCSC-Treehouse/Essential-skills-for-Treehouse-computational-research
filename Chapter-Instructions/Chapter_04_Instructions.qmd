@@ -1,8 +1,7 @@
 ---
 title: "Chapter 4, Code Style"
 format:
-  gfm:
-    self-contained: true
+  gfm
 ---
 
 A consistent coding style makes it easier for others (including future-you!) to read your work and is particularly important if you need to get help from someone else.
@@ -23,6 +22,7 @@ library(tidyverse)
 library(nycflights13)
 ```
 
+**NEXT UP:** [Chapter 5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)
 ------------------------------------------------------------------------
 
 ## Names
@@ -117,6 +117,7 @@ Try to break them up into smaller sub-tasks, giving each task an informative nam
 
 The same basic rules that apply to the pipe also apply to ggplot2; just treat + the same way as |>.
 ```{r example ggplot}
+#| eval: false
 flights |> 
     group_by(month) |> 
     summarize(
@@ -157,3 +158,5 @@ flights|>filter(carrier=="UA",dest%in%c("IAH","HOU"),sched_dep_time>
 0900,sched_arr_time<2000)|>group_by(flight)|>summarize(delay=mean(
 arr_delay,na.rm=TRUE),cancelled=sum(is.na(arr_delay)),n=n())|>filter(n>10)
 ```
+
+**NEXT UP:** [Chapter 5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)

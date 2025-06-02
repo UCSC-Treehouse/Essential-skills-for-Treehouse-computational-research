@@ -1050,3 +1050,5 @@ ggsave(by_clarity$path[[3]], by_clarity$plot[[3]], width = 6, height = 6)
 ...
 ggsave(by_clarity$path[[8]], by_clarity$plot[[8]], width = 6, height = 6)
 ```
+
+## CONGRATULATIONS! You have completed your Essential Skills in Computational Research training for Treehouse! Welcome to the team :)

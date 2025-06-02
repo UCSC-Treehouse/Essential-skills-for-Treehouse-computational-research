@@ -1,8 +1,7 @@
 ---
 title: "Chapter 12, Logical Vectors"
 format:
-  gfm: 
-    self-contained: true
+  gfm
 ---
 
 In this chapter, you’ll learn tools for working with logical vectors.
@@ -543,3 +542,5 @@ Use this fact and if_else() to determine whether each number between 0 and 20 is
 
 4. Write a case_when() statement that uses the month and day columns from flights to label a selection of important US holidays (e.g., New Years Day, 4th of July, Thanksgiving, and Christmas).
 First create a logical column that is either TRUE or FALSE, and then create a character column that either gives the name of the holiday or is NA.
+
+**NEXT UP:** [Chapter 13](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_13_Instructions.md)

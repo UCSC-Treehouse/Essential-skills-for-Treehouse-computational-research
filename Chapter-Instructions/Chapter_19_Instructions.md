@@ -678,3 +678,6 @@ x |> full_join(y, join_by(key == key), keep = TRUE)
 2.  When finding if any party period overlapped with another party
     period we used q \< q in the join_by()? Why? What happens if you
     remove this inequality?
+
+**NEXT UP:** [Chapter
+26](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_26_Instructions.md)

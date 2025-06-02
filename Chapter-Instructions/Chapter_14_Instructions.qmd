@@ -1,8 +1,7 @@
 ---
 title: "Chapter 14, Strings"
 format:
-  gfm: 
-    self-contained: true
+  gfm
 ---
 
 Now it’s time to dive into **strings**, learn what makes them tick, and master some of the powerful string manipulation tools you have at your disposal.
@@ -484,3 +483,5 @@ What will you do if the string has an even number of characters?
 
 3. Are there any major trends in the length of babynames over time?
 What about the popularity of first and last letters?
+
+**NEXT UP:** [Chapter 15](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_15_Instructions.md)
