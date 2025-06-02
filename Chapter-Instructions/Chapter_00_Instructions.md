@@ -99,17 +99,13 @@ Next, you will want to clear all of that automatic existing code & text.
 you can omit this additional information). Then, change your YAML
 heading to the following format:
 
-title: “chapter 01” output: md_document: variant: gfm
-
-<img src="Images/yaml_header.png" class="border"
-data-fig-alt="Image showing clear quarto document with corrected YAML header for markdown output"
-alt="Change Your YAML Header" />
+title: “chapter 01” format: gfm
 
 Let’s break down this header. Later, when we “render” our document, we
 *combine* the raw data, code, and text in our .qmd file into a finished
-document. The ‘output: md_document’ ensures that the output is a
-markdown file. We want to render to a gfm (GitHub Flavored Markdown),
-specifically, as it is best viewed on GitHub.
+document. The ‘format: gfm’ ensures that the output is a markdown file.
+We want to render to a gfm (GitHub Flavored Markdown), specifically, as
+it is best viewed on GitHub.
 
 3.  Enable Reproducibility:
 
