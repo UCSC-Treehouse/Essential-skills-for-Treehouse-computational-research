@@ -1,4 +1,4 @@
-# Chapter 00 Instructions
+# Chapter 0
 
 
 In this chapter, you will set up:
@@ -211,3 +211,6 @@ Repeat this workflow for **each** chapter
 3.  Run ‘renv::snapshot()’ if adding packages
 4.  Commit changes to a *new* branch (‘chapter-N’)
 5.  Create a pull request for mentor review
+
+**START** with [Chapter
+1](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_01_Instructions.md)
