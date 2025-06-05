@@ -21,6 +21,7 @@ Luckily, this can be easier for computational biology experiments than in wet la
 
 Before you can work on a Treehouse computational project, you must demonstrate that you know how to perform reproducible experiments. 
 When you have completed the work described in this repo, please reach out to your mentor so you can proceed with your project. 
+Throughout this training we will be working on the following:
 
 -   Using Terminal, GitHub, RStudio, renv, and Quarto notebooks
 -   Building repositories, files, and pipelines
