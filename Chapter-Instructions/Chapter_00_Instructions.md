@@ -12,8 +12,7 @@ In this chapter, you will set up:
 
 1.  **Install Required Software**
 
-- [Github Desktop](https://github.com/apps/desktop) (use UCSC email)
-- [Git](https://git-scm.com/downloads)
+- [Github Desktop](https://github.com/apps/desktop)
 - [R](https://www.r-project.org)
 - [RStudio](https://posit.co/download/rstudio-desktop/)
 - Quarto and renv (*instructions below*)
@@ -21,15 +20,16 @@ In this chapter, you will set up:
 2.  **Organization Access**
 
 - Ask your mentor, Holly, or Ellen to add you to the ‘UCSC-Treehouse’
-  GitHub organization. Please include your GitHub id in your request.
+  GitHub organization. **Please include your GitHub id in your
+  request.**
 
 ------------------------------------------------------------------------
 
 ## Setup Instructions
 
-### Step 1: Create a New Project with renv
+### Create a New Project with renv
 
-1.  In RStudio:
+In RStudio:
 
 - File –\> New Project –\> New Directory –\> Quarto Project
 
@@ -37,8 +37,8 @@ In this chapter, you will set up:
 data-fig-alt="Image showing file button to create &#39;New Project&#39;"
 alt="Create New Project in Github Desktop" />
 
-<img src="Images/project_in_new_directory.png" class="border"
-data-fig-alt="Image showing button on RStudio to &#39;Create New Project&#39; within &#39;New Directory&#39;"
+<img src="Images/project_in_existing_directory.png" class="border"
+data-fig-alt="Image showing button on RStudio to &#39;Create Project&#39; within &#39;New Directory&#39;"
 alt="Create New Project in New Directory" />
 
 <img src="Images/new_quarto_project.png" class="border"
@@ -55,160 +55,125 @@ alt="Create New Quarto Project" />
   project will be created as a subdirectory of my lab folder titled
   “Vaske_Lab_Treehouse”.
 
-- Make sure to select **“Use renv with this project”**
+- Make sure to **select**:
+
+- “Create a git repository”
+
+- “Use renv with this project”
+
+- “Open in new session”
+
+- Make sure to **deselect** (if present)
+
+- “Use visual markdown editor”
+
+- Now click “Create Project”
 
 <img src="Images/name_quarto_project.png" class="border"
 data-fig-alt="Image showing how to name new Quarto project, put in Vaske or Treehouse folder, and initialize with renv"
 alt="Name New Project" />
 
-Now that you have created your first project, you have a *workspace* to
-add all of your computational research to. Next, let’s create notebooks
-where you can add work to your space.
+------------------------------------------------------------------------
 
-2.  Create your first Quarto notebook:
+## What Happens When You Create a New Quarto Project?
 
-- File –\> New File –\> Quarto Document
+Now you have created your first Quarto project in RStudio! But what does
+that actually mean? Let’s **exit** RStudio and navigate to your new
+project directory to check it out. What do you see? Let’s break it down.
 
-<img src="Images/create_new_quarto_file.png" class="border"
-data-fig-alt="Image showing how to create a new quarto file in RStudio"
-alt="Create New Quarto File in Project" />
+When you create a new Quarto project, RStudio generates:
 
-- Title and save as ‘Chapter_01’
+- The .Rproj file (opens your project in RStudio)
+- The renv folder (stores all of the R packages used in your project)
+- The renv.lock file (records the *exact* packages & versions)
 
-<img src="Images/name_new_quarto_file.png" class="border"
-data-fig-alt="Image showing how to name and save a new quarto file in RStudio"
-alt="Name New Quarto File" />
+You *may* see some extra files… you can ignore them, for now.
 
-This is what your new document will look like…
+------------------------------------------------------------------------
 
-<img src="Images/quarto_document.png" class="border"
-data-fig-alt="Image showing what a newly created quarto document looks like."
-alt="New Quarto Document" />
+## GitHub Desktop
 
-This viewing method is called ‘Visual’. It can give you a nice preview
-of what the output document of your code will look like, but it is not
-very good for raw text and code.
+Since you just created a new project with new files, your GitHub Desktop
+should reflect these changes.
 
-On the top left, you will want to select “Source” view.
+Let’s open GitHub Desktop and follow the instructions to add your new
+repository (i.e. the directory/workspace your new project exists in.)
 
-<img src="Images/source_view.png" class="border"
-data-fig-alt="Switch to source view" alt="Change to Source View" />
+1.  **Click “Add” –\> “Add Existing Repository…” –\> “Choose…” –\>
+    navigate to your new repository –\> “Add Repository”**
 
-Next, you will want to clear all of that automatic existing code & text.
-(hint: if you click ‘Create Empty Document’ instead of just ‘Create’,
-you can omit this additional information). Then, change your YAML
-heading to the following format:
+<img src="Images/add_repo_to_github_desktop.png" class="border"
+data-fig-alt="GitHub Desktop visual with buttons to add an existing repository"
+alt="Add a New Repository to GitHub Desktop" />
 
-title: “chapter 01”
+<img src="Images/find_new_repo.png" class="border"
+data-fi-alt="GitHub Desktop visual with buttons to add your new local repository"
+alt="Find Your New Repository" />
 
-format: gfm
+You will see something similar to the following… Keep in mind some
+listed files (on the left of your screen) may be different due to
+RStudio version differences.
 
-Let’s break down this header. Later, when we “render” our document, we
-*combine* the raw data, code, and text in our .qmd file into a finished
-document. The ‘format: gfm’ ensures that the output is a markdown file.
-We want to render to a gfm (GitHub Flavored Markdown), specifically, as
-it is best viewed on GitHub.
+<img src="Images/new_repo_in_github_desktop.png" class="border"
+data-fig-alt="GitHub Desktop screen upon adding new repository; files listed on the left"
+alt="Your New Repository in GitHub Desktop" />
 
-3.  Enable Reproducibility:
+2.  **Push Your New Repository to GitHub**
 
-You have already initialized this project with renv, ensuring
-consistency of your package versions, and thus consistency when sharing
-or reproducing your work. renv takes and saves a “photo” or “snapshot”
-of your current packages and versions and restores this exact setup when
-reopening or sharing the project. You will do this step each time you
-install or update a package. So, to start, let’s install ‘tidyverse’, a
-collection of packages designed for clean, or *tidy*, data science.
+Now that you have your new repository on GitHub Desktop, you can ‘push’
+your work to the main branch (*note*: your ‘main’ branch may be called
+‘master’, like mine). When you ‘push’ your work to GitHub, you are
+sending the changes you made on your local computer to GitHub’s servers,
+where others will view and even collaborate on your code.
 
-- In your **R Console**, install ‘tidyverse’ packages:
+To push your work main/master:
 
-``` r
-install.packages("tidyverse")
-```
+1.  Save Your Work
 
-- In your **R Console**, take a snapshot:
+- Make sure all files are saved locally. Since you haven’t written any
+  new code or text, your changes (your new project files) should be
+  saved and ready to be pushed. For future reference, here is the save
+  button.
 
-``` r
-renv::snapshot()
-```
+<img src="Images/save_changes.png" class="border"
+data-fig-alt="Button on RStudio to save changes to current document, circled in red"
+alt="Save Your Work" />
 
-**Note:** In Chapter 01 you will learn another, more concise way to run
-these two steps in one step. However, if you forget this, you can always
-come back to take a current snapshot by running ‘renv::snapshot()’.
+2.  In **GitHub Desktop**, Commit Your Changes to Main
 
-### Step 4: General Workflow
+- Navigate to the description box and type in the required summary:
+  - In this case, you can write something like ‘Created new project with
+    renv’
+- Click ‘Commit \_ files to main/master’
 
-1.  In GitHub Desktop:
+<img src="Images/push_to_main.png" class="border" data-fig-alt=""
+alt="Commit Changes to Main" />
 
-- Add Existing Repository –\> Choose… –\> Add Repository
+3.  In **GitHub Desktop**, Publish Your Repository
 
-![Add Existing Repository](Images/add_local_repository.png)
+- Now that your work is committed to the main branch, you can ‘Publish
+  repository’
 
-- You will see your recent changes to the document in *red*
+<img src="Images/publish_repo.png" class="border"
+data-fig-alt="GitHub Desktop screen after committing changes to main branch. Publish repository button is in blue."
+alt="Publish Your Repository to GitHub" />
 
-- Commit changes to main with message “Initialize project with renv”
+- Make sure you are publishing your new repository to the UCSC Treehouse
+  organization on GitHub
 
-<img src="Images/commit_changes_to_git.png" class="border"
-data-fig-alt="Image showing how to commit changes to Git on GitHub Desktop"
-alt="Commit changes to Git" />
-
-*note: your \# of files will be different than mine*
-
-- Create new branch: ‘chapter-01’ (Branch –\> New Branch –\> Create
-  Branch)
-
-<img src="Images/create_new_branch.png" class="border"
-data-fig-alt="Image showing how to create a new branch on GitHub Desktop"
-alt="Create a new branch on GitHub Desktop" />
-
-2.  Push to GitHub:
-
-- Publish repository (first time only)
-- Push changes to ‘chapter-01’ branch
-
-<img src="Images/push_new_changes_to_new_branch.png" class="border"
-data-fig-alt="Image showing how to push newest files changes to main branch"
-alt="Push New Changes to New Chapter 01 Branch" />
-
-**Note:** Your changed files will be *different* than mine. What you
-*should* see is what is circled in red. Please make sure you are pushing
-your new work to a *new* branch.
-
-3.  Request Review (**once per chapter**)
-
-Upon completion of each chapter, you will ‘submit’ your work to be
-reviewed by a mentor.
-
-- Create Pull Request (GitHub Desktop –\> Current Branch –\> chapter-01
-  –\> Create Pull Request)
-
-<img src="Images/create_pull_request.png" class="border"
-data-fig-alt="Image showing how to create a new pull request"
-alt="Create a Pull Request" />
-
-You will be moved to the GitHub browser, where you will add your
-reviewer and finalize the pull request. Please write any relevant
-description here.
-
-- Assign your mentor as a reviewer. You will need their GitHub id. Here
-  I use Holly Beale as an example reviewer.
-
-<img src="Images/request_reviewer.png" class="border"
-data-fig-alt="Image showing GitHub browser where you will add a reviewer to your new pull request"
-alt="Assign your Mentor as Reviewer" />
+<img src="Images/publish_repo_to_treehouse_org.png" class="border"
+data-fig-alt="GitHub Desktop visual with button to publish your new repository. The organization is changed from &#39;none&#39; to &#39;UCSC-Treehouse&#39;."
+alt="Publish Your Repository to UCSC-Treehouse" />
 
 ------------------------------------------------------------------------
 
 ## Next Steps:
 
-Repeat this workflow for **each** chapter
+Now let’s get into some actual data analysis! By the end of Chapter 1,
+you will have your first experience with plotting data, as well as
+creating branches and pull requests on GitHub.
 
-1.  Create a Quarto document, changing the YAML header as described
-    above
-2.  Work on examples, take notes where relevant, & complete the
-    exercises
-3.  Run ‘renv::snapshot()’ if adding packages
-4.  Commit changes to a *new* branch (‘chapter-N’)
-5.  Create a pull request for mentor review
+------------------------------------------------------------------------
 
 **START** with [Chapter
 1](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_01_Instructions.md)

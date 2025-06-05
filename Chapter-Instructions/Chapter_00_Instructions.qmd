@@ -22,7 +22,7 @@ In this chapter, you will set up:
 2.  **Organization Access**
 
 -   Ask your mentor, Holly, or Ellen to add you to the 'UCSC-Treehouse' GitHub organization.
-Please include your GitHub id in your request.
+**Please include your GitHub id in your request.**
 
 ------------------------------------------------------------------------
 

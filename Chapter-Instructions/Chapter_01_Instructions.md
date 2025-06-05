@@ -3,36 +3,117 @@
 
 In this first chapter we will explore data visualization with
 **ggplot2**: navigating variables, distribution, plots, and varying
-aesthetic options.
+aesthetic options. Additionally, you will learn how to create a new
+branch on GitHub and push your Chapter 1 work to that branch, creating a
+pull request in the process. This pull request will allow a mentor to
+review your work each chapter.
 
 ------------------------------------------------------------------------
 
 ## Prerequisites
 
-Install necessary packages to access datasets and plotting functions –\>
-copy the commands into your own **R Console**
+But, where are you going to store all of this new data analysis? That’s
+the job of Quarto notebooks. For each chapter you work through, you will
+create a new quarto document *and* and new GitHub branch where you will
+push your corresponding chapters’ work to.
+
+**Create Your First GitHub Branch**
+
+1.  Before you return to RStudio to create your first quarto notebook,
+    you want to create a new branch on GitHub where you can push that
+    chapter’s work.
+
+- In **GitHub Desktop**, click Current Branch –\> New Branch
+
+<img src="Images/create_new_ch_1_branch.png" class="border"
+data-fig-alt="GitHub Desktop screen where &#39;Current Branch&#39; is selected and &#39;New Branch&#39; button is visible"
+alt="Create New Chapter 1 Branch" />
+
+- Name the branch ‘chapter-01’ and click ‘Create Branch’
+
+<img src="Images/name_new_branch_ch_1.png" class="border"
+data-fig-alt="GitHub Desktop screen upon creation of new branch, a name &#39;chapter-01&#39; is given and &#39;Create Branch&#39; button is visible in blue"
+alt="Name the New Branch Chapter 1" />
+
+**Create Your First Quarto Notebook:**
+
+1.  Now, you can return to RStudio by launching the .Rproj file in your
+    new directory
+
+![Launch Your Project in RStudio](Images/launch_new_project.png)
+
+2.  Next, create a new Quarto document (.qmd file) where you can work on
+    the examples, exercises, and type any notes you may want.
+
+- File –\> New File –\> Quarto Document…
+
+<img src="Images/create_new_quarto_file.png" class="border"
+data-fig-alt="RStudio screen showing button navigation to create a new quarto document"
+alt="Create New Quarto Document" />
+
+3.  Name your Quarto document
+
+- Title file ‘Chapter 1’
+- **deselect** ‘Use visual markdown editor’
+- Click ‘Create Empty Document’
+
+<img src="Images/name_new_quarto_file.png" class="border"
+data-fig-alt="RStudio screen upon creating new quarto document: title box changed to &#39;Chapter 1&#39;, &#39;Use visual markdown editor&#39; is deselected, and &#39;Create Empty Document&#39; button is present and circled in red."
+alt="Name and Create an Empty Quarto Document" />
+
+You will see something like the following…
+
+<img src="Images/ch_1_quarto_file.png" class="border"
+data-fig-alt="RStudio screen with newly created &#39;Chapter 1&#39; quarto document. The file is blank besides the YAML header with &#39;title: Chapter 1&#39; and &#39;format: html&#39;."
+alt="Chapter 1 Quarto Document" />
+
+4.  Change the YAML Header
+
+Notice that currently, your YAML header says ‘format: html’. Later, when
+we “render” our document, we *combine* the raw data, code, and text in
+our .qmd file into a finished document. Changing the header of the
+document to ‘format: gfm’ ensures that the output is a markdown file. We
+want to render to a gfm (GitHub Flavored Markdown), specifically, as it
+is best viewed on GitHub.
+
+<img src="Images/change_yaml_header.png" class="border"
+data-fig-alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct &#39;Chapter 1&#39; title but the output format has been changed to &#39;format: gfm&#39;."
+alt="Change Output to gfm" />
+
+5.  Install Packages and Enable Reproducibility
+
+You have already initialized this project with renv, ensuring
+consistency of your package versions, and thus consistency when sharing
+or reproducing your work. renv takes and saves a “photo” or “snapshot”
+of your current packages and versions and restores this exact setup when
+reopening or sharing the project. You will do this step each time you
+install or update a package. So, to start, let’s install ‘tidyverse’, a
+collection of packages designed for clean, or *tidy*, data science.
+
+- In your **R Console**, install ‘tidyverse’, ‘palmerpenguins’, and
+  ‘ggthemes’ packages:
 
 ``` r
-# install core packages (run once) using renv
-# as mentioned in Chapter 00, if you only run 'install.packages()' you can always run 'renv::snapshot()' to save current packages & versions.
-renv::install(c("palmerpenguins", "ggthemes"))
+# install core packages using renv
+renv::install(c("tidyverse", "palmerpenguins", "ggthemes"))
 ```
 
-    The following package(s) will be installed:
-    - ggthemes       [5.1.0]
-    - palmerpenguins [0.1.1]
-    These packages will be installed into "~/Desktop/Vaske_Lab_Treehouse/Essential-skills-for-Treehouse-computational-research/Chapter-Instructions/renv/library/macos/R-4.4/aarch64-apple-darwin20".
+This installation is using renv. However, if you forget and only run
+‘install.packages()’, you can always run ‘renv::snapshot()’ to save the
+current packages and versions. This is always done in your R Console,
+which can be found here:
 
-    # Installing packages --------------------------------------------------------
-    - Installing palmerpenguins ...                 OK [linked from cache]
-    - Installing ggthemes ...                       OK [linked from cache]
-    Successfully installed 2 packages in 5.6 milliseconds.
+<img src="Images/install_packages_in_console.png" class="border"
+data-fig-alt="RStudio screen navigated to the bottom by &#39;Console&#39;, which is circled in red. &#39;renv::install(c(&#39;tidyverse&#39;, &#39;palmerpenguins&#39;, &#39;ggthemes&#39;))&#39; is being run in the console, resulting in numerous downloads."
+alt="Install Packages in Your RConsole" />
 
-Load libraries from installed packages (*run every session*) –\> copy
-the commands into your own **quarto notebook (.qmd file)**
+If you are prompted, type ‘Y’ to proceed with downloads.
+
+- Load libraries from installed packages (*run every session*) –\> copy
+  these commands into your own **Quarto notebook**
 
 ``` r
-# load tidyverse library (you will use this in most of your data analysis!)
+# load tidyverse library (you will use this in a lot of your data analysis!)
 library(tidyverse)
 ```
 
@@ -48,11 +129,13 @@ library(tidyverse)
     ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 ``` r
-# load palmerpenguins library (includes example dataset, run every session)
+# load palmerpenguins library (includes an example dataset)
 library(palmerpenguins)
 # load ggthemes library (offers colorblind safe color palette)
 library(ggthemes)
 ```
+
+AMAZING work! Now, let’s *really* get into it.
 
 ------------------------------------------------------------------------
 
@@ -625,6 +708,54 @@ answer is in the error message, you might not yet know how to understand
 it. Another great tool is **Google**: try googling the error message, as
 it’s likely someone else has had the same problem, and has gotten help
 online.
+
+------------------------------------------------------------------------
+
+**You have completed your first chapter!** Now, remember that Chapter 1
+branch you created? You are going to push all of your new Chapter 1
+changes to that branch on GitHub, so your work will be viewable on the
+UCSC-Treehouse organization. Lastly, you will request your mentor as a
+‘reviewer’, so they can check over your work *before* you officially
+push it to the main branch.
+
+Navigate back to **GitHub Desktop**… You should see your new changes
+highlighted in red and green.
+
+1.  Push new Chapter 1 changes to Chapter-01 branch
+
+<img src="Images/push_ch_1_to_ch_1_branch.png" class="border"
+data-fig-alt="Cropped image of bottom left corder of GitHub Desktop screen where description &#39;Create and complete chapter 1&#39; is given and blue &#39;Commit 1 file to chapter-01&#39; button is visible at the bottom."
+alt="Push New Changes to New Chapter-01 Branch" />
+
+2.  Publish the new chapter-01 branch
+
+<img src="Images/publish_ch_1_branch.png" class="border"
+data-fig-alt="GitHub Desktop screen where blue &#39;Publish branch&#39; button is present and circled in red."
+alt="Publish the chapter-01 Branch" />
+
+3.  Create a pull request
+
+<img src="Images/create_pull_request.png" class="border"
+data-fig-alt="GitHub Desktop screen after committing changes to new branch, prompted to click &#39;Create Pull Request&#39; button in blue."
+alt="Create a Pull Request" />
+
+You will be relocated to the GitHub browser.
+
+1.  Add your mentor as a reviewer (**note**: here I use ‘hbeale’ but
+    make sure you are adding *your* mentor’s GitHub id)
+
+<img src="Images/add_reviewer_to_pull_request.png" class="border"
+data-fig-alt="GitHub browser screen upon creating a pull request. On the righthand side, a reviewer is added. The example shows &#39;hbeale&#39; as reviewer, circled in red."
+alt="Add Your Mentor as a Reviewer" />
+
+Now your mentor can review your work while making some suggested
+changes, where needed. After your mentor does this, when you return to
+GitHub Desktop and are under the ‘chapter-01’ branch, you will see your
+saved, unchanged work in **green** and your mentor’s changes (or any new
+changes you have made too) in **red**. The red signifies *any* new
+change that has not been committed and pushed to a branch.
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 2](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_02_Instructions.md)

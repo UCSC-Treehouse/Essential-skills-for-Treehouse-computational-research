@@ -1,6 +1,6 @@
 # Essential Skills for Treehouse Computational Research
 
-#### *Onboarding Repository*
+#### Onboarding Repository
 
 Welcome to your introductory guide to computational research!
 
