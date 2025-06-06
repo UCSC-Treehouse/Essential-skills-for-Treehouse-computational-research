@@ -134,7 +134,7 @@ ggplot(mpg) +
 ```
 
 3.  What does the stroke aesthetic do? What shapes does it work with?
-    (Hint: use ?geom_point)
+    (**Hint**: use ?geom_point)
 
 4.  What happens if you map an aesthetic to something other than a
     variable name, like aes(color = displ \< 5)? Note, you’ll also need
@@ -521,7 +521,7 @@ ggplot(diamonds) +
 
 3.  Most geoms and stats come in pairs that are almost always used in
     concert. Make a list of all the pairs. What do they have in common?
-    (Hint: Read through the documentation.)
+    (**Hint**: Read through the documentation.)
 
 4.  What variables does stat_smooth() compute? What arguments control
     its behavior?
@@ -719,14 +719,23 @@ ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
 We can expand on the graphing template you learned in Chapter 1 by
 adding position adjustments, stats, coordinate systems, and faceting:
 
-ggplot(data = <DATA>) + <GEOM_FUNCTION>( mapping = aes(<MAPPINGS>), stat
-= <STAT>, position = <POSITION> ) + <COORDINATE_FUNCTION> +
-<FACET_FUNCTION>
+``` {|}
+  ggplot(data = <DATA>) + 
+    <GEOM_FUNCTION>(
+      mapping = aes(<MAPPINGS>),
+      stat = <STAT>, 
+      position = <POSITION>
+    ) +
+    <COORDINATE_FUNCTION> +
+    <FACET_FUNCTION>
+```
 
 Our new template takes seven parameters, the bracketed words that appear
 in the template. In practice, you rarely need to supply all seven
 parameters to make a graph because ggplot2 will provide useful defaults
 for everything except the data, the mappings, and the geom function.
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 10](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_10_Instructions.md)

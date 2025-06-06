@@ -189,8 +189,8 @@ an inch long, but don’t cost hundreds of thousands of dollars!
     decide which dimension is the length, width, and depth.
 
 2.  Explore the distribution of price. Do you discover anything unusual
-    or surprising? (Hint: Carefully think about the binwidth and make
-    sure you try a wide range of values.)
+    or surprising? (**Hint**: Carefully think about the binwidth and
+    make sure you try a wide range of values.)
 
 3.  How many diamonds are 0.99 carat? How many are 1 carat? What do you
     think is the cause of the difference?
@@ -640,6 +640,8 @@ relative to their size, better quality diamonds are more expensive.
 ggplot(diamonds_aug, aes(x = cut, y = .resid)) + 
   geom_boxplot()
 ```
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 11](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_11_Instructions.md)

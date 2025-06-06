@@ -3,10 +3,12 @@
 
 In this first chapter we will explore data visualization with
 **ggplot2**: navigating variables, distribution, plots, and varying
-aesthetic options. Additionally, you will learn how to create a new
-branch on GitHub and push your Chapter 1 work to that branch, creating a
-pull request in the process. This pull request will allow a mentor to
-review your work each chapter.
+aesthetic options.
+
+Additionally, you will learn how to create a new branch on GitHub and
+push your Chapter 1 work to that branch, creating a pull request in the
+process. This pull request will allow a mentor to review your work each
+chapter.
 
 ------------------------------------------------------------------------
 
@@ -14,7 +16,7 @@ review your work each chapter.
 
 But, where are you going to store all of this new data analysis? That’s
 the job of Quarto notebooks. For each chapter you work through, you will
-create a new quarto document *and* and new GitHub branch where you will
+create a new quarto document *and* a new GitHub branch where you will
 push your corresponding chapters’ work to.
 
 **Create Your First GitHub Branch**
@@ -25,31 +27,34 @@ push your corresponding chapters’ work to.
 
 - In **GitHub Desktop**, click Current Branch –\> New Branch
 
-<img src="Images/create_new_ch_1_branch.png" class="border"
-data-fig-alt="GitHub Desktop screen where &#39;Current Branch&#39; is selected and &#39;New Branch&#39; button is visible"
-alt="Create New Chapter 1 Branch" />
+![Create New Chapter 1 Branch](Images/create_new_ch_1_branch.png){width=
+55% .border fig-alt=“GitHub Desktop screen where ‘Current Branch’ is
+selected and ‘New Branch’ button is visible”}
 
 - Name the branch ‘chapter-01’ and click ‘Create Branch’
 
-<img src="Images/name_new_branch_ch_1.png" class="border"
-data-fig-alt="GitHub Desktop screen upon creation of new branch, a name &#39;chapter-01&#39; is given and &#39;Create Branch&#39; button is visible in blue"
-alt="Name the New Branch Chapter 1" />
+![Name the New Branch Chapter 1](Images/name_new_branch_ch_1.png){width=
+55% .border fig-alt=“GitHub Desktop screen upon creation of new branch,
+a name ‘chapter-01’ is given and ‘Create Branch’ button is visible in
+blue”}
 
 **Create Your First Quarto Notebook:**
 
 1.  Now, you can return to RStudio by launching the .Rproj file in your
     new directory
 
-![Launch Your Project in RStudio](Images/launch_new_project.png)
+![Launch Your Project in RStudio](Images/launch_new_project.png){.border
+width= 55% fig-alt=“Screenshot of project folder with .Rproj file
+button”}
 
 2.  Next, create a new Quarto document (.qmd file) where you can work on
     the examples, exercises, and type any notes you may want.
 
 - File –\> New File –\> Quarto Document…
 
-<img src="Images/create_new_quarto_file.png" class="border"
-data-fig-alt="RStudio screen showing button navigation to create a new quarto document"
-alt="Create New Quarto Document" />
+![Create New Quarto Document](Images/create_new_quarto_file.png){width=
+55% .border fig-alt=“RStudio screen showing button navigation to create
+a new quarto document”}
 
 3.  Name your Quarto document
 
@@ -57,28 +62,32 @@ alt="Create New Quarto Document" />
 - **deselect** ‘Use visual markdown editor’
 - Click ‘Create Empty Document’
 
-<img src="Images/name_new_quarto_file.png" class="border"
-data-fig-alt="RStudio screen upon creating new quarto document: title box changed to &#39;Chapter 1&#39;, &#39;Use visual markdown editor&#39; is deselected, and &#39;Create Empty Document&#39; button is present and circled in red."
-alt="Name and Create an Empty Quarto Document" />
+![Name and Create an Empty Quarto
+Document](Images/name_new_quarto_file.png){width= 55% .border
+fig-alt=“RStudio screen upon creating new quarto document: title box
+changed to ‘Chapter 1’, ‘Use visual markdown editor’ is deselected, and
+‘Create Empty Document’ button is present and circled in red.”}
 
 You will see something like the following…
 
-<img src="Images/ch_1_quarto_file.png" class="border"
-data-fig-alt="RStudio screen with newly created &#39;Chapter 1&#39; quarto document. The file is blank besides the YAML header with &#39;title: Chapter 1&#39; and &#39;format: html&#39;."
-alt="Chapter 1 Quarto Document" />
+![Chapter 1 Quarto Document](Images/ch_1_quarto_file.png){width= 55%
+.border fig-alt=“RStudio screen with newly created ‘Chapter 1’ quarto
+document. The file is blank besides the YAML header with ‘title: Chapter
+1’ and ‘format: html’.”}
 
 4.  Change the YAML Header
 
 Notice that currently, your YAML header says ‘format: html’. Later, when
-we “render” our document, we *combine* the raw data, code, and text in
+we ‘render’ our document, we *combine* the raw data, code, and text in
 our .qmd file into a finished document. Changing the header of the
 document to ‘format: gfm’ ensures that the output is a markdown file. We
 want to render to a gfm (GitHub Flavored Markdown), specifically, as it
 is best viewed on GitHub.
 
-<img src="Images/change_yaml_header.png" class="border"
-data-fig-alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct &#39;Chapter 1&#39; title but the output format has been changed to &#39;format: gfm&#39;."
-alt="Change Output to gfm" />
+![Change Output to gfm](Images/change_yaml_header.png){width= 55%
+.border fig-alt=“Cropped screenshot of top left corner of RStudio
+screen. The YAML header has the correct ‘Chapter 1’ title but the output
+format has been changed to ‘format: gfm’.”}
 
 5.  Install Packages and Enable Reproducibility
 
@@ -87,10 +96,9 @@ consistency of your package versions, and thus consistency when sharing
 or reproducing your work. renv takes and saves a “photo” or “snapshot”
 of your current packages and versions and restores this exact setup when
 reopening or sharing the project. You will do this step each time you
-install or update a package. So, to start, let’s install ‘tidyverse’, a
-collection of packages designed for clean, or *tidy*, data science.
+install or update a package. So, to start, let’s install three packages.
 
-- In your **R Console**, install ‘tidyverse’, ‘palmerpenguins’, and
+- In your **R Console**, install the ‘tidyverse’, ‘palmerpenguins’, and
   ‘ggthemes’ packages:
 
 ``` r
@@ -103,9 +111,12 @@ This installation is using renv. However, if you forget and only run
 current packages and versions. This is always done in your R Console,
 which can be found here:
 
-<img src="Images/install_packages_in_console.png" class="border"
-data-fig-alt="RStudio screen navigated to the bottom by &#39;Console&#39;, which is circled in red. &#39;renv::install(c(&#39;tidyverse&#39;, &#39;palmerpenguins&#39;, &#39;ggthemes&#39;))&#39; is being run in the console, resulting in numerous downloads."
-alt="Install Packages in Your RConsole" />
+![Install Packages in Your
+RConsole](Images/install_packages_in_console.png){width= 55% .border
+fig-alt=“RStudio screen navigated to the bottom by ‘Console’, which is
+circled in red. ‘renv::install(c(’tidyverse’, ‘palmerpenguins’,
+‘ggthemes’))’ is being run in the console, resulting in numerous
+downloads.”}
 
 If you are prompted, type ‘Y’ to proceed with downloads.
 
@@ -152,7 +163,7 @@ AMAZING work! Now, let’s *really* get into it.
 
 ## Creating a ggplot
 
-*end goal*:
+**end goal**:
 
 <div id="fig-penguins">
 
@@ -165,8 +176,8 @@ Figure 1: Penguin flipper length vs. body mass relationship
 
 </div>
 
-*to begin*: Create a plot with the function ggplot(), which you will add
-**layers** to using different **arguments**. The first argument of
+**To begin**: Create a plot with the function ggplot(), which you will
+add **layers** to using different **arguments**. The first argument of
 ggplot() is the dataset to be used in the graph: ggplot(data = penguins)
 creates an empty graph that is primed to display the penguins dataset.
 
@@ -249,8 +260,8 @@ ggplot(
   geom_smooth(method = "lm")
 ```
 
-WAIT! This doesn’t look like our *end result* plot… think about why this
-may have happened.
+WAIT! This doesn’t look like our **end result** plot… think about why
+this may have happened.
 
 Now let’s try to match our expected ggplot which has one line of best
 fit. Since we want points to be colored based on species but don’t want
@@ -302,7 +313,7 @@ ggplot(
 ```
 
 Now we have a beautifully labeled scatterplot of penguins’ data that
-matches our *end goal*!
+matches our **end goal**!
 
 ------------------------------------------------------------------------
 
@@ -333,8 +344,8 @@ ggplot(data = penguins) +
     use this argument set to TRUE.
 
 7.  Add the following caption to the plot you made in the previous
-    exercise: “Data come from the palmerpenguins package.” Hint: Take a
-    look at the documentation for labs().
+    exercise: “Data come from the palmerpenguins package.” (**Hint:**
+    Take a look at the documentation for labs())
 
 8.  Recreate the following visualization. What aesthetic should
     bill_depth_mm be mapped to? And should it be mapped at the global
@@ -411,7 +422,7 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point()
 ```
 
-Which still shows the same result… with less typing! (hint: \*in the
+Which still shows the same result… with less typing! (**Hint**: in the
 future, you’ll also learn about the pipe, another concise method).
 
 ------------------------------------------------------------------------
@@ -622,8 +633,9 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
 1.  The mpg data frame that is bundled with the ggplot2 package contains
     234 observations collected by the US Environmental Protection Agency
     on 38 car models. Which variables in mpg are categorical? Which
-    variables are numerical? (Hint: Type ?mpg to read the documentation
-    for the dataset.) How can you see this information when you run mpg?
+    variables are numerical? (**Hint**: Type ?mpg to read the
+    documentation for the dataset.) How can you see this information
+    when you run mpg?
 
 2.  Make a scatterplot of hwy vs. displ using the mpg data frame. Next,
     map a third, numerical variable to color, then size, then both color
@@ -719,34 +731,38 @@ UCSC-Treehouse organization. Lastly, you will request your mentor as a
 push it to the main branch.
 
 Navigate back to **GitHub Desktop**… You should see your new changes
-highlighted in red and green.
+highlighted in red.
 
-1.  Push new Chapter 1 changes to Chapter-01 branch
+1.  Push new Chapter 1 changes to chapter-01 branch
 
-<img src="Images/push_ch_1_to_ch_1_branch.png" class="border"
-data-fig-alt="Cropped image of bottom left corder of GitHub Desktop screen where description &#39;Create and complete chapter 1&#39; is given and blue &#39;Commit 1 file to chapter-01&#39; button is visible at the bottom."
-alt="Push New Changes to New Chapter-01 Branch" />
+![Push New Changes to New Chapter-01
+Branch](Images/push_ch_1_to_ch_1_branch.png){width= 55% .border
+fig-alt=“Cropped image of bottom left corder of GitHub Desktop screen
+where description ‘Create and complete chapter 1’ is given and blue
+‘Commit 1 file to chapter-01’ button is visible at the bottom.”}
 
 2.  Publish the new chapter-01 branch
 
-<img src="Images/publish_ch_1_branch.png" class="border"
-data-fig-alt="GitHub Desktop screen where blue &#39;Publish branch&#39; button is present and circled in red."
-alt="Publish the chapter-01 Branch" />
+![Publish the chapter-01 Branch](Images/publish_ch_1_branch.png){width=
+55% .border fig-alt=“GitHub Desktop screen where blue ‘Publish branch’
+button is present and circled in red.”}
 
 3.  Create a pull request
 
-<img src="Images/create_pull_request.png" class="border"
-data-fig-alt="GitHub Desktop screen after committing changes to new branch, prompted to click &#39;Create Pull Request&#39; button in blue."
-alt="Create a Pull Request" />
+![Create a Pull Request](Images/create_pull_request.png){width= 55%
+.border fig-alt=“GitHub Desktop screen after committing changes to new
+branch, prompted to click ‘Create Pull Request’ button in blue.”}
 
-You will be relocated to the GitHub browser.
+You will be relocated to the **GitHub browser**.
 
-1.  Add your mentor as a reviewer (**note**: here I use ‘hbeale’ but
+1.  Add your mentor as a reviewer (**Note**: here I use ‘hbeale’ but
     make sure you are adding *your* mentor’s GitHub id)
 
-<img src="Images/add_reviewer_to_pull_request.png" class="border"
-data-fig-alt="GitHub browser screen upon creating a pull request. On the righthand side, a reviewer is added. The example shows &#39;hbeale&#39; as reviewer, circled in red."
-alt="Add Your Mentor as a Reviewer" />
+![Add Your Mentor as a
+Reviewer](Images/add_reviewer_to_pull_request.png){width= 55% .border
+fig-alt=“GitHub browser screen upon creating a pull request. On the
+righthand side, a reviewer is added. The example shows ‘hbeale’ as
+reviewer, circled in red.”}
 
 Now your mentor can review your work while making some suggested
 changes, where needed. After your mentor does this, when you return to

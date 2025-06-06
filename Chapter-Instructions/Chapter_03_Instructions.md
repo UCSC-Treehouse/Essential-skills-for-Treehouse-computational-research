@@ -23,7 +23,7 @@ of the tidyverse. We’ll illustrate the key ideas using data from the
 nycflights13 package and use ggplot2 to help us understand the data.
 
 First, install necessary packages to access datasets and plotting
-functions –\> copy the commands into your own **R Console**
+functions –\> copy the commands into your own **R Console**.
 
 ``` r
 # install core packages (run once)
@@ -38,10 +38,10 @@ renv::install(c("nycflights13", "tidyverse"))
     # Installing packages --------------------------------------------------------
     - Installing nycflights13 ...                   OK [linked from cache]
     - Installing tidyverse ...                      OK [linked from cache]
-    Successfully installed 2 packages in 5.2 milliseconds.
+    Successfully installed 2 packages in 11 milliseconds.
 
 Load libraries from installed packages (*run every session*) –\> copy
-the commands into your own **quarto notebook (.qmd file)**
+the commands into your own **quarto notebook (.qmd file)**.
 
 ``` r
 library(nycflights13)
@@ -235,7 +235,7 @@ flights |>
 2.  Sort flights to find the flights with the longest departure delays.
     Find the flights that left earliest in the morning.
 
-3.  Sort flights to find the fastest flights. (Hint: Try including a
+3.  Sort flights to find the fastest flights. (**Hint**: Try including a
     math calculation inside of your function.)
 
 4.  Was there a flight on every day of 2013?
@@ -330,28 +330,28 @@ might also have good reasons for overwriting flights.
 select() allows you to rapidly zoom in on a useful subset using
 operations based on the names of the variables:
 
--Select columns by name:
+- Select columns by name:
 
 ``` r
 flights |> 
   select(year, month, day)
 ```
 
--Select all columns between x and z (eg year and day)
+- Select all columns between x and z (eg year and day)
 
 ``` r
 flights |> 
   select(year:day)
 ```
 
--Select all columns except those from x to z (eg year to day):
+- Select all columns except those from x to z (eg year to day):
 
 ``` r
 flights |> 
   select(!year:day)
 ```
 
--Select all columns that are characters:
+- Select all columns that are characters:
 
 ``` r
 flights |> 
@@ -361,9 +361,12 @@ flights |>
 There are a number of helper functions you can use within select():
 
 -starts_with(“abc”): matches names that begin with “abc”.
--ends_with(“xyz”): matches names that end with “xyz”. -contains(“ijk”):
-matches names that contain “ijk”. -num_range(“x”, 1:3): matches x1, x2
-and x3.
+
+-ends_with(“xyz”): matches names that end with “xyz”.
+
+-contains(“ijk”): matches names that contain “ijk”.
+
+-num_range(“x”, 1:3): matches x1, x2 and x3.
 
 You can rename variables as you select() them by using =
 
@@ -505,11 +508,17 @@ flights |>
 There are five handy functions that allow you to extract specific rows
 within each group:
 
--df \|\> slice_head(n = 1) takes the first row from each group. -df \|\>
-slice_tail(n = 1) takes the last row in each group. -df \|\>
-slice_min(x, n = 1) takes the row with the smallest value of column x.
+-df \|\> slice_head(n = 1) takes the first row from each group.
+
+-df \|\> slice_tail(n = 1) takes the last row in each group.
+
+-df \|\> slice_min(x, n = 1) takes the row with the smallest value of
+column x.
+
 -df \|\> slice_max(x, n = 1) takes the row with the largest value of
-column x. -df \|\> slice_sample(n = 1) takes one random row.
+column x.
+
+-df \|\> slice_sample(n = 1) takes one random row.
 
 You can create groups using more than one variable. For example, we
 could make a group for each date.
@@ -560,8 +569,8 @@ flights |>
 
 1.  Which carrier has the worst average delays? Challenge: can you
     disentangle the effects of bad airports vs. bad carriers? Why/why
-    not? (Hint: think about flights \|\> group_by(carrier, dest) \|\>
-    summarize(n()))
+    not? (**Hint**: think about flights \|\> group_by(carrier, dest)
+    \|\> summarize(n()))
 
 2.  Find the flights that are most delayed upon departure from each
     destination.
@@ -670,7 +679,7 @@ batters
 
 Let’s plot the skill of the batter (measured by the batting average,
 performance) against the number of opportunities to hit the ball
-(measured by times at bat, n)
+(measured by times at bat, n).
 
 ``` r
 batters |> 

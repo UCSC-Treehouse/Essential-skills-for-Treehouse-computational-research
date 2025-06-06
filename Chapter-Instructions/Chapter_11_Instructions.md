@@ -73,10 +73,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   )
 ```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/mpg%20dataset%20scatterplot%20with%20labels-1.png)
-
 The purpose of a plot title is to summarize the main finding. Avoid
 titles that just describe what the plot is, e.g., “A scatterplot of
 engine displacement vs. fuel economy”.
@@ -107,8 +103,6 @@ ggplot(df, aes(x, y)) +
   )
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/label%20plots%20with%20math%20equations-1.png)
-
 ------------------------------------------------------------------------
 
 ## Exercises pt 1 of 5
@@ -119,16 +113,10 @@ ggplot(df, aes(x, y)) +
 2.  Recreate the following plot using the fuel economy data. Note that
     both the colors and shapes of points vary by type of drive train.
 
-<div id="fig-cars">
-
 <img src="Images/Ch11_Exercises_pt1_Q2.png" class="border"
-style="width:70.0%"
+style="width:55.0%"
 data-fig-alt="Scatterplot showing positive correlation between city miles per gallon vs highway miles per gallon, across 3 types of vehicles"
-data-fig-align="center" />
-
-Figure 1: City MPG vs Highway of Different car types
-
-</div>
+alt="City MPG vs Highway of Different car types" />
 
 3.  Take an exploratory graphic that you’ve created in the last month,
     and add informative titles to make it easier for others to
@@ -166,14 +154,6 @@ label_info <- mpg |>
 label_info
 ```
 
-    # A tibble: 3 × 4
-    # Groups:   drv [3]
-      displ   hwy drv   drive_type       
-      <dbl> <int> <chr> <chr>            
-    1   6.5    17 4     4-wheel drive    
-    2   5.3    25 f     front-wheel drive
-    3   7      24 r     rear-wheel drive 
-
 Then, we use this new data frame to directly label the three groups to
 replace the legend with labels placed directly on the plot. Using the
 fontface and size arguments we can customize the look of the text
@@ -192,10 +172,6 @@ ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   ) +
   theme(legend.position = "none")
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/exclude%20axes%20labels%20for%20on%20plot%20labels-1.png)
 
 Note the use of hjust (horizontal justification) and vjust (vertical
 justification) to control the alignment of the label.
@@ -217,10 +193,6 @@ ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   ) +
   theme(legend.position = "none")
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/automatic%20adjust%20label%20to%20avoid%20overlap-1.png)
 
 You can also use the same idea to highlight certain points on a plot
 with geom_text_repel() from the ggrepel package. Note another handy
@@ -273,8 +245,6 @@ trend_text <- "Larger engine sizes tend to have lower fuel economy." |>
 trend_text
 ```
 
-    [1] "Larger engine sizes tend to\nhave lower fuel economy."
-
 Then, we add two layers of annotation: one with a label geom and the
 other with a segment geom. The x and y aesthetics in both define where
 the annotation should start, and the xend and yend aesthetics in the
@@ -296,8 +266,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   )
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/add%20annotation%20and%20arrow%20to%20mpg%20plot-1.png)
-
 ------------------------------------------------------------------------
 
 ## Exercises pt 2 of 5
@@ -311,8 +279,8 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 
 3.  How do labels with geom_text() interact with faceting? How can you
     add a label to a single facet? How can you put a different label in
-    each facet? (Hint: Think about the dataset that is being passed to
-    geom_text().)
+    each facet? (**Hint**: Think about the dataset that is being passed
+    to geom_text().)
 
 4.  What arguments to geom_label() control the appearance of the
     background box?
@@ -332,8 +300,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class))
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/default%20ggplot2%20scales-1.png)
-
 ggplot2 automatically adds default scales behind the scenes:
 
 ``` r
@@ -343,8 +309,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   scale_y_continuous() +
   scale_color_discrete()
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/behind%20the%20scenes%20scales-1.png)
 
 Note the naming scheme for scales: scale\_ followed by the name of the
 aesthetic, then \_, then the name of the scale. The default scales are
@@ -383,8 +347,6 @@ ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   scale_y_continuous(breaks = seq(15, 40, by = 5)) 
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/break%20default%20y%20axis-1.png)
-
 You can use labels in the same way (a character vector the same length
 as breaks), but you can also set it to NULL to suppress the labels
 altogether. This can be useful for maps, or for publishing plots where
@@ -401,8 +363,6 @@ ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   scale_color_discrete(labels = c("4" = "4-wheel", "f" = "front", "r" = "rear"))
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/NULL%20axes%20labels-1.png)
-
 The labels argument coupled with labelling functions from the scales
 package is also useful for formatting numbers as currency, percent, etc.
 The plot on the *left* shows default labelling with label_dollar(),
@@ -415,11 +375,7 @@ breaks. Note that breaks is in the original scale of the data.
 ggplot(diamonds, aes(x = price, y = cut)) +
   geom_boxplot(alpha = 0.05) +
   scale_x_continuous(labels = label_dollar())
-```
 
-![](Chapter_11_Instructions_files/figure-commonmark/default%20and%20custom%20label%20on%20diamond%20dataset-1.png)
-
-``` r
 ggplot(diamonds, aes(x = price, y = cut)) +
   geom_boxplot(alpha = 0.05) +
   scale_x_continuous(
@@ -428,8 +384,6 @@ ggplot(diamonds, aes(x = price, y = cut)) +
   )
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/default%20and%20custom%20label%20on%20diamond%20dataset-2.png)
-
 Another handy label function is label_percent():
 
 ``` r
@@ -437,8 +391,6 @@ ggplot(diamonds, aes(x = cut, fill = clarity)) +
   geom_bar(position = "fill") +
   scale_y_continuous(name = "Percentage", labels = label_percent())
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/percent%20label-1.png)
 
 Another use of breaks is when you have relatively few data points and
 want to highlight exactly where the observations occur. For example,
@@ -453,8 +405,6 @@ presidential |>
   geom_segment(aes(xend = end, yend = id)) +
   scale_x_date(name = NULL, breaks = presidential$start, date_labels = "'%y")
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/presidential%20term%20lengths-1.png)
 
 Note that for the breaks argument we pulled out the start variable as a
 vector with presidential\$start because we can’t do an aesthetic mapping
@@ -481,31 +431,14 @@ base <- ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class))
 
 base + theme(legend.position = "right") # the default
-```
-
-![](Chapter_11_Instructions_files/figure-commonmark/themes%20on%20mpg%20dataset-1.png)
-
-``` r
 base + theme(legend.position = "left")
-```
-
-![](Chapter_11_Instructions_files/figure-commonmark/themes%20on%20mpg%20dataset-2.png)
-
-``` r
 base + 
   theme(legend.position = "top") +
   guides(color = guide_legend(nrow = 3))
-```
-
-![](Chapter_11_Instructions_files/figure-commonmark/themes%20on%20mpg%20dataset-3.png)
-
-``` r
 base + 
   theme(legend.position = "bottom") +
   guides(color = guide_legend(nrow = 3))
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/themes%20on%20mpg%20dataset-4.png)
 
 If your plot is short and wide, place the legend at the top or bottom,
 and if it’s tall and narrow, place the legend at the left or right. You
@@ -527,10 +460,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   guides(color = guide_legend(nrow = 2, override.aes = list(size = 4)))
 ```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/change%20nrow%20and%20enlarge%20points-1.png)
-
 ------------------------------------------------------------------------
 
 ## Replacing a Scale
@@ -545,16 +474,10 @@ we log transform them:
 ``` r
 ggplot(diamonds, aes(x = carat, y = price)) +
   geom_bin2d()
-```
 
-![](Chapter_11_Instructions_files/figure-commonmark/log%20transform%20both%20variables%20in%20transformation-1.png)
-
-``` r
 ggplot(diamonds, aes(x = log10(carat), y = log10(price))) +
   geom_bin2d()
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/log%20transform%20both%20variables%20in%20transformation-2.png)
 
 However, the disadvantage of this transformation is that the axes are
 now labelled with the transformed values, making it hard to interpret
@@ -568,8 +491,6 @@ ggplot(diamonds, aes(x = carat, y = price)) +
   scale_y_log10()
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/log%20transform%20both%20variables%20in%20aesthetics-1.png)
-
 Another scale that is frequently customized is color. The default
 categorical scale picks colors that are evenly spaced around the color
 wheel. Useful alternatives are the ColorBrewer scales which have been
@@ -579,17 +500,11 @@ blindness.
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv))
-```
 
-![](Chapter_11_Instructions_files/figure-commonmark/colorblind%20preferred%20palettes-1.png)
-
-``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv)) +
   scale_color_brewer(palette = "Set1")
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/colorblind%20preferred%20palettes-2.png)
 
 Don’t forget simpler techniques for improving accessibility. If there
 are just a few colors, you can add a redundant shape mapping. This will
@@ -600,8 +515,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv, shape = drv)) +
   scale_color_brewer(palette = "Set1")
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/redundant%20shape%20mapping-1.png)
 
 When you have a predefined mapping between values and colors, use
 scale_color_manual(). For example, if we map presidential party to
@@ -617,8 +530,6 @@ presidential |>
   geom_segment(aes(xend = end, yend = id)) +
   scale_color_manual(values = c(Republican = "#E81B23", Democratic = "#00AEF3"))
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/hex%20color%20codes-1.png)
 
 For continuous color, you can use the built-in scale_color_gradient() or
 scale_fill_gradient(). If you have a diverging scale, you can use
@@ -677,23 +588,13 @@ variables, but subsets the data that are plotted.
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv)) +
   geom_smooth()
-```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/engine%20size%20v%20fuel%20efficiency%20by%20drv,%20subset-1.png)
-
-``` r
 mpg |>
   filter(displ >= 5 & displ <= 6 & hwy >= 10 & hwy <= 25) |>
   ggplot(aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv)) +
   geom_smooth()
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/engine%20size%20v%20fuel%20efficiency%20by%20drv,%20subset-2.png)
 
 Let’s compare these to the two plots below where the plot on the left
 sets the limits on individual scales and the plot on the right sets them
@@ -707,28 +608,12 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth() +
   scale_x_continuous(limits = c(5, 6)) +
   scale_y_continuous(limits = c(10, 25))
-```
 
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    Warning: Removed 202 rows containing non-finite outside the scale range
-    (`stat_smooth()`).
-
-    Warning: Removed 202 rows containing missing values or values outside the scale range
-    (`geom_point()`).
-
-![](Chapter_11_Instructions_files/figure-commonmark/best%20way%20to%20zoom-1.png)
-
-``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv)) +
   geom_smooth() +
   coord_cartesian(xlim = c(5, 6), ylim = c(10, 25))
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/best%20way%20to%20zoom-2.png)
 
 Setting the limits on individual scales is generally more useful if you
 want to expand the limits, e.g., to match scales across different plots.
@@ -740,7 +625,6 @@ x-axis, the y-axis, and the color aesthetic) have different ranges.
 suv <- mpg |> filter(class == "suv")
 compact <- mpg |> filter(class == "compact")
 
-#| eval: true
 ggplot(suv, aes(x = displ, y = hwy, color = drv)) +
   geom_point()
 
@@ -756,7 +640,6 @@ x_scale <- scale_x_continuous(limits = range(mpg$displ))
 y_scale <- scale_y_continuous(limits = range(mpg$hwy))
 col_scale <- scale_color_discrete(limits = unique(mpg$drv))
 
-#| eval: true
 ggplot(suv, aes(x = displ, y = hwy, color = drv)) +
   geom_point() +
   x_scale +
@@ -811,8 +694,6 @@ ggplot(diamonds, aes(x = carat, y = price)) +
   geom_point(aes(color = cut), alpha = 1/20)
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/ch%2011%20exercises%20pt%203%20#4-1.png)
-
 ------------------------------------------------------------------------
 
 ## Themes
@@ -825,10 +706,6 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth(se = FALSE) +
   theme_bw()
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](Chapter_11_Instructions_files/figure-commonmark/theme%20for%20non%20data-1.png)
 
 Many more are included in add-on packages like ggthemes
 (https://jrnold.github.io/ggthemes), by Jeffrey Arnold. You can also
@@ -868,12 +745,6 @@ ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   )
 ```
 
-    Warning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2
-    3.5.0.
-    ℹ Please use the `legend.position.inside` argument of `theme()` instead.
-
-![](Chapter_11_Instructions_files/figure-commonmark/bold%20plot%20labels%20and%20position%20text-1.png)
-
 ------------------------------------------------------------------------
 
 ## Exercises pt 4 of 5
@@ -906,8 +777,6 @@ p2 <- ggplot(mpg, aes(x = drv, y = hwy)) +
 p1 + p2
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/multiple%20plots%20together-1.png)
-
 You can also create complex plot layouts with patchwork. In the
 following, \| places the p1 and p3 next to each other and / moves p2 to
 the next line.
@@ -918,8 +787,6 @@ p3 <- ggplot(mpg, aes(x = cty, y = hwy)) +
   labs(title = "Plot 3")
 (p1 | p3) / p2
 ```
-
-![](Chapter_11_Instructions_files/figure-commonmark/more%20complex%20multi%20plot%20layouts-1.png)
 
 Additionally, patchwork allows you to collect legends from multiple
 plots into one common legend, customize the placement of the legend as
@@ -972,8 +839,6 @@ p5 <- ggplot(mpg, aes(x = cty, y = hwy, color = drv)) +
   theme(legend.position = "top")
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/heavily%20customized%20multi%20plot%20layout-1.png)
-
 ------------------------------------------------------------------------
 
 ## Exercises pt 5 of 5
@@ -995,8 +860,6 @@ p3 <- ggplot(mpg, aes(x = cty, y = hwy)) +
 (p1 | p2) / p3
 ```
 
-![](Chapter_11_Instructions_files/figure-commonmark/ch%2011%20exercises%20pt%205%20#1-1.png)
-
 2.  Using the three plots from the previous exercise, recreate the
     following patchwork.
 
@@ -1007,13 +870,15 @@ style="width:55.0%"
 data-fig-alt="Three plots, 2 scatterplots, 1 with negative correlation between car type and fuel efficiency, 1 with positive correlation between city and highway fuel efficiency. Finally, 1 last boxplot shows 3 types of vehicles&#39; fuel efficiency."
 data-fig-align="center" />
 
-Figure 2: Chapter 11 Exercise pt 5 \#2: Three plots of mpg dataset
+Figure 1: Chapter 11 Exercise pt 5 \#2: Three plots of mpg dataset
 
 </div>
 
 For the next 8 chapters (12-19) you’ll learn about the most important
 types of variables that you’ll encounter inside a data frame and learn
 the tools you can use to work with them.
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 12](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_12_Instructions.md)

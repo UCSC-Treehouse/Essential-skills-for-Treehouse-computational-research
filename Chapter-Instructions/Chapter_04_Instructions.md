@@ -38,12 +38,12 @@ library(tidyverse)
 library(nycflights13)
 ```
 
-## **NEXT UP:** [Chapter 5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)
+------------------------------------------------------------------------
 
 ## Names
 
 Remember that variable names (those created by \<- and those created by
-mutate()) should use only lowercase letters, numbers, and “*”. Use ”*”
+mutate()) should use only lowercase letters, numbers, and “\_”. Use “\_”
 to separate words within a name. As a general rule of thumb, it’s better
 to prefer long, descriptive names that are easy to understand rather
 than concise names that are fast to type.
@@ -189,6 +189,8 @@ flights|>filter(carrier=="UA",dest%in%c("IAH","HOU"),sched_dep_time>
 0900,sched_arr_time<2000)|>group_by(flight)|>summarize(delay=mean(
 arr_delay,na.rm=TRUE),cancelled=sum(is.na(arr_delay)),n=n())|>filter(n>10)
 ```
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)

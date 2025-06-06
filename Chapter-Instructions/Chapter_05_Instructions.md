@@ -34,7 +34,7 @@ core tidyverse.
     ✖ dplyr::lag()    masks stats::lag()
     ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
-## **NEXT UP:** [Chapter 6](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_06_Instructions.md)
+------------------------------------------------------------------------
 
 ## Tidy Data
 
@@ -156,9 +156,12 @@ After the data, there are three key arguments:
 -cols specifies which columns need to be pivoted, i.e. which columns
 aren’t variables. This argument uses the same syntax as select() so here
 we could use !c(artist, track, date.entered) or starts_with(“wk”).
+
 -names_to names the variable stored in the column names, we named that
-variable week. -values_to names the variable stored in the cell values,
-we named that variable rank.
+variable week.
+
+-values_to names the variable stored in the cell values, we named that
+variable rank.
 
 Note that in the code “week” and “rank” are quoted because those are new
 variables we’re creating, they don’t yet exist in the data when we run
@@ -503,6 +506,8 @@ df |>
 What’s gone wrong? Repair the underlying damage or use your grouping and
 summarizing skills to ensure that each combination of row and column
 values only has a single row.
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 6](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_06_Instructions.md)

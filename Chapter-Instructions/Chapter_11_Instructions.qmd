@@ -1,7 +1,6 @@
 ---
 title: "Chapter 11, Communication"
-format:
-  gfm
+format: gfm
 ---
 
 Now that you understand your data, you need to **communicate** your understanding to others.
@@ -30,6 +29,7 @@ library(patchwork)
 The easiest place to start when turning an exploratory graphic into an expository graphic is with good labels.
 You add labels with the labs() function.
 ```{r mpg dataset scatterplot with labels}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class)) +
   geom_smooth(se = FALSE) +
@@ -53,6 +53,7 @@ It’s usually a good idea to replace short variable names with more detailed de
 It’s possible to use mathematical equations instead of text strings.
 Just switch "" out for quote() and read about the available options in ?plotmath:
 ```{r label plots with math equations}
+#| eval: false
 df <- tibble(
   x = 1:10,
   y = cumsum(x^2)
@@ -75,7 +76,7 @@ ggplot(df, aes(x, y)) +
 2. Recreate the following plot using the fuel economy data.
 Note that both the colors and shapes of points vary by type of drive train.
 
-![City MPG vs Highway of Different car types](Images/Ch11_Exercises_pt1_Q2.png){#fig-cars width=70% fig-alt="Scatterplot showing positive correlation between city miles per gallon vs highway miles per gallon, across 3 types of vehicles" fig-align="center" .border}
+![City MPG vs Highway of Different car types](Images/Ch11_Exercises_pt1_Q2.png){width=55% fig-alt="Scatterplot showing positive correlation between city miles per gallon vs highway miles per gallon, across 3 types of vehicles" .border}
 
 3. Take an exploratory graphic that you’ve created in the last month, and add informative titles to make it easier for others to understand.
 
@@ -92,6 +93,7 @@ There are two possible sources of labels.
 First, you might have a tibble that provides labels.
 In the following plot we pull out the cars with the highest engine size in each drive type and save their information as a new data frame called label_info.
 ```{r tibble labels first}
+#| eval: false
 label_info <- mpg |>
   group_by(drv) |>
   arrange(desc(displ)) |>
@@ -113,6 +115,7 @@ Using the fontface and size arguments we can customize the look of the text labe
 They’re larger than the rest of the text on the plot and bolded.
 (theme(legend.position = "none") turns all the legends off — we’ll talk about it more shortly.)
 ```{r exclude axes labels for on plot labels}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   geom_point(alpha = 0.3) +
   geom_smooth(se = FALSE) +
@@ -130,6 +133,7 @@ However the annotated plot we made above is hard to read because the labels over
 We can use the geom_label_repel() function from the ggrepel package to address both of these issues.
 This useful package will automatically adjust labels so that they don’t overlap:
 ```{r automatic adjust label to avoid overlap}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   geom_point(alpha = 0.3) +
   geom_smooth(se = FALSE) +
@@ -176,6 +180,7 @@ As a rule of thumb, geoms are generally useful for highlighting a subset of the 
 To demonstrate using annotate(), let’s create some text to add to our plot.
 The text is a bit long, so we’ll use stringr::str_wrap() to automatically add line breaks to it given the number of characters you want per line:
 ```{r text to add to mpg plot}
+#| eval: false
 trend_text <- "Larger engine sizes tend to have lower fuel economy." |>
   str_wrap(width = 30)
 trend_text
@@ -185,6 +190,7 @@ Then, we add two layers of annotation: one with a label geom and the other with 
 The x and y aesthetics in both define where the annotation should start, and the xend and yend aesthetics in the segment annotation define the end location of the segment.
 Note also that the segment is styled as an arrow.
 ```{r add annotation and arrow to mpg plot}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point() +
   annotate(
@@ -211,7 +217,7 @@ Customize the shape, size, or color of the point.
 3. How do labels with geom_text() interact with faceting?
 How can you add a label to a single facet?
 How can you put a different label in each facet?
-(Hint: Think about the dataset that is being passed to geom_text().)
+(**Hint**: Think about the dataset that is being passed to geom_text().)
 
 4. What arguments to geom_label() control the appearance of the background box?
 
@@ -226,12 +232,14 @@ Create a series of plots that demonstrate the most important options.
 Normally, ggplot2 automatically adds scales for you.
 For example, when you type:
 ```{r default ggplot2 scales}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class))
 ```
 
 ggplot2 automatically adds default scales behind the scenes:
 ```{r behind the scenes scales}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class)) +
   scale_x_continuous() +
@@ -262,6 +270,7 @@ There are two primary arguments that affect the appearance of the **ticks** on t
 Labels controls the text label associated with each tick/key.
 The most common use of breaks is to override the default choice:
 ```{r break default y axis}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   geom_point() +
   scale_y_continuous(breaks = seq(15, 40, by = 5)) 
@@ -272,6 +281,7 @@ This can be useful for maps, or for publishing plots where you can’t share the
 You can also use breaks and labels to control the appearance of legends.
 For discrete scales for categorical variables, labels can be a named list of the existing level names and the desired labels for them.
 ```{r NULL axes labels}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   geom_point() +
   scale_x_continuous(labels = NULL) +
@@ -284,6 +294,7 @@ The plot on the *left* shows default labelling with label_dollar(), which adds a
 The plot on the *right* adds further customization by dividing dollar values by 1,000 and adding a suffix “K” (for “thousands”) as well as adding custom breaks.
 Note that breaks is in the original scale of the data.
 ```{r default and custom label on diamond dataset}
+#| eval: false
 ggplot(diamonds, aes(x = price, y = cut)) +
   geom_boxplot(alpha = 0.05) +
   scale_x_continuous(labels = label_dollar())
@@ -298,6 +309,7 @@ ggplot(diamonds, aes(x = price, y = cut)) +
 
 Another handy label function is label_percent():
 ```{r percent label}
+#| eval: false
 ggplot(diamonds, aes(x = cut, fill = clarity)) +
   geom_bar(position = "fill") +
   scale_y_continuous(name = "Percentage", labels = label_percent())
@@ -306,6 +318,7 @@ ggplot(diamonds, aes(x = cut, fill = clarity)) +
 Another use of breaks is when you have relatively few data points and want to highlight exactly where the observations occur.
 For example, take this plot that shows when each US president started and ended their term.
 ```{r presidential term lengths}
+#| eval: false
 presidential |>
   mutate(id = 33 + row_number()) |>
   ggplot(aes(x = start, y = id)) +
@@ -329,6 +342,7 @@ To control the overall *position* of the legend, you need to use a theme() setti
 We’ll come back to *themes* at the end of the chapter, but in brief, they control the non-data parts of the plot.
 The theme setting legend.position controls where the legend is drawn:
 ```{r themes on mpg dataset}
+#| eval: false
 base <- ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class))
 
@@ -349,6 +363,7 @@ To control the display of individual legends, use guides() along with guide_lege
 The following example shows two important settings: controlling the number of rows the legend uses with nrow, and overriding one of the aesthetics to make the points bigger.
 This is particularly useful if you have used a low alpha to display many points on a plot.
 ```{r change nrow and enlarge points}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class)) +
   geom_smooth(se = FALSE) +
@@ -365,6 +380,7 @@ There are two types of scales you’re mostly likely to want to switch out: cont
 It’s very useful to plot transformations of your variable.
 For example, it’s easier to see the precise relationship between carat and price if we log transform them:
 ```{r log transform both variables in transformation}
+#| eval: false
 ggplot(diamonds, aes(x = carat, y = price)) +
   geom_bin2d()
 
@@ -375,6 +391,7 @@ ggplot(diamonds, aes(x = log10(carat), y = log10(price))) +
 However, the disadvantage of this transformation is that the axes are now labelled with the transformed values, making it hard to interpret the plot.
 Instead of doing the transformation in the aesthetic mapping, we can instead do it with the scale.
 ```{r log transform both variables in aesthetics}
+#| eval: false
 ggplot(diamonds, aes(x = carat, y = price)) +
   geom_bin2d() + 
   scale_x_log10() + 
@@ -385,6 +402,7 @@ Another scale that is frequently customized is color.
 The default categorical scale picks colors that are evenly spaced around the color wheel.
 Useful alternatives are the ColorBrewer scales which have been hand tuned to work better for people with common types of color blindness.
 ```{r colorblind preferred palettes}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv))
 
@@ -397,6 +415,7 @@ Don’t forget simpler techniques for improving accessibility.
 If there are just a few colors, you can add a redundant shape mapping.
 This will also help ensure your plot is interpretable in black and white.
 ```{r redundant shape mapping}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv, shape = drv)) +
   scale_color_brewer(palette = "Set1")
@@ -406,6 +425,7 @@ When you have a predefined mapping between values and colors, use scale_color_ma
 For example, if we map presidential party to color, we want to use the standard mapping of red for Republicans and blue for Democrats.
 One approach for assigning these colors is using hex color codes:
 ```{r hex color codes}
+#| eval: false
 presidential |>
   mutate(id = 33 + row_number()) |>
   ggplot(aes(x = start, y = id, color = party)) +
@@ -462,6 +482,7 @@ We’ll demonstrate these options in a series of plots.
 The plot on the left shows the relationship between engine size and fuel efficiency, colored by type of drive train.
 The plot on the right shows the same variables, but subsets the data that are plotted.
 ```{r engine size v fuel efficiency by drv, subset}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv)) +
   geom_smooth()
@@ -477,6 +498,7 @@ Let’s compare these to the two plots below where the plot on the left sets the
 We can see that reducing the limits is *equivalent* to subsetting the data.
 Therefore, to zoom in on a region of the plot, it’s generally best to use coord_cartesian().
 ```{r best way to zoom}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = drv)) +
   geom_smooth() +
@@ -496,7 +518,6 @@ For example, if we extract two classes of cars and plot them separately, it’s 
 suv <- mpg |> filter(class == "suv")
 compact <- mpg |> filter(class == "compact")
 
-#| eval: true
 ggplot(suv, aes(x = displ, y = hwy, color = drv)) +
   geom_point()
 
@@ -511,7 +532,6 @@ x_scale <- scale_x_continuous(limits = range(mpg$displ))
 y_scale <- scale_y_continuous(limits = range(mpg$hwy))
 col_scale <- scale_color_discrete(limits = unique(mpg$drv))
 
-#| eval: true
 ggplot(suv, aes(x = displ, y = hwy, color = drv)) +
   geom_point() +
   x_scale +
@@ -556,6 +576,7 @@ How does it compare to labs()?
 4. First, create the following plot.
 Then, modify the code using override.aes to make the legend easier to see.
 ```{r ch 11 exercises pt 3 #4}
+#| eval: false
 ggplot(diamonds, aes(x = carat, y = price)) +
   geom_point(aes(color = cut), alpha = 1/20)
 ```
@@ -566,6 +587,7 @@ ggplot(diamonds, aes(x = carat, y = price)) +
 
 You can customize the non-data elements of your plot with a theme:
 ```{r theme for non data}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(color = class)) +
   geom_smooth(se = FALSE) +
@@ -583,6 +605,7 @@ The theme elements that control the position of the title and the caption are pl
 In the following plot these are set to "plot" to indicate these elements are aligned to the entire plot area, instead of the plot panel (the default).
 A few other helpful theme() components are used to change the placement for format of the title and caption text.
 ```{r bold plot labels and position text}
+#| eval: false
 ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
   geom_point() +
   labs(
@@ -620,6 +643,7 @@ To place two plots next to each other, you can simply add them to each other.
 Note that you first need to create the plots and save them as objects (in the following example they’re called p1 and p2).
 Then, you place them next to each other with +.
 ```{r multiple plots together}
+#| eval: false
 p1 <- ggplot(mpg, aes(x = displ, y = hwy)) + 
   geom_point() + 
   labs(title = "Plot 1")
@@ -632,6 +656,7 @@ p1 + p2
 You can also create complex plot layouts with patchwork.
 In the following, | places the p1 and p3 next to each other and / moves p2 to the next line.
 ```{r more complex multi plot layouts}
+#| eval: false
 p3 <- ggplot(mpg, aes(x = cty, y = hwy)) + 
   geom_point() + 
   labs(title = "Plot 3")
@@ -648,6 +673,7 @@ The legend is placed on top, inside the guide_area().
 Finally, we have also customized the heights of the various components of our patchwork – the guide has a height of 1, the box plots 3, density plots 2, and the faceted scatterplot 4.
 Patchwork divides up the area you have allotted for your plot using this scale and places the components accordingly.
 ```{r heavily customized multi plot layout}
+#| eval: false
 p1 <- ggplot(mpg, aes(x = drv, y = cty, color = drv)) + 
   geom_boxplot(show.legend = FALSE) + 
   labs(title = "Plot 1")
@@ -688,6 +714,7 @@ p5 <- ggplot(mpg, aes(x = cty, y = hwy, color = drv)) +
 1. What happens if you omit the parentheses in the following plot layout.
 Can you explain why this happens?
 ```{r ch 11 exercises pt 5 #1}
+#| eval: false
 p1 <- ggplot(mpg, aes(x = displ, y = hwy)) + 
   geom_point() + 
   labs(title = "Plot 1")
@@ -706,5 +733,7 @@ p3 <- ggplot(mpg, aes(x = cty, y = hwy)) +
 ![Chapter 11 Exercise pt 5 #2: Three plots of mpg dataset](Images/Ch11_Exercise_pt5_Q2.png){#fig-cars width=55% fig-alt="Three plots, 2 scatterplots, 1 with negative correlation between car type and fuel efficiency, 1 with positive correlation between city and highway fuel efficiency. Finally, 1 last boxplot shows 3 types of vehicles' fuel efficiency." fig-align="center" .border}
 
 For the next 8 chapters (12-19) you’ll learn about the most important types of variables that you’ll encounter inside a data frame and learn the tools you can use to work with them.
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter 12](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_12_Instructions.md)

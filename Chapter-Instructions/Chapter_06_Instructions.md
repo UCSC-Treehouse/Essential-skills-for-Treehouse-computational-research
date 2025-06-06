@@ -128,19 +128,21 @@ project folder ends up.
 Absolute paths point to the same place regardless of your working
 directory. They look a little different depending on your operating
 system. On Windows they start with a drive letter (e.g., C:) or two
-backslashes (e.g., \servername) and on Mac/Linux they start with a slash
-“/” (e.g., /users/hadley). You should **never** use absolute paths in
-your scripts, because they hinder sharing: no one else will have exactly
-the same directory configuration as you.
+backslashes (e.g., “\servername”) and on Mac/Linux they start with a
+slash “/” (e.g., /users/hadley). You should **never** use absolute paths
+in your scripts, because they hinder sharing: no one else will have
+exactly the same directory configuration as you.
 
 There’s another important difference between operating systems: how you
 separate the components of the path. Mac and Linux uses slashes (e.g.,
-data/diamonds.csv) and Windows uses backslashes (e.g., data.csv). R can
-work with either type (no matter what platform you’re currently using),
-but unfortunately, backslashes mean something special to R, and to get a
-single backslash in the path, you need to type two backslashes! That
-makes life frustrating, so we recommend always using the Linux/Mac style
-with forward slashes.
+“data/diamonds.csv”) and Windows uses backslashes (e.g., “data.csv”). R
+can work with either type (no matter what platform you’re currently
+using), but unfortunately, backslashes mean something special to R, and
+to get a single backslash in the path, you need to type two backslashes!
+That makes life frustrating, so we recommend always using the Linux/Mac
+style with forward slashes.
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 7](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_07_Instructions.md)

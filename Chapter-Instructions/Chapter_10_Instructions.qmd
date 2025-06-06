@@ -1,7 +1,6 @@
 ---
 title: "Chapter 10, Exploratory Data Analysis"
-format:
-  gfm
+format: gfm
 ---
 
 This chapter will show you how to use visualization and transformation to explore your data in a systematic way, a task that statisticians call **exploratory data analysis**, or **EDA** for short.
@@ -158,7 +157,7 @@ Think about a diamond and how you might decide which dimension is the length, wi
 
 2. Explore the distribution of price.
 Do you discover anything unusual or surprising?
-(Hint: Carefully think about the binwidth and make sure you try a wide range of values.)
+(**Hint**: Carefully think about the binwidth and make sure you try a wide range of values.)
 
 3. How many diamonds are 0.99 carat?
 How many are 1 carat?
@@ -532,5 +531,7 @@ Once you’ve removed the strong relationship between carat and price, you can s
 ggplot(diamonds_aug, aes(x = cut, y = .resid)) + 
   geom_boxplot()
 ```
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter 11](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_11_Instructions.md)

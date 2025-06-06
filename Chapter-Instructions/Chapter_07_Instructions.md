@@ -41,11 +41,19 @@ simple CSV file looks like. The first row, commonly called the header
 row, gives the column names, and the following six rows provide the
 data. The columns are separated, aka **delimited**, by commas.
 
-Student ID,Full Name,favourite.food,mealPlan,AGE 1,Sunil
-Huffmann,Strawberry yoghurt,Lunch only,4 2,Barclay Lynn,French
-fries,Lunch only,5 3,Jayendra Lyne,N/A,Breakfast and lunch,7 4,Leon
-Rossini,Anchovies,Lunch only, 5,Chidiegwu Dunkel,Pizza,Breakfast and
-lunch,five 6,Güvenç Attila,Ice cream,Lunch only,6
+Student ID,Full Name,favourite.food,mealPlan,AGE
+
+1,Sunil Huffmann,Strawberry yoghurt,Lunch only,4
+
+2,Barclay Lynn,French fries,Lunch only,5
+
+3,Jayendra Lyne,N/A,Breakfast and lunch,7
+
+4,Leon Rossini,Anchovies,Lunch only,
+
+5,Chidiegwu Dunkel,Pizza,Breakfast and lunch,five
+
+6,Güvenç Attila,Ice cream,Lunch only,6
 
 We can read this file into R using read_csv(). The first argument is the
 most important: the path to the file. You can think about the path as
@@ -253,9 +261,11 @@ for:
 
 4.  Sometimes strings in a CSV file contain commas. To prevent them from
     causing problems, they need to be surrounded by a quoting character,
-    like ” or ‘. By default, read_csv() assumes that the quoting
+    like ” or ’. By default, read_csv() assumes that the quoting
     character will be “. To read the following text into a data frame,
-    what argument to read_csv() do you need to specify?”x,y,’a,b’”
+    what argument to read_csv() do you need to specify?
+
+“x,y,‘a,b’”
 
 5.  Identify what is wrong with each of the following inline CSV files.
     What happens when you run the code?
@@ -516,6 +526,8 @@ tribble(
   5, "g", 0.60
 )
 ```
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 8](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_08_Instructions.md)

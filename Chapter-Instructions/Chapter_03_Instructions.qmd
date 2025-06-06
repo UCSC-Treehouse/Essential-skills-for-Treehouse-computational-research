@@ -1,7 +1,6 @@
 ---
 title: "Chapter 3, Data Transformation"
-format:
-  gfm
+format: gfm
 ---
 
 Visualization is an important tool for generating insight, but it’s rare that you get the data in exactly the right form you need to make the graph you want.
@@ -17,13 +16,13 @@ The goal of this chapter is to give you an overview of all the key tools for tra
 In this chapter, we’ll focus on the dplyr package, another core member of the tidyverse.
 We’ll illustrate the key ideas using data from the nycflights13 package and use ggplot2 to help us understand the data.
 
-First, install necessary packages to access datasets and plotting functions --> copy the commands into your own **R Console**
+First, install necessary packages to access datasets and plotting functions --> copy the commands into your own **R Console**.
 ```{r R CONSOLE prerequisites}
 # install core packages (run once)
 renv::install(c("nycflights13", "tidyverse"))
 ```
 
-Load libraries from installed packages (*run every session*) --> copy the commands into your own **quarto notebook (.qmd file)**
+Load libraries from installed packages (*run every session*) --> copy the commands into your own **quarto notebook (.qmd file)**.
 ```{r load libraries}
 library(nycflights13)
 library(tidyverse)
@@ -183,7 +182,7 @@ flights |>
 Find the flights that left earliest in the morning.
 
 3. Sort flights to find the fastest flights.
-(Hint: Try including a math calculation inside of your function.)
+(**Hint**: Try including a math calculation inside of your function.)
 
 4. Was there a flight on every day of 2013?
 
@@ -257,28 +256,28 @@ Often, the right answer is a new object that is named informatively to indicate 
 
 select() allows you to rapidly zoom in on a useful subset using operations based on the names of the variables:
 
--Select columns by name:
+- Select columns by name:
 ```{r select by name}
 #| eval: false
 flights |> 
   select(year, month, day)
 ```
 
--Select all columns between x and z (eg year and day)
+- Select all columns between x and z (eg year and day)
 ```{r select between}
 #| eval: false
 flights |> 
   select(year:day)
 ```
 
--Select all columns except those from x to z (eg year to day):
+- Select all columns except those from x to z (eg year to day):
 ```{r select except}
 #| eval: false
 flights |> 
   select(!year:day)
 ```
 
--Select all columns that are characters:
+- Select all columns that are characters:
 ```{r select chr}
 #| eval: false
 flights |> 
@@ -288,8 +287,11 @@ flights |>
 There are a number of helper functions you can use within select():
 
 -starts_with("abc"): matches names that begin with “abc”.
+
 -ends_with("xyz"): matches names that end with “xyz”.
+
 -contains("ijk"): matches names that contain “ijk”.
+
 -num_range("x", 1:3): matches x1, x2 and x3.
 
 You can rename variables as you select() them by using =
@@ -416,9 +418,13 @@ flights |>
 There are five handy functions that allow you to extract specific rows within each group:
 
 -df |> slice_head(n = 1) takes the first row from each group.
+
 -df |> slice_tail(n = 1) takes the last row in each group.
+
 -df |> slice_min(x, n = 1) takes the row with the smallest value of column x.
+
 -df |> slice_max(x, n = 1) takes the row with the largest value of column x.
+
 -df |> slice_sample(n = 1) takes one random row.
 
 You can create groups using more than one variable.
@@ -470,7 +476,7 @@ flights |>
 1. Which carrier has the worst average delays?
 Challenge: can you disentangle the effects of bad airports vs. bad carriers?
 Why/why not?
-(Hint: think about flights |> group_by(carrier, dest) |> summarize(n()))
+(**Hint**: think about flights |> group_by(carrier, dest) |> summarize(n()))
 
 2. Find the flights that are most delayed upon departure from each destination.
 
@@ -568,7 +574,7 @@ batters <- Lahman::Batting |>
 batters
 ```
 
-Let's plot the skill of the batter (measured by the batting average, performance) against the number of opportunities to hit the ball (measured by times at bat, n)
+Let's plot the skill of the batter (measured by the batting average, performance) against the number of opportunities to hit the ball (measured by times at bat, n).
 ```{r skill of batter}
 #| eval: false
 batters |> 

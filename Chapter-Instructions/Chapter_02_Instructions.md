@@ -26,9 +26,9 @@ x <- 3 * 4
 ```
 
 Note that the value of x is not printed, it is just stored. If you want
-to view the value, type x in the console. (*hint: you can also highlight
-the object name by double clicking and pressing command + enter. another
-simple way, type the object name and run the line*)
+to view the value, type x in the console. (**Hint**: you can also
+highlight the object name by double clicking and pressing command +
+enter. another simple way, type the object name and run the line)
 
 You can combine multiple elements into a vector with c():
 
@@ -90,9 +90,9 @@ this knowledge from the code itself.
 ## What’s in a name?
 
 Object names must start with a letter and can only contain letters,
-numbers, “*”, and ”.”. You want your object names to be descriptive, so
+numbers, “\_”, and “.”. You want your object names to be descriptive, so
 you’ll need to adopt a convention for multiple words. We recommend
-**snake_case**, where you separate lowercase words with ”*”.
+**snake_case**, where you separate lowercase words with “\_”.
 
 i_use_snake_case
 
@@ -193,6 +193,8 @@ ggplot(dTA = mpg) +
 my_bar_plot \<- ggplot(mpg, aes(x = class)) + geom_bar() my_scatter_plot
 \<- ggplot(mpg, aes(x = cty, y = hwy)) + geom_point() ggsave(filename =
 “mpg-plot.png”, plot = my_bar_plot)
+
+------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
 3](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_03_Instructions.md)
