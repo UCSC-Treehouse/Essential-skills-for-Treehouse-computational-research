@@ -34,16 +34,16 @@ In RStudio:
 - File –\> New Project –\> New Directory –\> Quarto Project
 
 ![Create New Project in Github
-Desktop](Images/create_new_project.png){width= 55% fig-alt=“Image
-showing file button to create ‘New Project’” .border}
+Desktop](Images/create_new_project.png){width= 55% .border}
+fig-alt=“Image showing file button to create ‘New Project’”
 
 ![Create New Project in New
-Directory](Images/project_in_existing_directory.png){width= 55%
+Directory](Images/project_in_existing_directory.png){width= 55% .border}
 fig-alt=“Image showing button on RStudio to ‘Create Project’ within ‘New
-Directory’” .border}
+Directory’”
 
 ![Create New Quarto Project](Images/new_quarto_project.png){width= 55%
-fig-alt=“Image showing new Quarto Project button” .border}
+.border} fig-alt=“Image showing new Quarto Project button”
 
 - When creating your new Quarto project, you want to name it in the
   following format:
@@ -64,9 +64,9 @@ titled “Vaske_Lab_Treehouse”.
   - “Use visual markdown editor”
 - Now click “Create Project”
 
-![Name New Project](Images/name_quarto_project.png){width= 55% .border
+![Name New Project](Images/name_quarto_project.png){width= 55% .border}
 fig-alt=“Image showing how to name new Quarto project, put in Vaske or
-Treehouse folder, and initialize with renv”}
+Treehouse folder, and initialize with renv”
 
 ------------------------------------------------------------------------
 
@@ -98,22 +98,22 @@ repository (i.e. the directory/workspace your new project exists in.)
     navigate to your new repository –\> “Add Repository”
 
 ![Add a New Repository to GitHub
-Desktop](Images/add_repo_to_github_desktop.png){width= 55% .border
+Desktop](Images/add_repo_to_github_desktop.png){width= 55% .border}
 fig-alt=“GitHub Desktop visual with buttons to add an existing
-repository”}
+repository”
 
-![Find Your New Repository](Images/find_new_repo.png){width= 55% .border
-fi-alt=“GitHub Desktop visual with buttons to add your new local
-repository”}
+![Find Your New Repository](Images/find_new_repo.png){width= 55%
+.border} fig-alt=“GitHub Desktop visual with buttons to add your new
+local repository”
 
 You will see something similar to the following… Keep in mind some
 listed files (on the left of your screen) may be different due to
 RStudio version differences.
 
 ![Your New Repository in GitHub
-Desktop](Images/new_repo_in_github_desktop.png){width= 55% .border
+Desktop](Images/new_repo_in_github_desktop.png){width= 55% .border}
 fig-alt=“GitHub Desktop screen upon adding new repository; files listed
-on the left”}
+on the left”
 
 2.  Push Your New Repository to GitHub
 
@@ -132,9 +132,9 @@ To push your work main/master:
   saved and ready to be pushed. For future reference, here is the save
   button.
 
-![Save Your Work](Images/save_changes.png){width= 55% .border
+![Save Your Work](Images/save_changes.png){width= 55% .border}
 fig-alt=“Button on RStudio to save changes to current document, circled
-in red”}
+in red”
 
 2.  In **GitHub Desktop**, Commit Your Changes to Main/Master
 
@@ -143,8 +143,9 @@ in red”}
     renv’
 - Click ‘Commit \_ files to main/master’
 
-![Commit Changes to Main](Images/push_to_main.png){width= 55% .border
-fig-alt=““}
+![Commit Changes to Main](Images/push_to_main.png){width= 55% .border}
+fig-alt=“Screenshot of GitHub Desktop on main/master branch with commit
+file(s) button in blue”
 
 3.  In **GitHub Desktop**, Publish Your Repository
 
@@ -152,17 +153,17 @@ fig-alt=““}
   ‘Publish repository’
 
 ![Publish Your Repository to GitHub](Images/publish_repo.png){width= 55%
-.border fig-alt=“GitHub Desktop screen after committing changes to main
-branch. Publish repository button is in blue.”}
+.border} fig-alt=“GitHub Desktop screen after committing changes to main
+branch. Publish repository button is in blue.”
 
 - Make sure you are publishing your new repository to the UCSC Treehouse
   organization on GitHub
 
 ![Publish Your Repository to
 UCSC-Treehouse](Images/publish_repo_to_treehouse_org.png){width= 55%
-.border fig-alt=“GitHub Desktop visual with button to publish your new
+.border} fig-alt=“GitHub Desktop visual with button to publish your new
 repository. The organization is changed from ‘none’ to
-‘UCSC-Treehouse’.”}
+‘UCSC-Treehouse’.”
 
 ------------------------------------------------------------------------
 

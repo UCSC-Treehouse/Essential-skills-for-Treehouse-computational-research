@@ -34,11 +34,14 @@ In RStudio:
 
 -   File --\> New Project --\> New Directory --\> Quarto Project
 
-![Create New Project in Github Desktop](Images/create_new_project.png){width= 55% fig-alt="Image showing file button to create 'New Project'" .border}
+![Create New Project in Github Desktop](Images/create_new_project.png){width= 55% .border} 
+fig-alt="Image showing file button to create 'New Project'"
 
-![Create New Project in New Directory](Images/project_in_existing_directory.png){width= 55% fig-alt="Image showing button on RStudio to 'Create Project' within 'New Directory'" .border}
+![Create New Project in New Directory](Images/project_in_existing_directory.png){width= 55% .border}
+fig-alt="Image showing button on RStudio to 'Create Project' within 'New Directory'"
 
-![Create New Quarto Project](Images/new_quarto_project.png){width= 55% fig-alt="Image showing new Quarto Project button" .border}
+![Create New Quarto Project](Images/new_quarto_project.png){width= 55% .border}
+fig-alt="Image showing new Quarto Project button"
 
 -   When creating your new Quarto project, you want to name it in the following format: **YourName_essential_skills_in_computational_research**
 
@@ -57,8 +60,8 @@ In the example below, my new project will be created as a subdirectory of my lab
 
 - Now click "Create Project"
 
-![Name New Project](Images/name_quarto_project.png){width= 55% .border
-fig-alt="Image showing how to name new Quarto project, put in Vaske or Treehouse folder, and initialize with renv"}
+![Name New Project](Images/name_quarto_project.png){width= 55% .border}
+fig-alt="Image showing how to name new Quarto project, put in Vaske or Treehouse folder, and initialize with renv"
 
 ------------------------------------------------------------------------
 
@@ -88,17 +91,17 @@ Let's open GitHub Desktop and follow the instructions to add your new repository
 
 1. Click "Add" --\> "Add Existing Repository..." --\> "Choose..." --\> navigate to your new repository --\> "Add Repository"
 
-![Add a New Repository to GitHub Desktop](Images/add_repo_to_github_desktop.png){width= 55% .border
-fig-alt="GitHub Desktop visual with buttons to add an existing repository"}
+![Add a New Repository to GitHub Desktop](Images/add_repo_to_github_desktop.png){width= 55% .border}
+fig-alt="GitHub Desktop visual with buttons to add an existing repository"
 
-![Find Your New Repository](Images/find_new_repo.png){width= 55% .border
-fi-alt="GitHub Desktop visual with buttons to add your new local repository"}
+![Find Your New Repository](Images/find_new_repo.png){width= 55% .border}
+fig-alt="GitHub Desktop visual with buttons to add your new local repository"
 
 You will see something similar to the following...
 Keep in mind some listed files (on the left of your screen) may be different due to RStudio version differences.
 
-![Your New Repository in GitHub Desktop](Images/new_repo_in_github_desktop.png){width= 55% .border
-fig-alt="GitHub Desktop screen upon adding new repository; files listed on the left"}
+![Your New Repository in GitHub Desktop](Images/new_repo_in_github_desktop.png){width= 55% .border}
+fig-alt="GitHub Desktop screen upon adding new repository; files listed on the left"
 
 2. Push Your New Repository to GitHub
 
@@ -113,8 +116,8 @@ To push your work main/master:
 Since you haven't written any new code or text, your changes (your new project files) should be saved and ready to be pushed.
 For future reference, here is the save button.
 
-![Save Your Work](Images/save_changes.png){width= 55% .border
-fig-alt="Button on RStudio to save changes to current document, circled in red"}
+![Save Your Work](Images/save_changes.png){width= 55% .border}
+fig-alt="Button on RStudio to save changes to current document, circled in red"
 
 2. In **GitHub Desktop**, Commit Your Changes to Main/Master
 
@@ -122,20 +125,20 @@ fig-alt="Button on RStudio to save changes to current document, circled in red"}
   - In this case, you can write something like 'Created new project with renv'
 - Click 'Commit _ files to main/master'
 
-![Commit Changes to Main](Images/push_to_main.png){width= 55% .border
-fig-alt=""}
+![Commit Changes to Main](Images/push_to_main.png){width= 55% .border}
+fig-alt="Screenshot of GitHub Desktop on main/master branch with commit file(s) button in blue"
 
 3. In **GitHub Desktop**, Publish Your Repository
 
 - Now that your work is committed to the main branch, you can click 'Publish repository'
 
-![Publish Your Repository to GitHub](Images/publish_repo.png){width= 55% .border
-fig-alt="GitHub Desktop screen after committing changes to main branch. Publish repository button is in blue."}
+![Publish Your Repository to GitHub](Images/publish_repo.png){width= 55% .border}
+fig-alt="GitHub Desktop screen after committing changes to main branch. Publish repository button is in blue."
 
 - Make sure you are publishing your new repository to the UCSC Treehouse organization on GitHub
 
-![Publish Your Repository to UCSC-Treehouse](Images/publish_repo_to_treehouse_org.png){width= 55% .border
-fig-alt="GitHub Desktop visual with button to publish your new repository. The organization is changed from 'none' to 'UCSC-Treehouse'."}
+![Publish Your Repository to UCSC-Treehouse](Images/publish_repo_to_treehouse_org.png){width= 55% .border}
+fig-alt="GitHub Desktop visual with button to publish your new repository. The organization is changed from 'none' to 'UCSC-Treehouse'."
 
 ------------------------------------------------------------------------
 

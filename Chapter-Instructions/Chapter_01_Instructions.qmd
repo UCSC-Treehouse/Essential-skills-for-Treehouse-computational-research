@@ -22,27 +22,27 @@ For each chapter you work through, you will create a new quarto document *and* a
 
 - In **GitHub Desktop**, click Current Branch --\> New Branch
 
-![Create New Chapter 1 Branch](Images/create_new_ch_1_branch.png){width= 55% .border
-fig-alt="GitHub Desktop screen where 'Current Branch' is selected and 'New Branch' button is visible"}
+![Create New Chapter 1 Branch](Images/create_new_ch_1_branch.png){width= 55% .border}
+fig-alt="GitHub Desktop screen where 'Current Branch' is selected and 'New Branch' button is visible"
 
 - Name the branch 'chapter-01' and click 'Create Branch'
 
-![Name the New Branch Chapter 1](Images/name_new_branch_ch_1.png){width= 55% .border
-fig-alt="GitHub Desktop screen upon creation of new branch, a name 'chapter-01' is given and 'Create Branch' button is visible in blue"}
+![Name the New Branch Chapter 1](Images/name_new_branch_ch_1.png){width= 55% .border}
+fig-alt="GitHub Desktop screen upon creation of new branch, a name 'chapter-01' is given and 'Create Branch' button is visible in blue"
 
 **Create Your First Quarto Notebook:**
 
 1. Now, you can return to RStudio by launching the .Rproj file in your new directory
 
-![Launch Your Project in RStudio](Images/launch_new_project.png){.border width= 55% 
-fig-alt="Screenshot of project folder with .Rproj file button"}
+![Launch Your Project in RStudio](Images/launch_new_project.png){.border width= 55%}
+fig-alt="Screenshot of project folder with .Rproj file button"
 
 2. Next, create a new Quarto document (.qmd file) where you can work on the examples, exercises, and type any notes you may want.
 
 - File --\> New File --\> Quarto Document...
 
-![Create New Quarto Document](Images/create_new_quarto_file.png){width= 55% .border
-fig-alt="RStudio screen showing button navigation to create a new quarto document"}
+![Create New Quarto Document](Images/create_new_quarto_file.png){width= 55% .border}
+fig-alt="RStudio screen showing button navigation to create a new quarto document"
 
 3. Name your Quarto document
 
@@ -50,13 +50,13 @@ fig-alt="RStudio screen showing button navigation to create a new quarto documen
 - **deselect** 'Use visual markdown editor'
 - Click 'Create Empty Document'
 
-![Name and Create an Empty Quarto Document](Images/name_new_quarto_file.png){width= 55% .border
-fig-alt="RStudio screen upon creating new quarto document: title box changed to 'Chapter 1', 'Use visual markdown editor' is deselected, and 'Create Empty Document' button is present and circled in red."}
+![Name and Create an Empty Quarto Document](Images/name_new_quarto_file.png){width= 55% .border}
+fig-alt="RStudio screen upon creating new quarto document: title box changed to 'Chapter 1', 'Use visual markdown editor' is deselected, and 'Create Empty Document' button is present and circled in red."
 
 You will see something like the following...
 
-![Chapter 1 Quarto Document](Images/ch_1_quarto_file.png){width= 55% .border
-fig-alt="RStudio screen with newly created 'Chapter 1' quarto document. The file is blank besides the YAML header with 'title: Chapter 1' and 'format: html'."}
+![Chapter 1 Quarto Document](Images/ch_1_quarto_file.png){width= 55% .border}
+fig-alt="RStudio screen with newly created 'Chapter 1' quarto document. The file is blank besides the YAML header with 'title: Chapter 1' and 'format: html'."
 
 4. Change the YAML Header
 
@@ -65,8 +65,8 @@ Later, when we 'render' our document, we *combine* the raw data, code, and text 
 Changing the header of the document to 'format: gfm' ensures that the output is a markdown file.
 We want to render to a gfm (GitHub Flavored Markdown), specifically, as it is best viewed on GitHub.
 
-![Change Output to gfm](Images/change_yaml_header.png){width= 55% .border
-fig-alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct 'Chapter 1' title but the output format has been changed to 'format: gfm'."}
+![Change Output to gfm](Images/change_yaml_header.png){width= 55% .border}
+fig-alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct 'Chapter 1' title but the output format has been changed to 'format: gfm'."
 
 5. Install Packages and Enable Reproducibility
 
@@ -87,8 +87,8 @@ This installation is using renv.
 However, if you forget and only run 'install.packages()', you can always run 'renv::snapshot()' to save the current packages and versions.
 This is always done in your R Console, which can be found here:
 
-![Install Packages in Your RConsole](Images/install_packages_in_console.png){width= 55% .border
-fig-alt="RStudio screen navigated to the bottom by 'Console', which is circled in red. 'renv::install(c('tidyverse', 'palmerpenguins', 'ggthemes'))' is being run in the console, resulting in numerous downloads."}
+![Install Packages in Your RConsole](Images/install_packages_in_console.png){width= 55% .border}
+fig-alt="RStudio screen navigated to the bottom by 'Console', which is circled in red. 'renv::install(c('tidyverse', 'palmerpenguins', 'ggthemes'))' is being run in the console, resulting in numerous downloads."
 
 If you are prompted, type 'Y' to proceed with downloads.
 
@@ -119,7 +119,8 @@ In the context of **palmerpenguins**, a variable refers to an attribute of all t
 
 **end goal**:
 
-![Penguin flipper length vs. body mass relationship](Images/penguin_flipper_to_mass_ggplot2.png){#fig-penguins .border width="55%" fig-alt="Scatterplot showing positive correlation between penguin flipper length and body mass across three species" fig-align="center"}
+![Penguin flipper length vs. body mass relationship](Images/penguin_flipper_to_mass_ggplot2.png){#fig-penguins .border width="55%"} 
+fig-alt="Scatterplot showing positive correlation between penguin flipper length and body mass across three species" fig-align="center"
 
 **To begin**: Create a plot with the function ggplot(), which you will add **layers** to using different **arguments**.
 The first argument of ggplot() is the dataset to be used in the graph: ggplot(data = penguins) creates an empty graph that is primed to display the penguins dataset.
@@ -277,7 +278,8 @@ Create a scatterplot where you successfully use this argument set to TRUE.
 What aesthetic should bill_depth_mm be mapped to?
 And should it be mapped at the global level or at the geom level?
 
-![Chapter 1 Exercise pt 1 Question #8 Plot](Images/Ch1_Exercise_pt1_Q8.png){#fig-penguins .border width="65%" fig-alt="Scatterplot showing positive correlation between penguin flipper length and body mass across species with varying bill depths" fig-align="center"}
+![Chapter 1 Exercise pt 1 Question #8 Plot](Images/Ch1_Exercise_pt1_Q8.png){.border width="65%"}
+fig-alt="Scatterplot showing positive correlation between penguin flipper length and body mass across species with varying bill depths" fig-align="center"
 
 9.  Run this code in your head and predict what the output will look like.
 Then, run the code in R and check your predictions.
@@ -622,25 +624,25 @@ You should see your new changes highlighted in red.
 
 1. Push new Chapter 1 changes to chapter-01 branch
 
-![Push New Changes to New Chapter-01 Branch](Images/push_ch_1_to_ch_1_branch.png){width= 55% .border
-fig-alt="Cropped image of bottom left corder of GitHub Desktop screen where description 'Create and complete chapter 1' is given and blue 'Commit 1 file to chapter-01' button is visible at the bottom."}
+![Push New Changes to New Chapter-01 Branch](Images/push_ch_1_to_ch_1_branch.png){width= 55% .border}
+fig-alt="Cropped image of bottom left corder of GitHub Desktop screen where description 'Create and complete chapter 1' is given and blue 'Commit 1 file to chapter-01' button is visible at the bottom."
 
 2. Publish the new chapter-01 branch
 
-![Publish the chapter-01 Branch](Images/publish_ch_1_branch.png){width= 55% .border
-fig-alt="GitHub Desktop screen where blue 'Publish branch' button is present and circled in red."}
+![Publish the chapter-01 Branch](Images/publish_ch_1_branch.png){width= 55% .border}
+fig-alt="GitHub Desktop screen where blue 'Publish branch' button is present and circled in red."
 
 3. Create a pull request
 
-![Create a Pull Request](Images/create_pull_request.png){width= 55% .border
-fig-alt="GitHub Desktop screen after committing changes to new branch, prompted to click 'Create Pull Request' button in blue."}
+![Create a Pull Request](Images/create_pull_request.png){width= 55% .border}
+fig-alt="GitHub Desktop screen after committing changes to new branch, prompted to click 'Create Pull Request' button in blue."
 
 You will be relocated to the **GitHub browser**.
 
 1. Add your mentor as a reviewer (**Note**: here I use 'hbeale' but make sure you are adding *your* mentor's GitHub id)
 
-![Add Your Mentor as a Reviewer](Images/add_reviewer_to_pull_request.png){width= 55% .border
-fig-alt="GitHub browser screen upon creating a pull request. On the righthand side, a reviewer is added. The example shows 'hbeale' as reviewer, circled in red."}
+![Add Your Mentor as a Reviewer](Images/add_reviewer_to_pull_request.png){width= 55% .border}
+fig-alt="GitHub browser screen upon creating a pull request. On the righthand side, a reviewer is added. The example shows 'hbeale' as reviewer, circled in red."
 
 Now your mentor can review your work while making some suggested changes, where needed.
 After your mentor does this, when you return to GitHub Desktop and are under the 'chapter-01' branch, you will see your saved, unchanged work in **green** and your mentor's changes (or any new changes you have made too) in **red**.
