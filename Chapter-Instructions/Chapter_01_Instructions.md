@@ -94,8 +94,8 @@ of your current packages and versions and restores this exact setup when
 reopening or sharing the project. You will do this step each time you
 install or update a package. So, to start, let’s install three packages.
 
-- In your **R Console**, install the ‘tidyverse’, ‘palmerpenguins’, and
-  ‘ggthemes’ packages:
+In your **R Console**, install the ‘tidyverse’, ‘palmerpenguins’, and
+‘ggthemes’ packages:
 
 ``` r
 # install core packages using renv
@@ -107,17 +107,25 @@ than one way to achieve the same end goal**. ‘renv::install()’
 automatically includes a snapshot of the packages and versions. But, if
 you just run ‘install.packages()’, you can always run ‘renv::snapshot()’
 to save the current packages and versions afterward. This is always done
-in your R Console, which can be found here:
+in your R Console.
 
-<img src="Images/install_packages_in_console.png" 
-     alt="RStudio screen navigated to the bottom by 'Console', which is circled in red. 'renv::install(c('tidyverse', 'palmerpenguins', 'ggthemes'))' is being run in the console, resulting in numerous downloads."
+Now, you will switch to writing commands in your own **Quarto
+document**! To do this, click the green “+C” button near the top of your
+RStudio page.
+
+<img src="Images/create_code_chunk.png" 
+     alt="RStudio screen navigated to the top by the green '+C' button, which is circled in red. This will create a new code chunk."
      style="width: 55%;">
 
-If you are prompted, type ‘Y’ to proceed with downloads.
+(**Hint**: If you click the right side of the button, by the down arrow,
+you will notice there are many types of code you select. For the purpose
+of the following examples and exercises, you will be using R.)
 
-- Next, load libraries from the installed packages. Unlike installing
-  packages, you will want to load the libraries every session. Copy
-  these commands into your own **Quarto notebook**.
+The following commands (**all** of the following, unless otherwise
+specified) can be run in your executable code chunks.
+
+Load libraries from the installed packages. Unlike installing packages,
+you will want to load the libraries every session.
 
 ``` r
 # load tidyverse library (you will use this in a lot of your data analysis!)

@@ -30,15 +30,22 @@ In this chapter, you will set up:
 Please make sure you have a recent version of RStudio that includes
 Quarto (2024.04+).
 
-Next, we want to install `renv`, which captures the packages and
+Next, you want to install `renv`, which captures the packages and
 versions your project uses, aiding in reproducibility.
 
-Open RStudio. Under the “Console” tab, and after the “\>”, you can go
-ahead and install the `renv` package. To do this, type:
-install.packages(“renv”). (**Hint**: You may notice that RStudio
-suggests autofilling names of functions and packages. To complete this
-autofill, you can either click the appropriate name, or, navigate to the
-name using your keyboard’s up/down arrows, and press “tab”.)
+Open RStudio. The “Console” tab is where you can ran R commands
+interactively. You can type code here and press “Enter” to see immediate
+results. This is where we will begin in Chapter 0.
+
+Later in Chapter 1 you will create a **Quarto document** (`.qmd` files)
+to combine code, output, and text.
+
+Under the “Console” tab, and after the “\>”, you can install the `renv`
+package. To do this, type: install.packages(“renv”) and press “Enter”.
+(**Hint**: You may notice that RStudio suggests autofilling names of
+functions and packages. To complete this autofill, you can either click
+the appropriate name, or, navigate to the name using your keyboard’s
+up/down arrows, and press “tab”.)
 
 <img src="Images/install_renv_in_console.png" 
      alt="Install 'renv' package with install.packages() in the R Console" 
