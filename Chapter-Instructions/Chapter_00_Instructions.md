@@ -27,9 +27,8 @@ In this chapter, you will set up:
 
 ## Install Quarto and renv
 
-If you have downloaded the most recent version of RStudio, Quarto will
-be included (2024.04+). However, if RStudio has not included Quarto for
-you, you can download it [here](https://quarto.org/docs/download/).
+Please make sure you have a recent version of RStudio that includes
+Quarto (2024.04+).
 
 Next, we want to install `renv`, which captures the packages and
 versions your project uses, aiding in reproducibility.
@@ -110,8 +109,9 @@ You *may* see some extra files… you can ignore them, for now.
 
 ## Use GitHub Desktop to Make Your Code Shareable
 
-Since you just created a new project with new files, your GitHub Desktop
-should reflect these changes.
+Since you created a project that includes a repository, you can add that
+repository to GitHub Desktop to facilitate sharing your code with
+GitHub.
 
 Let’s open GitHub Desktop and follow the instructions to add your new
 repository (i.e. the directory/workspace your new project exists in.)
@@ -145,18 +145,7 @@ where others will view and even collaborate on your code.
 
 To push your work main/master:
 
-1.  Save Your Work
-
-- Make sure all files are saved locally. Since you haven’t written any
-  new code or text, your changes (your new project files) should be
-  saved and ready to be pushed. For future reference, here is the save
-  button.
-
-<img src="Images/save_changes.png" 
-     alt="Button on RStudio to save changes to current document, circled in red" 
-     style="width: 55%;">
-
-2.  In **GitHub Desktop**, Commit Your Changes to Main/Master
+1.  In **GitHub Desktop**, Commit Your Changes to Main/Master
 
 - Navigate to the description box and type in the required summary:
   - In this case, you can write something like ‘Created new project with
@@ -167,7 +156,7 @@ To push your work main/master:
      alt="Screenshot of GitHub Desktop on main/master branch with commit file(s) button in blue" 
      style="width: 55%;">
 
-3.  In **GitHub Desktop**, Publish Your Repository
+2.  In **GitHub Desktop**, Publish Your Repository
 
 - Now that your work is committed to the main branch, you can click
   ‘Publish repository’
