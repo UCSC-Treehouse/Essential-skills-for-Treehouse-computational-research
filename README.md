@@ -6,7 +6,7 @@ Welcome to your introductory guide to computational research!
 
 This guide has been created to walk you through basic software downloads and installations as well as highlighted chapters of the ["R for Data Science"](https://r4ds.hadley.nz) book.
 
-This guide was created by Kaylee M. Delgado through the [Vaske Lab](https://vaskelab.ucsc.edu) at UC Santa Cruz; all software links reflect current version as of Q2 2024).
+This guide was created by Kaylee M. Delgado through the [Vaske Lab](https://vaskelab.ucsc.edu) at UC Santa Cruz; all software links reflect current version as of Q2 2024.
 
 ------------------------------------------------------------------------
 
