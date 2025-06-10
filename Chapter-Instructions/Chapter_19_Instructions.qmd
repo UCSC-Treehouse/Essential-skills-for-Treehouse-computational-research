@@ -356,7 +356,9 @@ y <- tribble(
 )
 ```
 
-![Inner Join Example](Images/inner_join_example.png){#fig-inner_join width=55% fig-alt="An inner join matches each row in x to the row in y that has the same value of key. Each match becomes a row in the output." fig-align="center" .border}
+<img src="Images/inner_join_example.png" 
+     alt="An inner join matches each row in x to the row in y that has the same value of key. Each match becomes a row in the output."
+     style="width: 55%;">
 
 We can apply the same principles to explain the **outer joins**, which keep observations that appear in at least one of the data frames.
 These joins work by adding an additional “virtual” observation to each data frame.
@@ -366,19 +368,25 @@ There are three types of outer joins:
 - A **left join** keeps all observations in x.
 Every row of x is preserved in the output because it can fall back to matching a row of NAs in y.
 
-![Left Join Example](Images/left_join_example.png){#fig-left_join width=55% fig-alt="A visual representation of the left join where every row in x appears in the output." fig-align="center" .border}
-
+<img src="Images/left_join_example.png" 
+     alt="A visual representation of the left join where every row in x appears in the output."
+     style="width: 55%;">
+     
 - A **right join** keeps all observations in y.
 Every row of y is preserved in the output because it can fall back to matching a row of NAs in x.
 The output still matches x as much as possible; any extra rows from y are added to the end.
 
-![Right Join Example](Images/right_join_example.png){#fig-right_join width=55% fig-alt="A visual representation of the right join where every row of y appears in the output." fig-align="center" .border}
+<img src="Images/right_join_example.png" 
+     alt="A visual representation of the right join where every row of y appears in the output."
+     style="width: 55%;">
 
 - A **full join** keeps all observations that appear in x or y.
 Every row of x and y is included in the output because both x and y have a fall back row of NAs.
 Again, the output starts with all rows from x, followed by the remaining unmatched y rows.
 
-![Full Join Example](Images/full_join_example.png){#fig-full_join width=55% fig-alt="A visual representation of the full join where every row in x and y appears in the output." fig-align="center" .border}
+<img src="Images/full_join_example.png" 
+     alt="A visual representation of the full join where every row in x and y appears in the output."
+     style="width: 55%;">
 
 The joins shown previously are the so-called **equi joins**, where rows match if the keys are equal.
 Equi joins are the most common type of join, so we’ll typically omit the equi prefix, and just say “inner join” rather than “equi inner join”.
@@ -391,7 +399,9 @@ So far we’ve explored what happens if a row in x matches zero or one row in y.
 What happens if it matches more than one row?
 To understand what’s going on let’s first narrow our focus to the inner_join() and then draw a picture, below.
 
-![Matching Rows Example](Images/matching_rows_example.png){#fig-matching_rows width=55% fig-alt="The three ways a row in x can match. x1 matches one row in y, x2 matches two rows in y, x3 matches zero rows in y. Note that while there are three rows in x and three rows in the output, there isn’t a direct correspondence between the rows." fig-align="center" .border}
+<img src="Images/matching_rows_example.png" 
+     alt="The three ways a row in x can match. x1 matches one row in y, x2 matches two rows in y, x3 matches zero rows in y. Note that while there are three rows in x and three rows in the output, there isn’t a direct correspondence between the rows."
+     style="width: 55%;">
 
 There are three possible outcomes for a row in x:
 
@@ -426,10 +436,14 @@ The anti-join keeps rows in x that match zero rows in y, as in the second figure
 In both cases, only the existence of a match is important; it doesn’t matter how many times it matches.
 This means that filtering joins never duplicate rows like mutating joins do.
 
-![Semi Join Example](Images/semi_join_example.png){#fig-semi_join width=55% fig-alt="In a semi-join it only matters that there is a match; otherwise values in y don’t affect the output." fig-align="center" .border}
+<img src="Images/semi_join_example.png" 
+     alt="In a semi-join it only matters that there is a match; otherwise values in y don’t affect the output."
+     style="width: 55%;">
 
-![Anti Join Example](Images/anti_join_example.png){#fig-anti_join width=55% fig-alt="An anti-join is the inverse of a semi-join, dropping rows from x that have a match in y." fig-align="center" .border}
-
+<img src="Images/anti_join_example.png" 
+     alt="An anti-join is the inverse of a semi-join, dropping rows from x that have a match in y."
+     style="width: 55%;">
+     
 ------------------------------------------------------------------------
 
 ## Non-equi Joins
@@ -441,13 +455,17 @@ We can request that dplyr keep both keys with keep = TRUE, leading to the code b
 x |> inner_join(y, join_by(key == key), keep = TRUE)
 ```
 
-![Join By Example](Images/join_by_example.png){#fig-join_by width=55% fig-alt="An inner join showing both x and y keys in the output." fig-align="center" .border}
+<img src="Images/join_by_example.png" 
+     alt="An inner join showing both x and y keys in the output."
+     style="width: 55%;">
 
 When we move away from equi joins we’ll always show the keys, because the key values will often be different.
 For example, instead of matching only when the x$key and y$key are equal, we could match whenever the x$key is greater than or equal to the y$key, leading to the below figure.
 dplyr’s join functions understand this distinction equi and non-equi joins so will always show both keys when you perform a non-equi join.
 
-![Join By GTE Example](Images/join_by_gte_example.png){#fig-join_by_gte width=55% fig-alt="A non-equi join where the x key must be greater than or equal to the y key. Many rows generate multiple matches." fig-align="center" .border}
+<img src="Images/join_by_gte_example.png" 
+     alt="A non-equi join where the x key must be greater than or equal to the y key. Many rows generate multiple matches."
+     style="width: 55%;">
 
 Non-equi join isn’t a particularly useful term because it only tells you what the join is not, not what it is.
 dplyr helps by identifying four particularly useful types of non-equi join:
@@ -463,7 +481,9 @@ dplyr helps by identifying four particularly useful types of non-equi join:
 
 A cross join matches everything, as in the figure below, generating the Cartesian product of rows. This means the output will have nrow(x) * nrow(y) rows.
 
-![Cross Join Example](Images/cross_join_example.png){#fig-cross_join width=30% fig-alt="A cross join matches each row in x with every row in y." fig-align="center" .border}
+<img src="Images/cross_join_example.png" 
+     alt="A cross join matches each row in x with every row in y."
+     style="width: 55%;">
 
 Cross joins are useful when generating permutations.
 For example, the code below generates every possible pair of names.

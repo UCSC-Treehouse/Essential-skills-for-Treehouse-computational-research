@@ -210,6 +210,7 @@ flights |>
 
 We can combine that with mean(is.na(x)) to see how the proportion of cancelled flights varies over the course of the day.
 ```{r changing proportion of cancelled flights}
+#| eval: false
 flights |> 
   group_by(hour = sched_dep_time %/% 100) |> 
   summarize(prop_cancelled = mean(is.na(dep_time)), n = n()) |> 
@@ -339,7 +340,9 @@ cumsum(x)
 
 1. Explain in words what each line of the code used to generate the following figure does.
 
-![Positive correlation hour vs proportion of flights cancelled](Images/Ch13_Exercise_pt2_Q1.png){#fig-flights width=65% fig-alt="A line plot with scheduled departure hour on the x-axis, and proportion of cancelled flights on the y-axis. Cancellations seem to accumulate over the course of the day until 8pm, very late flights are much less likely to be cancelled." fig-align="center" .border}
+<img src="Images/Ch13_Exercise_pt2_Q1.png" 
+     alt="A line plot with scheduled departure hour on the x-axis, and proportion of cancelled flights on the y-axis. Cancellations seem to accumulate over the course of the day until 8pm, very late flights are much less likely to be cancelled."
+     style="width: 55%;">
 
 2. What trigonometric functions does R provide?
 Guess some names and look up the documentation.

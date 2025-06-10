@@ -61,11 +61,9 @@ There are three interrelated rules that make a dataset tidy:
 2.  Each observation is a row; each row is an observation.
 3.  Each value is a cell; each cell is a single value.
 
-Here are the rules represented visually.
-<img src="Images/example_tidy_dataset.png" id="fig-tidy" class="border"
-style="width:75.0%"
-data-fig-alt="The following three rules make a dataset tidy: variables are columns, observations are rows, and values are cells."
-data-fig-align="center" alt="A “tidy” dataset example" />
+<img src="Images/example_tidy_dataset.png" 
+     alt="The following three rules make a dataset tidy: variables are columns, observations are rows, and values are cells."
+     style="width: 55%;">
 
 dplyr, ggplot2, and all the other packages in the tidyverse are designed
 to work with tidy data. Here are a few small examples showing how you
@@ -259,15 +257,9 @@ column by column. As shown in the image, the values in a column that was
 already a variable in the original dataset (id) need to be repeated,
 once for each column that is pivoted.
 
-<div id="fig-tidy">
-
-<img src="Images/reshaping.png" class="border" style="width:70.0%"
-data-fig-alt="A reshaped dataset of patient blood pressures."
-data-fig-align="center" />
-
-Figure 1: Example of reshaping a dataset
-
-</div>
+<img src="Images/reshaping.png" 
+     alt="A reshaped dataset of patient blood pressures."
+     style="width: 55%;">
 
 ------------------------------------------------------------------------
 

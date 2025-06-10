@@ -158,10 +158,9 @@ try again.
 Note that the environment tab in the upper right pane displays all of
 the objects that you’ve created:
 
-<img src="Images/Ch2_Environment_Tab_Example.png" class="border"
-style="width:65.0%"
-data-fig-alt="Zoomed in example of environment tab located in the upper right pane display of RStudio"
-data-fig-align="center" alt="Chapter 2 Environment Tab Example" />
+<img src="Images/Ch2_Environment_Tab_Example.png" 
+     alt="Zoomed in example of environment tab located in the upper right pane display of RStudio"
+     style="width: 55%;">
 
 ------------------------------------------------------------------------
 

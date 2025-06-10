@@ -38,7 +38,7 @@ renv::install(c("nycflights13", "tidyverse"))
     # Installing packages --------------------------------------------------------
     - Installing nycflights13 ...                   OK [linked from cache]
     - Installing tidyverse ...                      OK [linked from cache]
-    Successfully installed 2 packages in 11 milliseconds.
+    Successfully installed 2 packages in 5.9 milliseconds.
 
 Load libraries from installed packages (*run every session*) –\> copy
 the commands into your own **quarto notebook (.qmd file)**.

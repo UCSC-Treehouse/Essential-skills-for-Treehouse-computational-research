@@ -6,7 +6,7 @@ Welcome to your introductory guide to computational research!
 
 This guide has been created to walk you through basic software downloads and installations as well as highlighted chapters of the ["R for Data Science"](https://r4ds.hadley.nz) book.
 
-This guide was created by the [Vaske Lab](https://vaskelab.ucsc.edu) at UC Santa Cruz; all software links reflect current version as of Q2 2024).
+This guide was created by Kaylee M. Delgado through the [Vaske Lab](https://vaskelab.ucsc.edu) at UC Santa Cruz; all software links reflect current version as of Q2 2024).
 
 ------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ Before you can work on a Treehouse computational project, you must demonstrate t
 When you have completed the work described in this repo, please reach out to your mentor so you can proceed with your project. 
 Throughout this training we will be working on the following:
 
--   Using Terminal, GitHub, RStudio, renv, and Quarto notebooks
+-   Using GitHub, RStudio, renv, and Quarto notebooks
 -   Building repositories, files, and pipelines
 -   Getting a hang of research computing workflows
 -   Learning computational research skills in R including: data visualization, data transformation, and program iteration

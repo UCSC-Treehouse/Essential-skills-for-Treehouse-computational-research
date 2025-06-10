@@ -27,34 +27,33 @@ push your corresponding chapters’ work to.
 
 - In **GitHub Desktop**, click Current Branch –\> New Branch
 
-![Create New Chapter 1 Branch](Images/create_new_ch_1_branch.png){width=
-55% .border} fig-alt=“GitHub Desktop screen where ‘Current Branch’ is
-selected and ‘New Branch’ button is visible”
+<img src="Images/create_new_ch_1_branch.png" 
+     alt="GitHub Desktop screen where 'Current Branch' is selected and 'New Branch' button is visible" 
+     style="width: 55%;">
 
 - Name the branch ‘chapter-01’ and click ‘Create Branch’
 
-![Name the New Branch Chapter 1](Images/name_new_branch_ch_1.png){width=
-55% .border} fig-alt=“GitHub Desktop screen upon creation of new branch,
-a name ‘chapter-01’ is given and ‘Create Branch’ button is visible in
-blue”
+<img src="Images/name_new_branch_ch_1.png" 
+     alt="GitHub Desktop screen upon creation of new branch, a name 'chapter-01' is given and 'Create Branch' button is visible in blue" 
+     style="width: 55%;">
 
 **Create Your First Quarto Notebook:**
 
 1.  Now, you can return to RStudio by launching the .Rproj file in your
     new directory
 
-![Launch Your Project in RStudio](Images/launch_new_project.png){.border
-width= 55%} fig-alt=“Screenshot of project folder with .Rproj file
-button”
+<img src="Images/launch_new_project.png" 
+     alt="Screenshot of project folder with .Rproj file button" 
+     style="width: 55%;">
 
 2.  Next, create a new Quarto document (.qmd file) where you can work on
     the examples, exercises, and type any notes you may want.
 
 - File –\> New File –\> Quarto Document…
 
-![Create New Quarto Document](Images/create_new_quarto_file.png){width=
-55% .border} fig-alt=“RStudio screen showing button navigation to create
-a new quarto document”
+<img src="Images/create_new_quarto_file.png" 
+     alt="RStudio screen showing button navigation to create a new quarto document"
+     style="width: 55%;">
 
 3.  Name your Quarto document
 
@@ -62,32 +61,29 @@ a new quarto document”
 - **deselect** ‘Use visual markdown editor’
 - Click ‘Create Empty Document’
 
-![Name and Create an Empty Quarto
-Document](Images/name_new_quarto_file.png){width= 55% .border}
-fig-alt=“RStudio screen upon creating new quarto document: title box
-changed to ‘Chapter 1’, ‘Use visual markdown editor’ is deselected, and
-‘Create Empty Document’ button is present and circled in red.”
+<img src="Images/name_new_quarto_file.png" 
+     alt="RStudio screen upon creating new quarto document: title box changed to 'Chapter 1', 'Use visual markdown editor' is deselected, and 'Create Empty Document' button is present and circled in red."
+     style="width: 55%;">
 
 You will see something like the following…
 
-![Chapter 1 Quarto Document](Images/ch_1_quarto_file.png){width= 55%
-.border} fig-alt=“RStudio screen with newly created ‘Chapter 1’ quarto
-document. The file is blank besides the YAML header with ‘title: Chapter
-1’ and ‘format: html’.”
+<img src="Images/ch_1_quarto_file.png" 
+     alt="RStudio screen with newly created 'Chapter 1' quarto document. The file is blank besides the YAML header with 'title: Chapter 1' and 'format: html'."
+     style="width: 55%;">
 
 4.  Change the YAML Header
 
-Notice that currently, your YAML header says ‘format: html’. Later, when
-we ‘render’ our document, we *combine* the raw data, code, and text in
-our .qmd file into a finished document. Changing the header of the
-document to ‘format: gfm’ ensures that the output is a markdown file. We
-want to render to a gfm (GitHub Flavored Markdown), specifically, as it
-is best viewed on GitHub.
+The section at the top of your document, enclosed by ‘—’, is called the
+YAML header. Currently, it specifies ‘format: html’, which renders your
+.qmd file as an HTML document. When you “render” the document, Quarto
+combines your code, text, and raw data into a finished document.
+Changing the header of the document to ‘format: gfm’ ensures that the
+output is a markdown file. We want to render to a gfm (GitHub Flavored
+Markdown), specifically, as it is optimized for viewing on GitHub.
 
-![Change Output to gfm](Images/change_yaml_header.png){width= 55%
-.border} fig-alt=“Cropped screenshot of top left corner of RStudio
-screen. The YAML header has the correct ‘Chapter 1’ title but the output
-format has been changed to ‘format: gfm’.”
+<img src="Images/change_yaml_header.png" 
+     alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct 'Chapter 1' title but the output format has been changed to 'format: gfm'."
+     style="width: 55%;">
 
 5.  Install Packages and Enable Reproducibility
 
@@ -106,22 +102,22 @@ install or update a package. So, to start, let’s install three packages.
 renv::install(c("tidyverse", "palmerpenguins", "ggthemes"))
 ```
 
-This installation is using renv. However, if you forget and only run
-‘install.packages()’, you can always run ‘renv::snapshot()’ to save the
-current packages and versions. This is always done in your R Console,
-which can be found here:
+This installation is using renv. Like many things in R, there is **more
+than one way to achieve the same end goal**. ‘renv::install()’
+automatically includes a snapshot of the packages and versions. But, if
+you just run ‘install.packages()’, you can always run ‘renv::snapshot()’
+to save the current packages and versions afterward. This is always done
+in your R Console, which can be found here:
 
-![Install Packages in Your
-RConsole](Images/install_packages_in_console.png){width= 55% .border}
-fig-alt=“RStudio screen navigated to the bottom by ‘Console’, which is
-circled in red. ‘renv::install(c(’tidyverse’, ‘palmerpenguins’,
-‘ggthemes’))’ is being run in the console, resulting in numerous
-downloads.”
+<img src="Images/install_packages_in_console.png" 
+     alt="RStudio screen navigated to the bottom by 'Console', which is circled in red. 'renv::install(c('tidyverse', 'palmerpenguins', 'ggthemes'))' is being run in the console, resulting in numerous downloads."
+     style="width: 55%;">
 
 If you are prompted, type ‘Y’ to proceed with downloads.
 
-- Load libraries from installed packages (*run every session*) –\> copy
-  these commands into your own **Quarto notebook**
+- Next, load libraries from the installed packages. Unlike installing
+  packages, you will want to load the libraries every session. Copy
+  these commands into your own **Quarto notebook**.
 
 ``` r
 # load tidyverse library (you will use this in a lot of your data analysis!)
@@ -165,11 +161,9 @@ AMAZING work! Now, let’s *really* get into it.
 
 **end goal**:
 
-<img src="Images/penguin_flipper_to_mass_ggplot2.png" id="fig-penguins"
-class="border" style="width:55.0%"
-alt="Penguin flipper length vs. body mass relationship" />
-fig-alt=“Scatterplot showing positive correlation between penguin
-flipper length and body mass across three species” fig-align=“center”
+<img src="Images/penguin_flipper_to_mass_ggplot2.png" 
+     alt="Scatterplot showing positive correlation between penguin flipper length and body mass across three species"
+     style="width: 55%;">
 
 **To begin**: Create a plot with the function ggplot(), which you will
 add **layers** to using different **arguments**. The first argument of
@@ -346,11 +340,9 @@ ggplot(data = penguins) +
     bill_depth_mm be mapped to? And should it be mapped at the global
     level or at the geom level?
 
-<img src="Images/Ch1_Exercise_pt1_Q8.png" class="border"
-style="width:65.0%" alt="Chapter 1 Exercise pt 1 Question #8 Plot" />
-fig-alt=“Scatterplot showing positive correlation between penguin
-flipper length and body mass across species with varying bill depths”
-fig-align=“center”
+<img src="Images/Ch1_Exercise_pt1_Q8.png" 
+     alt="Scatterplot showing positive correlation between penguin flipper length and body mass across species with varying bill depths"
+     style="width: 55%;">
 
 9.  Run this code in your head and predict what the output will look
     like. Then, run the code in R and check your predictions.
@@ -725,34 +717,30 @@ highlighted in red.
 
 1.  Push new Chapter 1 changes to chapter-01 branch
 
-![Push New Changes to New Chapter-01
-Branch](Images/push_ch_1_to_ch_1_branch.png){width= 55% .border}
-fig-alt=“Cropped image of bottom left corder of GitHub Desktop screen
-where description ‘Create and complete chapter 1’ is given and blue
-‘Commit 1 file to chapter-01’ button is visible at the bottom.”
+<img src="Images/push_ch_1_to_ch_1_branch.png" 
+     alt="Cropped image of bottom left corder of GitHub Desktop screen where description 'Create and complete chapter 1' is given and blue 'Commit 1 file to chapter-01' button is visible at the bottom."
+     style="width: 55%;">
 
 2.  Publish the new chapter-01 branch
 
-![Publish the chapter-01 Branch](Images/publish_ch_1_branch.png){width=
-55% .border} fig-alt=“GitHub Desktop screen where blue ‘Publish branch’
-button is present and circled in red.”
+<img src="Images/publish_ch_1_branch.png" 
+     alt="GitHub Desktop screen where blue 'Publish branch' button is present and circled in red."
+     style="width: 55%;">
 
 3.  Create a pull request
 
-![Create a Pull Request](Images/create_pull_request.png){width= 55%
-.border} fig-alt=“GitHub Desktop screen after committing changes to new
-branch, prompted to click ‘Create Pull Request’ button in blue.”
+<img src="Images/create_pull_request.png" 
+     alt="GitHub Desktop screen after committing changes to new branch, prompted to click 'Create Pull Request' button in blue."
+     style="width: 55%;">
 
 You will be relocated to the **GitHub browser**.
 
 1.  Add your mentor as a reviewer (**Note**: here I use ‘hbeale’ but
     make sure you are adding *your* mentor’s GitHub id)
 
-![Add Your Mentor as a
-Reviewer](Images/add_reviewer_to_pull_request.png){width= 55% .border}
-fig-alt=“GitHub browser screen upon creating a pull request. On the
-righthand side, a reviewer is added. The example shows ‘hbeale’ as
-reviewer, circled in red.”
+<img src="Images/add_reviewer_to_pull_request.png" 
+     alt="GitHub browser screen upon creating a pull request. On the righthand side, a reviewer is added. The example shows 'hbeale' as reviewer, circled in red."
+     style="width: 55%;">
 
 Now your mentor can review your work while making some suggested
 changes, where needed. After your mentor does this, when you return to

@@ -268,8 +268,6 @@ flights |>
   geom_point(aes(size = n))
 ```
 
-![](Chapter_13_Instructions_files/figure-commonmark/changing%20proportion%20of%20cancelled%20flights-1.png)
-
 ------------------------------------------------------------------------
 
 ## Logarithms
@@ -404,16 +402,9 @@ cumsum(x)
 1.  Explain in words what each line of the code used to generate the
     following figure does.
 
-<div id="fig-flights">
-
-<img src="Images/Ch13_Exercise_pt2_Q1.png" class="border"
-style="width:65.0%"
-data-fig-alt="A line plot with scheduled departure hour on the x-axis, and proportion of cancelled flights on the y-axis. Cancellations seem to accumulate over the course of the day until 8pm, very late flights are much less likely to be cancelled."
-data-fig-align="center" />
-
-Figure 1: Positive correlation hour vs proportion of flights cancelled
-
-</div>
+<img src="Images/Ch13_Exercise_pt2_Q1.png" 
+     alt="A line plot with scheduled departure hour on the x-axis, and proportion of cancelled flights on the y-axis. Cancellations seem to accumulate over the course of the day until 8pm, very late flights are much less likely to be cancelled."
+     style="width: 55%;">
 
 2.  What trigonometric functions does R provide? Guess some names and
     look up the documentation. Do they use degrees or radians?

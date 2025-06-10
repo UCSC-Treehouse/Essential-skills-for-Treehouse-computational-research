@@ -142,8 +142,9 @@ Either add the missing pair, or press ESCAPE to abort the expression and try aga
 
 Note that the environment tab in the upper right pane displays all of the objects that you’ve created:
 
-![Chapter 2 Environment Tab Example](Images/Ch2_Environment_Tab_Example.png){width=65% fig-alt="Zoomed in example of environment tab located in the upper right pane display of RStudio" fig-align="center" .border}
-
+<img src="Images/Ch2_Environment_Tab_Example.png" 
+     alt="Zoomed in example of environment tab located in the upper right pane display of RStudio"
+     style="width: 55%;">
 
 ------------------------------------------------------------------------
 

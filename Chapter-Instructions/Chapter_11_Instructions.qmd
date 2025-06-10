@@ -76,7 +76,9 @@ ggplot(df, aes(x, y)) +
 2. Recreate the following plot using the fuel economy data.
 Note that both the colors and shapes of points vary by type of drive train.
 
-![City MPG vs Highway of Different car types](Images/Ch11_Exercises_pt1_Q2.png){width=55% fig-alt="Scatterplot showing positive correlation between city miles per gallon vs highway miles per gallon, across 3 types of vehicles" .border}
+<img src="Images/Ch11_Exercises_pt1_Q2.png" 
+     alt="Scatterplot showing positive correlation between city miles per gallon vs highway miles per gallon, across 3 types of vehicles."
+     style="width: 55%;">
 
 3. Take an exploratory graphic that you’ve created in the last month, and add informative titles to make it easier for others to understand.
 
@@ -730,7 +732,9 @@ p3 <- ggplot(mpg, aes(x = cty, y = hwy)) +
 
 2. Using the three plots from the previous exercise, recreate the following patchwork.
 
-![Chapter 11 Exercise pt 5 #2: Three plots of mpg dataset](Images/Ch11_Exercise_pt5_Q2.png){#fig-cars width=55% fig-alt="Three plots, 2 scatterplots, 1 with negative correlation between car type and fuel efficiency, 1 with positive correlation between city and highway fuel efficiency. Finally, 1 last boxplot shows 3 types of vehicles' fuel efficiency." fig-align="center" .border}
+<img src="Images/Ch11_Exercise_pt5_Q2.png" 
+     alt="Three plots, 2 scatterplots, 1 with negative correlation between car type and fuel efficiency, 1 with positive correlation between city and highway fuel efficiency. Finally, 1 last boxplot shows 3 types of vehicles' fuel efficiency."
+     style="width: 55%;">
 
 For the next 8 chapters (12-19) you’ll learn about the most important types of variables that you’ll encounter inside a data frame and learn the tools you can use to work with them.
 
