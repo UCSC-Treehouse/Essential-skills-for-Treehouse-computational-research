@@ -132,6 +132,8 @@ you will want to load the libraries every session.
 library(tidyverse)
 ```
 
+When you run the command, you will see the results in the space below the chunk. The results will look like this:
+
     ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ✔ dplyr     1.1.4     ✔ readr     2.1.5
     ✔ forcats   1.0.0     ✔ stringr   1.5.1
