@@ -127,12 +127,17 @@ specified) can be run in your executable code chunks.
 Load libraries from the installed packages. Unlike installing packages,
 you will want to load the libraries every session.
 
+To run a command from a code chunk, click the green arrow on the top
+right of the chunk.
+
+<img src="Images/run_command_in_chunk.png" 
+     alt="RStudio screen navigated to a executable code chunk, with the 'Run Current Chunk' green arrow button circled in red."
+     style="width: 85%;">
+
 ``` r
 # load tidyverse library (you will use this in a lot of your data analysis!)
 library(tidyverse)
 ```
-
-When you run the command, you will see the results in the space below the chunk. The results will look like this:
 
     ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ✔ dplyr     1.1.4     ✔ readr     2.1.5
@@ -151,13 +156,6 @@ library(palmerpenguins)
 # load ggthemes library (offers colorblind safe color palette)
 library(ggthemes)
 ```
-
-To run a command from a code chunk, click the green arrow on the top
-right of the chunk.
-
-<img src="Images/run_command_in_chunk.png" 
-     alt="RStudio screen navigated to a executable code chunk, with the 'Run Current Chunk' green arrow button circled in red."
-     style="width: 85%;">
 
 AMAZING work! Now, let’s *really* get into it.
 
