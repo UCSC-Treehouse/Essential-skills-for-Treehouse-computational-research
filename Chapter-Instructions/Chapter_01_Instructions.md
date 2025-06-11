@@ -150,6 +150,13 @@ library(palmerpenguins)
 library(ggthemes)
 ```
 
+To run a command from a code chunk, click the green arrow on the top
+right of the chunk.
+
+<img src="Images/run_command_in_chunk.png" 
+     alt="RStudio screen navigated to a executable code chunk, with the 'Run Current Chunk' green arrow button circled in red."
+     style="width: 85%;">
+
 AMAZING work! Now, let’s *really* get into it.
 
 ------------------------------------------------------------------------
