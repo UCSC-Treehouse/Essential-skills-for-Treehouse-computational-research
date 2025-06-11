@@ -46,46 +46,7 @@ push your corresponding chapters’ work to.
      alt="Screenshot of project folder with .Rproj file button" 
      style="width: 55%;">
 
-2.  Next, create a new Quarto document (.qmd file) where you can work on
-    the examples, exercises, and type any notes you may want.
-
-- File –\> New File –\> Quarto Document…
-
-<img src="Images/create_new_quarto_file.png" 
-     alt="RStudio screen showing button navigation to create a new quarto document"
-     style="width: 55%;">
-
-3.  Name your Quarto document
-
-- Title file ‘Chapter 1’
-- **deselect** ‘Use visual markdown editor’
-- Click ‘Create Empty Document’
-
-<img src="Images/name_new_quarto_file.png" 
-     alt="RStudio screen upon creating new quarto document: title box changed to 'Chapter 1', 'Use visual markdown editor' is deselected, and 'Create Empty Document' button is present and circled in red."
-     style="width: 55%;">
-
-You will see something like the following…
-
-<img src="Images/ch_1_quarto_file.png" 
-     alt="RStudio screen with newly created 'Chapter 1' quarto document. The file is blank besides the YAML header with 'title: Chapter 1' and 'format: html'."
-     style="width: 55%;">
-
-4.  Change the YAML Header
-
-The section at the top of your document, enclosed by ‘—’, is called the
-YAML header. Currently, it specifies ‘format: html’, which renders your
-.qmd file as an HTML document. When you “render” the document, Quarto
-combines your code, text, and raw data into a finished document.
-Changing the header of the document to ‘format: gfm’ ensures that the
-output is a markdown file. We want to render to a gfm (GitHub Flavored
-Markdown), specifically, as it is optimized for viewing on GitHub.
-
-<img src="Images/change_yaml_header.png" 
-     alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct 'Chapter 1' title but the output format has been changed to 'format: gfm'."
-     style="width: 55%;">
-
-5.  Install Packages and Enable Reproducibility
+2.  Install Packages and Enable Reproducibility
 
 You have already initialized this project with renv, ensuring
 consistency of your package versions, and thus consistency when sharing
@@ -109,49 +70,93 @@ you just run ‘install.packages()’, you can always run ‘renv::snapshot()’
 to save the current packages and versions afterward. This is always done
 in your R Console.
 
-Now, you will switch to writing commands in your own **Quarto
-document**! To do this, click the green “+C” button near the top of your
-RStudio page.
+3.  Next, create a new Quarto document (.qmd file) where you can work on
+    the examples, exercises, and type any notes you may want.
+
+- File –\> New File –\> Quarto Document…
+
+<img src="Images/create_new_quarto_file.png" 
+     alt="RStudio screen showing button navigation to create a new quarto document"
+     style="width: 55%;">
+
+4.  Name your Quarto document
+
+- Title file ‘Chapter 1’
+- **deselect** ‘Use visual markdown editor’
+- Click ‘Create Empty Document’
+
+<img src="Images/name_new_quarto_file.png" 
+     alt="RStudio screen upon creating new quarto document: title box changed to 'Chapter 1', 'Use visual markdown editor' is deselected, and 'Create Empty Document' button is present and circled in red."
+     style="width: 55%;">
+
+You will see something like the following…
+
+<img src="Images/ch_1_quarto_file.png" 
+     alt="RStudio screen with newly created 'Chapter 1' quarto document. The file is blank besides the YAML header with 'title: Chapter 1' and 'format: html'."
+     style="width: 55%;">
+
+5.  Change the YAML Header
+
+The section at the top of your document, enclosed by ‘—’, is called the
+YAML header. Currently, it specifies ‘format: html’, which renders your
+.qmd file as an HTML document. When you “render” the document, Quarto
+combines your code, text, and raw data into a finished document.
+Changing the header of the document to ‘format: gfm’ ensures that the
+output is a markdown file. We want to render to a gfm (GitHub Flavored
+Markdown), specifically, as it is optimized for viewing on GitHub.
+
+<img src="Images/change_yaml_header.png" 
+     alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct 'Chapter 1' title but the output format has been changed to 'format: gfm'."
+     style="width: 55%;">
+
+6.  Load Libraries from the Installed Packages.
+
+Installing new packages does not mean they are ready to use just yet.
+Next, we need to load the libraries from the packages into our new
+project. Unlike installing packages, you need to load the libraries each
+new session.
+
+Thus far you have been working in your Console. You will now switch to
+writing commands in your own **Quarto document**! But don’t worry, your
+Console will still appear at the bottom of your RStudio screen. To
+create a new code chunk, click the green “+C” button near the top of
+your RStudio page. (**Hint**: Make sure your cursor is outside of the
+YAML header!)
 
 <img src="Images/create_code_chunk.png" 
      alt="RStudio screen navigated to the top by the green '+C' button, which is circled in red. This will create a new code chunk."
      style="width: 55%;">
 
 (**Hint**: If you click the right side of the button, by the down arrow,
-you will notice there are many types of code you select. For the purpose
-of the following examples and exercises, you will be using R.)
+you will notice there are many types of code you can select. For the
+purpose of the following examples and exercises, you will be using R.)
 
-The following commands (**all** of the following, unless otherwise
-specified) can be run in your executable code chunks.
-
-Load libraries from the installed packages. Unlike installing packages,
-you will want to load the libraries every session.
-
-To run a command from a code chunk, click the green arrow on the top
-right of the chunk.
-
-<img src="Images/run_command_in_chunk.png" 
-     alt="RStudio screen navigated to a executable code chunk, with the 'Run Current Chunk' green arrow button circled in red."
-     style="width: 85%;">
+Copy the following command into a new code chunk to load the `tidyverse`
+library.
 
 ``` r
 # load tidyverse library (you will use this in a lot of your data analysis!)
 library(tidyverse)
 ```
 
-When you run the command, you will see the results in the space below the chunk.
-The results will look like this:
+To run a command, click the “Run” button on the top right of your
+RStudio screen, to the right of the “Insert a new code chunk” button. A
+dropdown box will appear, click “Run Current Chunk” to run the
+**entire** chunk.
 
-    ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-    ✔ dplyr     1.1.4     ✔ readr     2.1.5
-    ✔ forcats   1.0.0     ✔ stringr   1.5.1
-    ✔ ggplot2   3.5.2     ✔ tibble    3.2.1
-    ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-    ✔ purrr     1.0.4     
-    ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ✖ dplyr::filter() masks stats::filter()
-    ✖ dplyr::lag()    masks stats::lag()
-    ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+<img src="Images/run_current_chunk.png" 
+     alt="RStudio screen navigated to the top right 'Run' button, circled in red."
+     style="width: 55%;">
+
+You will see the following output:
+
+<img src="Images/load_library_output.png" 
+     alt="RStudio screen when running command to load 'library(tidyverse)' with output."
+     style="width: 55%;">
+
+Now that you know how to run an entire chunk, let’s see how to run
+**selected lines** of your chunk. Copy the next two commands into a new
+chunk. Select both lines, click “Run”, and “Run Selected Line(s)”.
 
 ``` r
 # load palmerpenguins library (includes an example dataset)
@@ -159,6 +164,10 @@ library(palmerpenguins)
 # load ggthemes library (offers colorblind safe color palette)
 library(ggthemes)
 ```
+
+<img src="Images/run_selected_lines.png" 
+     alt="RStudio screen when running selected lines of a command. In this case, to load two libraries, 'palmerpenguins' and 'ggthemes'."
+     style="width: 55%;">
 
 AMAZING work! Now, let’s *really* get into it.
 
@@ -724,11 +733,12 @@ online.
 ------------------------------------------------------------------------
 
 **You have completed your first chapter!** Now, remember that Chapter 1
-branch you created? You are going to push all of your new Chapter 1
-changes to that branch on GitHub, so your work will be viewable on the
-UCSC-Treehouse organization. Lastly, you will request your mentor as a
-‘reviewer’, so they can check over your work *before* you officially
-push it to the main branch.
+branch you created? After you save your Quarto notebook, you are going
+to push all of your new Chapter 1 changes to that branch on GitHub, so
+your work will be viewable on the UCSC-Treehouse organization.
+
+Lastly, you will request your mentor as a ‘reviewer’, so they can check
+over your work *before* you officially push it to the main branch.
 
 Navigate back to **GitHub Desktop**… You should see your new changes
 highlighted in red.
