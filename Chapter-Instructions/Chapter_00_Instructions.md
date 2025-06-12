@@ -190,4 +190,4 @@ creating branches and pull requests on GitHub.
 ------------------------------------------------------------------------
 
 **START** with [Chapter
-1](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_01_Instructions.md)
+1a](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_01a_Instructions.md)
