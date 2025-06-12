@@ -5,6 +5,15 @@ You now have some experience running R code. Before we go any further,
 let’s ensure you’ve got a solid foundation in running R code and that
 you know some of the most helpful RStudio features.
 
+**REMEMBER**: **For each of the following chapters, create a new branch
+corresponding to that chapter.** **Continue to work on the examples,
+exercises, and write any notes you may want.** **Then, save and render
+the document, before committing and pushing those changes to the
+corresponding new branch on GitHub desktop.** **Create a pull request,
+requesting your mentor’s review.** **Finally, after they approve the
+request, make sure your remote and local repository versions are
+synced.**
+
 ------------------------------------------------------------------------
 
 ## Coding Basics
