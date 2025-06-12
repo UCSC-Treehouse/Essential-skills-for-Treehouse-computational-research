@@ -204,8 +204,8 @@ Instead, you will "render" your document to a markdown document, in this case a 
 
 Render your Chapter 1a work by clicking the "Render" button by the blue right arrow located on the top of your RStudio screen.
 
-<img src="Images/penguin_flipper_to_mass_ggplot2.png" 
-     alt="Scatterplot showing positive correlation between penguin flipper length and body mass across three species"
+<img src="Images/render_document.png" 
+     alt="RStudio screen at the top of the page with the 'Render' button with the blue arrow circled in red."
      style="width: 55%;">
 
 ------------------------------------------------------------------------

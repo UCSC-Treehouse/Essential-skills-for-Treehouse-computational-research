@@ -54,6 +54,41 @@ saved, unchanged work in **green** and your mentor’s changes (or any new
 changes you have made too) in **red**. The red signifies *any* new
 change that has not been committed and pushed to a branch.
 
+After adding their comments, your mentor will accept your pull request
+on GitHub. Here’s what happens and what you’ll see:
+
+1.  Pull Request is Merged into the Main Branch
+
+- Your proposed changes (commits) are added to the **main** branch
+
+- GitHub marks the pull request as “Merged”
+
+2.  Branch Deletion
+
+- After the merge, you will be prompted to *safely* delete your
+  Chapter-01 branch
+
+3.  Sync Your Local Repository
+
+Navigate to your local copy and check the files. Do you see the new
+changes?
+
+While your mentors new edits appear on GitHub after the merge, they will
+not be reflected in your *local* repository. To sync these changes to
+your local repository, you will need to “pull” them from GitHub.
+
+Open GitHub desktop. You should see a highlighted blue bar prompting you
+to “Pull 1 commit from the origin remote”. Click “Pull origin”.
+
+<img src="Images/pull_origin_changes.png" 
+     alt="GitHub desktop screen upon changes to a file by someone on GitHub. GitHub desktop prompts the user to 'pull origin', ultimately syncing the remote and local repositories."
+     style="width: 55%;">
+
+Now the remote and local repositories are synced! (**Hint**: Anytime you
+make changes to either the remote (e.g. on GitHub) or the local
+repository, you will need to sync them to keep both versions up to
+date.)
+
 ------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
