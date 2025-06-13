@@ -174,6 +174,7 @@ In the context of **palmerpenguins**, a variable refers to an attribute of all t
 
 **To begin**: Create a plot with the function ggplot(), which you will add **layers** to using different **arguments**.
 The first argument of ggplot() is the dataset to be used in the graph: ggplot(data = penguins) creates an empty graph that is primed to display the penguins dataset.
+Run the following command (and all example and exercise commands) the same way you ran the library commands above. 
 
 ```{r empty ggplot}
 #| eval: false
