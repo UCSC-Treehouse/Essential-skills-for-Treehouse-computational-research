@@ -193,7 +193,8 @@ AMAZING work! Now, let’s *really* get into it.
 **To begin**: Create a plot with the function ggplot(), which you will
 add **layers** to using different **arguments**. The first argument of
 ggplot() is the dataset to be used in the graph: ggplot(data = penguins)
-creates an empty graph that is primed to display the penguins dataset.
+creates an empty graph that is primed to display the penguins dataset. 
+Run the following command (and all example commands) the same way you ran the library commands above. 
 
 ``` r
 ggplot(data = penguins)
