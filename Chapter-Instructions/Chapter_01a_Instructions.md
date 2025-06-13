@@ -282,6 +282,8 @@ You will be relocated to the **GitHub browser**.
      alt="GitHub browser screen upon creating a pull request. On the right-hand side, a reviewer is added. The example shows 'hbeale' as reviewer, circled in red."
      style="width: 55%;">
 
+2.  Click “Create pull request” and you’re done!
+
 ------------------------------------------------------------------------
 
 **NEXT UP:** [Chapter
