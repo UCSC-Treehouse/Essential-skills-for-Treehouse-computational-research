@@ -1,9 +1,10 @@
 ---
-title: "Chapter 1a, RStudio"
+title: "Chapter 1a, RStudio and GitHub"
 format: gfm
 ---
 
 In this first section of Chapter 1 you will create and work on a new branch on GitHub, create a **Quarto document**, and have a brief introduction to plotting.
+Then, you will **push** your Chapter 1a work to a Chapter-1a branch, for your mentor's review.
 
 ------------------------------------------------------------------------
 
@@ -19,14 +20,14 @@ For each chapter you work through, you will create a new quarto document *and* a
 
 - In **GitHub Desktop**, click Current Branch --\> New Branch
 
-<img src="Images/create_new_ch_1_branch.png" 
-     alt="GitHub Desktop screen where 'Current Branch' is selected and 'New Branch' button is visible" 
+<img src="Images/create_new_ch_1a_branch.png" 
+     alt="GitHub Desktop screen where 'Current Branch' is selected and 'New Branch' button is visible. Both are circled in red." 
      style="width: 55%;">
 
-- Name the branch 'chapter-01' and click 'Create Branch'
+- Name the branch 'chapter-01a' and click 'Create Branch'
 
-<img src="Images/name_new_branch_ch_1.png" 
-     alt="GitHub Desktop screen upon creation of new branch, a name 'chapter-01' is given and 'Create Branch' button is visible in blue" 
+<img src="Images/name_new_branch_ch_1a.png" 
+     alt="GitHub Desktop screen upon creation of new branch, a name 'chapter-01a' is given and 'Create Branch' button is visible in blue" 
      style="width: 55%;">
 
 **Create Your First Quarto Notebook:**
@@ -63,23 +64,23 @@ This is always done in your R Console.
 - File --\> New File --\> Quarto Document...
 
 <img src="Images/create_new_quarto_file.png" 
-     alt="RStudio screen showing button navigation to create a new quarto document"
+     alt="RStudio screen showing button navigation to create a new quarto document. 'File', 'New file', and Quarto document...' are all circled in red."
      style="width: 55%;">
 
 4. Name your Quarto document
 
-- Title file 'Chapter 1'
+- Title file 'Chapter 1a'
 - **deselect** 'Use visual markdown editor'
 - Click 'Create Empty Document'
 
 <img src="Images/name_new_quarto_file.png" 
-     alt="RStudio screen upon creating new quarto document: title box changed to 'Chapter 1', 'Use visual markdown editor' is deselected, and 'Create Empty Document' button is present and circled in red."
+     alt="RStudio screen upon creating new quarto document: title box changed to 'Chapter 1a', 'Use visual markdown editor' is deselected, and 'Create Empty Document' button is present and circled in red."
      style="width: 55%;">
 
 You will see something like the following...
 
-<img src="Images/ch_1_quarto_file.png" 
-     alt="RStudio screen with newly created 'Chapter 1' quarto document. The file is blank besides the YAML header with 'title: Chapter 1' and 'format: html'."
+<img src="Images/ch_1a_quarto_file.png" 
+     alt="RStudio screen with newly created 'Chapter 1a' quarto document. The file is blank besides the YAML header with 'title: Chapter 1a' and 'format: html'."
      style="width: 55%;">
 
 5. Change the YAML Header
@@ -91,7 +92,7 @@ Changing the header of the document to 'format: gfm' ensures that the output is 
 We want to render to a gfm (GitHub Flavored Markdown), specifically, as it is optimized for viewing on GitHub.
 
 <img src="Images/change_yaml_header.png" 
-     alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct 'Chapter 1' title but the output format has been changed to 'format: gfm'."
+     alt="Cropped screenshot of top left corner of RStudio screen. The YAML header has the correct 'Chapter 1a' title but the output format has been changed to 'format: gfm'."
      style="width: 55%;">
 
 6. Load Libraries from the Installed Packages.
@@ -99,6 +100,8 @@ We want to render to a gfm (GitHub Flavored Markdown), specifically, as it is op
 Installing new packages does not mean they are ready to use just yet.
 Next, we need to load the libraries from the packages into our new project.
 Unlike installing packages, you need to load the libraries each new session.
+
+**Load Libraries**
 
 Thus far you have been working in your Console.
 You will now switch to writing commands in your own **Quarto document**!
@@ -125,7 +128,7 @@ To run a command, click the "Run" button on the top right of your RStudio screen
 A dropdown box will appear, click "Run Current Chunk" to run the **entire** chunk.
 
 <img src="Images/run_current_chunk.png" 
-     alt="RStudio screen navigated to the top right 'Run' button, circled in red."
+     alt="RStudio screen navigated to the top right 'Run' button and 'Run current chunk' button, both circled in red."
      style="width: 55%;">
      
 You will see the following output:
@@ -146,7 +149,7 @@ library(ggthemes)
 ```
 
 <img src="Images/run_selected_lines.png" 
-     alt="RStudio screen when running selected lines of a command. In this case, to load two libraries, 'palmerpenguins' and 'ggthemes'."
+     alt="RStudio screen when running selected lines of a command."
      style="width: 55%;">
 
 AMAZING work! Now, let's *really* get into it.
@@ -206,6 +209,46 @@ Render your Chapter 1a work by clicking the "Render" button by the blue right ar
 
 <img src="Images/render_document.png" 
      alt="RStudio screen at the top of the page with the 'Render' button with the blue arrow circled in red."
+     style="width: 55%;">
+
+------------------------------------------------------------------------
+
+Now, to wrap up Chapter 1a, you will learn to use GitHub to make your work viewable to others (and also reproducible)!
+You will push your Chapter 1a work to GitHub, creating a pull request in the process.
+This pull request will allow a mentor to review your work each chapter.
+
+Remember that Chapter 1a branch you created?
+After you save your Quarto notebook, you are going to push all of your new Chapter 1a changes to that branch on GitHub, so your work will be visible on the UCSC-Treehouse organization.
+
+Lastly, you will request your mentor as a 'reviewer', so they can check over your work *before* you officially merge it with the main branch.
+
+Navigate back to **GitHub Desktop**...
+You should see your new changes highlighted in red.
+
+1. Push new Chapter 1a changes to chapter-01a branch
+
+<img src="Images/push_ch_1a_to_ch_1a_branch.png" 
+     alt="Cropped image of bottom left corner of GitHub Desktop screen where description 'Create and complete chapter 1a' is given and blue 'Commit 1 file to chapter-01a' button is circled in red at the bottom."
+     style="width: 55%;">
+
+2. Publish the new chapter-01a branch
+
+<img src="Images/publish_ch_1a_branch.png" 
+     alt="GitHub Desktop screen where blue 'Publish branch' button is present and circled in red."
+     style="width: 55%;">
+
+3. Create a pull request
+
+<img src="Images/create_pull_request.png" 
+     alt="GitHub Desktop screen after committing changes to new branch, prompted to click 'Create Pull Request' button in blue."
+     style="width: 55%;">
+
+You will be relocated to the **GitHub browser**.
+
+1. Add your mentor as a reviewer (**Note**: here I use 'hbeale' but make sure you are adding *your* mentor's GitHub id)
+
+<img src="Images/add_reviewer_to_pull_request.png" 
+     alt="GitHub browser screen upon creating a pull request. On the right-hand side, a reviewer is added. The example shows 'hbeale' as reviewer, circled in red."
      style="width: 55%;">
 
 ------------------------------------------------------------------------

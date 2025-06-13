@@ -5,6 +5,16 @@ Now that you have created your first plot, you will begin to explore
 data visualization with **ggplot2**: navigating variables, distribution,
 plots, and varying aesthetic options.
 
+**REMEMBER**: **For each of the following chapters, create a new branch
+corresponding to that chapter.** **Continue to work on the examples,
+exercises, and write any notes you may want.** **Then, save and render
+the document, before committing and pushing those changes to the
+corresponding new branch on GitHub desktop.** **Create a pull request,
+requesting your mentor’s review.** **You will learn what happens after
+your pull request is approved in Chapter 1c.**
+
+------------------------------------------------------------------------
+
 First, we need to define a **geom**: a geometrical object that a plot
 uses to represent data. For example, bar charts use bar geoms with
 geom_bar(), line charts can be displayed with line geoms using

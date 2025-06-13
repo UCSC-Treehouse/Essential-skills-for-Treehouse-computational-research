@@ -4,67 +4,51 @@ format: gfm
 ---
 
 **That was a lot!**
-Now, to wrap up Chapter 1 you will learn to use GitHub to make your work viewable to others (and also reproducible!)
-You will create a new branch on GitHub and push your Chapter 1 work to that branch, creating a pull request in the process.
-This pull request will allow a mentor to review your work each chapter.
+
+This chapter will be brief.
+You will learn what happens after you make your pull request and your mentor approves it.
 
 ------------------------------------------------------------------------
 
-Remember that Chapter 1 branch you created?
-After you save your Quarto notebook, you are going to push all of your new Chapter 1 changes to that branch on GitHub, so your work will be viewable on the UCSC-Treehouse organization.
-
-Lastly, you will request your mentor as a 'reviewer', so they can check over your work *before* you officially push it to the main branch.
-
-Navigate back to **GitHub Desktop**...
-You should see your new changes highlighted in red.
-
-1. Push new Chapter 1 changes to chapter-01 branch
-
-<img src="Images/push_ch_1_to_ch_1_branch.png" 
-     alt="Cropped image of bottom left corder of GitHub Desktop screen where description 'Create and complete chapter 1' is given and blue 'Commit 1 file to chapter-01' button is visible at the bottom."
-     style="width: 55%;">
-
-2. Publish the new chapter-01 branch
-
-<img src="Images/publish_ch_1_branch.png" 
-     alt="GitHub Desktop screen where blue 'Publish branch' button is present and circled in red."
-     style="width: 55%;">
-
-3. Create a pull request
-
-<img src="Images/create_pull_request.png" 
-     alt="GitHub Desktop screen after committing changes to new branch, prompted to click 'Create Pull Request' button in blue."
-     style="width: 55%;">
-
-You will be relocated to the **GitHub browser**.
-
-1. Add your mentor as a reviewer (**Note**: here I use 'hbeale' but make sure you are adding *your* mentor's GitHub id)
-
-<img src="Images/add_reviewer_to_pull_request.png" 
-     alt="GitHub browser screen upon creating a pull request. On the righthand side, a reviewer is added. The example shows 'hbeale' as reviewer, circled in red."
-     style="width: 55%;">
-
 Now your mentor can review your work while making some suggested changes, where needed.
-After your mentor does this, when you return to GitHub Desktop and are under the 'chapter-01' branch, you will see your saved, unchanged work in **green** and your mentor's changes (or any new changes you have made too) in **red**.
+After your mentor does this, when you return to GitHub Desktop and are under the 'Chapter-01a' or "Chapter-01b" branch, you will see your saved, unchanged work in **green** and your mentor's changes (or any new changes you have made too) in **red**.
 The red signifies *any* new change that has not been committed and pushed to a branch.
 
 After adding their comments, your mentor will accept your pull request on GitHub.
-Here's what happens and what you'll see:
+Here's what happens and what you'll do:
 
-1. Pull Request is Merged into the Main Branch
+1. Merge the Pull Request
 
-- Your proposed changes (commits) are added to the **main** branch
+Once your mentor approves the pull request, you can officially merge the changes into your main branch.
+You will be prompted with the following:
 
-- GitHub marks the pull request as "Merged"
+<img src="Images/pull_request_accepted.png" 
+     alt="GitHub browser screen upon pull request being accepted. Mentor 'hbeale' accepted the pull request, and GitHub is prompting viewer to 'Merge pull request', which is circled in red."
+     style="width: 55%;">
 
-2. Branch Deletion
+<img src="Images/confirm_pull_request.png" 
+     alt="Cropped image of GitHub browser window after a pull request is approved and 'Merge pull request' has been select. GitHub prompts you to 'Confirm merge', which is circled in red."
+     style="width: 55%;">
 
-- After the merge, you will be prompted to *safely* delete your Chapter-01 branch
+2. Delete the Branch
+
+After the merge, you will be prompted to *safely* delete your chapter's branch.
+
+<img src="Images/delete_ch_1a_branch.png" 
+     alt="Cropped image of GitHub browser window after the merge is complete. The viewer is prompted to safely 'Delete branch', which is circled in red."
+     style="width: 55%;">
+
 
 3. Sync Your Local Repository
 
-Navigate to your local copy and check the files.
-Do you see the new changes?
+After the merge is complete, you will see the new Chapter 1 Quarto documents in your GitHub.
+
+<img src="Images/ch_1a_pr_merged.png" 
+     alt="GitHub browser window after the merge is complete and branch is deleted. All project files and folders are listed and the newly merged file, 'Chapter-1a.qmd', is circled in red."
+     style="width: 55%;">
+
+Now, navigate to your local copy and check the files.
+Do you see the new changes in your file?
 
 While your mentors new edits appear on GitHub after the merge, they will not be reflected in your *local* repository.
 To sync these changes to your local repository, you will need to "pull" them from GitHub.

@@ -65,8 +65,8 @@ In RStudio:
      alt="Create New Project in RStudio with 'File', 'New Project...'" 
      style="width: 55%;">
 
-<img src="Images/project_in_existing_directory.png" 
-     alt="Create New Project in RStudio with 'New Directory'" 
+<img src="Images/project_in_new_directory.png" 
+     alt="Create new project in RStudio with 'New Directory'" 
      style="width: 55%;">
 
 <img src="Images/new_quarto_project.png" 
@@ -134,9 +134,9 @@ repository (i.e. the directory/workspace your new project exists in.)
      alt="GitHub Desktop visual with buttons to add your new local repository" 
      style="width: 55%;">
 
-You will see something similar to the following… Keep in mind some
-listed files (on the left of your screen) may be different due to
-RStudio version differences.
+You will see something similar to the following. (**Hint**: Keep in mind
+some listed files on the left of your screen may be different due to
+RStudio version differences)
 
 <img src="Images/new_repo_in_github_desktop.png" 
      alt="GitHub Desktop screen upon adding new repository; files listed on the left" 
