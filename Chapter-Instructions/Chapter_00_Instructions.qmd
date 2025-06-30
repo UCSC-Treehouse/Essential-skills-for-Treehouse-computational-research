@@ -12,17 +12,18 @@ In this chapter, you will set up:
 
 ## Prerequisites
 
-1.  **Install Required Software**
+1.  **Organization Access**
+
+-   Ask your mentor, Holly, or Ellen to add you to the 'UCSC-Treehouse' GitHub organization.
+**Please include your GitHub id in your request.**
+
+2.  **Install Required Software**
 
 -   [Github Desktop](https://github.com/apps/desktop)
 -   [R](https://www.r-project.org)
 -   [RStudio](https://posit.co/download/rstudio-desktop/)
 -   Quarto and `renv` (*instructions below*)
 
-2.  **Organization Access**
-
--   Ask your mentor, Holly, or Ellen to add you to the 'UCSC-Treehouse' GitHub organization.
-**Please include your GitHub id in your request.**
 
 ------------------------------------------------------------------------
 
