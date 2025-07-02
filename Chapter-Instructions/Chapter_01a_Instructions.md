@@ -1,4 +1,4 @@
-# Chapter 1a, RStudio and GitHub
+hi# Chapter 1a, RStudio and GitHub
 
 
 In this first section of Chapter 1 you will create and work on a new
