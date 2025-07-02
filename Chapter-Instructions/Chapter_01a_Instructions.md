@@ -1,4 +1,4 @@
-hi# Chapter 1a, RStudio and GitHub
+# Chapter 1a, RStudio and GitHub
 
 
 In this first section of Chapter 1 you will create and work on a new
@@ -222,13 +222,17 @@ explore different visualizations of your data in the following section.
 
 ------------------------------------------------------------------------
 
+## Saving Your Work
+
+Remember to save your work periodically by clicking the blue "Save" button on the top left of the workspace and title the file ‘Chapter 1a’. Saving your new Quarto document will properly save it as a "Quarto Markdown" or `.qmd` file in your repository folder. 
+
 ## Render Your New Work
 
 By now you should have four code chunks, two to load libraries and two
 to create a plot. While a `.qmd` document (the file you are working in
 now) can be viewed on GitHub, it is best used to view raw code. Instead,
 you will “render” your document to a markdown document, in this case a
-gfm, since we specified that in our YAML header.
+gfm, since we specified that in our YAML header. The markdown document will be saved as an `.md` document (just like the files you are reading in this textbook). 
 
 Render your Chapter 1a work by clicking the “Render” button by the blue
 right arrow located on the top of your RStudio screen.
