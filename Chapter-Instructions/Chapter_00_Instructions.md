@@ -15,6 +15,7 @@ In this chapter, you will set up:
 - [Github Desktop](https://github.com/apps/desktop)
 - [R](https://www.r-project.org)
 - [RStudio](https://posit.co/download/rstudio-desktop/)
+- [Windows Extension](https://git-scm.com/downloads/win) (*Windows users only*)
 - Quarto and `renv` (*instructions below*)
 
 2.  **Organization Access**
