@@ -253,7 +253,7 @@ Lastly, you will request your mentor as a ‘reviewer’, so they can check
 over your work *before* you officially merge it with the main branch.
 
 Navigate back to **GitHub Desktop**… You should see your new changes
-highlighted in red.
+highlighted.
 
 1.  Push new Chapter 1a changes to chapter-01a branch
 
