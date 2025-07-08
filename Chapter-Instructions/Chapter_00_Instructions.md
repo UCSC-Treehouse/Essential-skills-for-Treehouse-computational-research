@@ -34,7 +34,7 @@ Quarto (2024.04+).
 Next, you want to install `renv`, which captures the packages and
 versions your project uses, aiding in reproducibility.
 
-Open RStudio. The “Console” tab is where you can ran R commands
+Open RStudio. The “Console” tab is where you can run R commands
 interactively. You can type code here and press “Enter” to see immediate
 results. This is where we will begin in Chapter 0.
 
