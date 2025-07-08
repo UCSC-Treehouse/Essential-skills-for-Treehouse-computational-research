@@ -27,8 +27,8 @@ x <- 3 * 4
 
 Note that the value of x is not printed, it is just stored. If you want
 to view the value, type x in the console. (**Hint**: you can also
-highlight the object name by double clicking and pressing command +
-enter. another simple way, type the object name and run the line)
+highlight the object name by double-clicking and pressing Command +
+Enter. Another simple way, type the object name and run the line)
 
 You can combine multiple elements into a vector with c():
 
