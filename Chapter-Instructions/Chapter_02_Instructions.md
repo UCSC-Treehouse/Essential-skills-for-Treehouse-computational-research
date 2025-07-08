@@ -36,7 +36,7 @@ You can combine multiple elements into a vector with c():
 primes <- c(2, 3, 5, 7, 11, 13)
 ```
 
-And basic arithmetic on vectors is applied to every element of of the
+And basic arithmetic on vectors is applied to every element of the
 vector:
 
 ``` r
