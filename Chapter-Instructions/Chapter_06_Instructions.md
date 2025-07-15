@@ -43,23 +43,15 @@ Three important principles for file naming are as follows:
 
 For example, suppose you have the following files in a project folder.
 
-alternative model.R
-
-code for exploratory analysis.r
-
-finalreport.qmd
-
-FinalReport.qmd
-
-fig 1.png
-
-Figure_02.png
-
-model_first_try.R
-
-run-first.r
-
-temp.txt
+| Bad Naming                      |
+|---------------------------------|
+| code for exploratory analysis.r |
+| finalreport.qmd                 |
+| FinalReport.qmd                 |
+| fig 1.png                       |
+| model_first_try.R               |
+| run-first.r                     |
+| temp.txt                        |
 
 There are a variety of problems here: it’s hard to find which file to
 run first, file names contain spaces, there are two files with the same
@@ -68,23 +60,17 @@ some names don’t describe their contents (run-first and temp).
 
 Here’s a better way of naming and organizing the same set of files:
 
-01-load-data.R
-
-02-exploratory-analysis.R
-
-03-model-approach-1.R
-
-04-model-approach-2.R
-
-fig-01.png
-
-fig-02.png
-
-report-2022-03-20.qmd
-
-report-2022-04-02.qmd
-
-report-draft-notes.txt
+| Good Naming               |
+|---------------------------|
+| 01-load-data.R            |
+| 02-exploratory-analysis.R |
+| 03-model-approach-1.R     |
+| 04-model-approach-2.R     |
+| fig-01.png                |
+| fig-02.png                |
+| report-2022-03-20.qmd     |
+| report-2022-04-02.qmd     |
+| report-draft-notes.txt    |
 
 ------------------------------------------------------------------------
 
@@ -127,20 +113,20 @@ project folder ends up.
 
 Absolute paths point to the same place regardless of your working
 directory. They look a little different depending on your operating
-system. On Windows they start with a drive letter (e.g., C:) or two
-backslashes (e.g., “\servername”) and on Mac/Linux they start with a
-slash “/” (e.g., /users/hadley). You should **never** use absolute paths
-in your scripts, because they hinder sharing: no one else will have
-exactly the same directory configuration as you.
+system. - On Windows they start with a drive letter (e.g., C:) or two
+backslashes (e.g., “\servername”) - On Mac/Linux they start with a slash
+“/” (e.g., /users/hadley) You should **NEVER** use absolute paths in
+your scripts, because they hinder sharing: no one else will have exactly
+the same directory configuration as you.
 
 There’s another important difference between operating systems: how you
-separate the components of the path. Mac and Linux uses slashes (e.g.,
-“data/diamonds.csv”) and Windows uses backslashes (e.g., “data.csv”). R
-can work with either type (no matter what platform you’re currently
-using), but unfortunately, backslashes mean something special to R, and
-to get a single backslash in the path, you need to type two backslashes!
-That makes life frustrating, so we recommend always using the Linux/Mac
-style with forward slashes.
+separate the components of the path. - Mac and Linux uses slashes (e.g.,
+“data/diamonds.csv”) - Windows uses backslashes (e.g., “data.csv”) R can
+work with either type (no matter what platform you’re currently using),
+but unfortunately, backslashes mean something special to R, and to get a
+single backslash in the path, you need to type two backslashes! That
+makes life frustrating, so we recommend always using the Linux/Mac style
+with forward slashes.
 
 ------------------------------------------------------------------------
 
