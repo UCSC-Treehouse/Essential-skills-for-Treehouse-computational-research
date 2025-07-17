@@ -180,6 +180,7 @@ Run the following command (and all example and exercise commands) the same way y
 #| eval: false
 ggplot(data = penguins)
 ```
+A grey box with no axes should have appeared in your workspace.
 
 Now we can tell ggplot() how we want to visualize our penguins data.
 Our next argument is mapping, where we define how the variables in our dataset are mapped to visual properties (ie **aesthetics**) of the plot.
