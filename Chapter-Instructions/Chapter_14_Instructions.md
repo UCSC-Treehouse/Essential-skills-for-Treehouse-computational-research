@@ -23,8 +23,8 @@ library(tidyverse)
     ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ✔ dplyr     1.1.4     ✔ readr     2.1.5
     ✔ forcats   1.0.0     ✔ stringr   1.5.1
-    ✔ ggplot2   3.5.2     ✔ tibble    3.2.1
-    ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+    ✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+    ✔ lubridate 1.9.4     ✔ tidyr     1.3.1
     ✔ purrr     1.0.4     
     ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ✖ dplyr::filter() masks stats::filter()
@@ -257,18 +257,10 @@ df |>
 
 ## Exercises pt 2 of 3
 
-1.  Compare and contrast the results of paste0() with str_c() for the
-    following inputs:
-
-``` r
-str_c("hi ", NA)
-str_c(letters[1:2], letters[1:3])
-```
-
-2.  What’s the difference between paste() and paste0()? How can you
+1.  What’s the difference between paste() and paste0()? How can you
     recreate the equivalent of paste() with str_c()?
 
-3.  Convert the following expressions from str_c() to str_glue() or vice
+2.  Convert the following expressions from str_c() to str_glue() or vice
     versa:
 
 <!-- -->
