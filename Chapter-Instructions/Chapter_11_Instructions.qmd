@@ -713,7 +713,7 @@ p5 <- ggplot(mpg, aes(x = cty, y = hwy, color = drv)) +
 
 ## Exercises pt 5 of 5
 
-1. What happens if you omit the parentheses in the following plot layout.
+1. What happens if you omit the parentheses "(p1 | p2)" in the following plot layout.
 Can you explain why this happens?
 ```{r ch 11 exercises pt 5 #1}
 #| eval: false
