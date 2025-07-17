@@ -1,10 +1,11 @@
 # Chapter 1a, RStudio and GitHub
 
 
-In this first section of Chapter 1 you will create and work on a new
-branch on GitHub, create a **Quarto document**, and have a brief
-introduction to plotting. Then, you will **push** your Chapter 1a work
-to a Chapter-1a branch, for your mentor’s review.
+In this first section of Chapter 1, you will continue to work in the
+repository you created in the previous chapter. Now you will create and
+work on a new branch of the repository, create a **Quarto document**,
+and have a brief introduction to plotting. Then, you will **push** your
+Chapter 1a work to a Chapter-1a branch, for your mentor’s review.
 
 ------------------------------------------------------------------------
 
@@ -255,7 +256,8 @@ over your work *before* you officially merge it with the main branch.
 Navigate back to **GitHub Desktop**… You should see your new changes
 highlighted.
 
-1.  Push new Chapter 1a changes to chapter-01a branch
+1.  Push new Chapter 1a changes to chapter-01a branch (Look to the
+    bottom left of your screen and write a summary)
 
 <img src="Images/push_ch_1a_to_ch_1a_branch.png" 
      alt="Cropped image of bottom left corner of GitHub Desktop screen where description 'Create and complete chapter 1a' is given and blue 'Commit 1 file to chapter-01a' button is circled in red at the bottom."
