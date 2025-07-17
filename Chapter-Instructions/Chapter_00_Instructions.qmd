@@ -174,4 +174,4 @@ By the end of Chapter 1, you will have your first experience with plotting data,
 
 ------------------------------------------------------------------------
 
-**START** with [Chapter 1a](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_01a_Instructions.md)
+**START** with [Chapter 1a](Chapter_01a_Instructions.md)
