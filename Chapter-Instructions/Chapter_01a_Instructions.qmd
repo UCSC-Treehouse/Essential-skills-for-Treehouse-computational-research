@@ -3,7 +3,8 @@ title: "Chapter 1a, RStudio and GitHub"
 format: gfm
 ---
 
-In this first section of Chapter 1 you will create and work on a new branch on GitHub, create a **Quarto document**, and have a brief introduction to plotting.
+In this first section of Chapter 1, you will continue to work in the repository you created in the previous chapter. 
+Now you will create and work on a new branch of the repository, create a **Quarto document**, and have a brief introduction to plotting.
 Then, you will **push** your Chapter 1a work to a Chapter-1a branch, for your mentor's review.
 
 ------------------------------------------------------------------------
