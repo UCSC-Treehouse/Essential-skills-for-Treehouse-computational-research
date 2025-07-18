@@ -494,7 +494,9 @@ which will save the plot most recently created. The format looks like
 this:
 
 ``` r
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + geom_point() ggsave(filename = "penguin-plot.png")
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+geom_point()
+ggsave(filename = "penguin-plot.png")
 ```
 
 This will save your plot to your working directory, a concept you’ll
