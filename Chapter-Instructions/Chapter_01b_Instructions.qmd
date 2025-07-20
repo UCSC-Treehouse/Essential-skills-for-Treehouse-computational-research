@@ -454,7 +454,9 @@ The format looks like this:
 
 ```{r save your plot}
 #| eval: false
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + geom_point() ggsave(filename = "penguin-plot.png")
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+geom_point()
+ggsave(filename = "penguin-plot.png")
 ```
 
 This will save your plot to your working directory, a concept you’ll learn more about in Chapter 6.
