@@ -523,8 +523,7 @@ Because this is such a useful operation, ggplot2 comes with a shorthand for geom
 
 ## Exercises pt 5 of 6
 
-1. What is the problem with the following plot?
-How could you improve it?
+1. Identify a limitation in the following plot, and show how you would address and improve it. (Hint: Explore the data in the question.)
 ```{r ch 9 exercises pt 5 #1}
 #| eval: false
 ggplot(mpg, aes(x = cty, y = hwy)) + 

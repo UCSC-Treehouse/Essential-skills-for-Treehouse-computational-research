@@ -35,7 +35,7 @@ Don’t rely on case sensitivity to distinguish files.
 
 For example, suppose you have the following files in a project folder.
 
-   | Bad Naming  |
+ | Bad Naming  |
 |--------|
 | code for exploratory analysis.r  | 
 |  finalreport.qmd  | 
@@ -49,7 +49,7 @@ There are a variety of problems here: it’s hard to find which file to run firs
 
 Here’s a better way of naming and organizing the same set of files:
 
-| Good Naming  |
+ | Good Naming  |
 |--------|
 | 01-load-data.R | 
 |   02-exploratory-analysis.R  | 

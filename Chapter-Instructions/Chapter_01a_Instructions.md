@@ -255,7 +255,8 @@ over your work *before* you officially merge it with the main branch.
 Navigate back to **GitHub Desktop**… You should see your new changes
 highlighted.
 
-1.  Push new Chapter 1a changes to chapter-01a branch
+1.  Push new Chapter 1a changes to chapter-01a branch (Look to the
+    bottom left of your screen and write a summary)
 
 <img src="Images/push_ch_1a_to_ch_1a_branch.png" 
      alt="Cropped image of bottom left corner of GitHub Desktop screen where description 'Create and complete chapter 1a' is given and blue 'Commit 1 file to chapter-01a' button is circled in red at the bottom."
