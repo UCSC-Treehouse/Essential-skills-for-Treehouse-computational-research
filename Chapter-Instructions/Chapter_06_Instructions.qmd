@@ -44,7 +44,6 @@ For example, suppose you have the following files in a project folder.
 |   model_first_try.R | 
 |  run-first.r | 
 |   temp.txt | 
-
   
 There are a variety of problems here: it’s hard to find which file to run first, file names contain spaces, there are two files with the same name but different capitalization (finalreport vs. FinalReport), and some names don’t describe their contents (run-first and temp).
 
@@ -61,7 +60,6 @@ Here’s a better way of naming and organizing the same set of files:
 |    report-2022-03-20.qmd | 
 |     report-2022-04-02.qmd | 
 |      report-draft-notes.txt | 
-
 
 ------------------------------------------------------------------------
 
