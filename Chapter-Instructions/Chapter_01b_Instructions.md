@@ -157,7 +157,7 @@ ggplot(data = penguins) +
     use this argument set to TRUE.
 
 7.  Add the following caption to the plot you made in the previous
-    exercise: “Data come from the palmerpenguins package.” (**Hint:**
+    exercise: “Data comes from the palmerpenguins package.” (**Hint:**
     Take a look at the documentation for labs())
 
 8.  Recreate the following visualization. What aesthetic should
