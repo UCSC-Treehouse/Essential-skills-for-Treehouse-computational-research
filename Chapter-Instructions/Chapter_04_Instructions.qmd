@@ -5,7 +5,7 @@ format:
 ---
 
 A consistent coding style makes it easier for others (including future-you!) to read your work and is particularly important if you need to get help from someone else.
-This chapter will introduce the most important points of the tidyverse style guide, which is used throughout our Essential Skills to Computational Research.
+This chapter will introduce the most important points of the tidyverse style guide, which is used throughout our Essential Skills for Computational Research.
 
 ------------------------------------------------------------------------
 
