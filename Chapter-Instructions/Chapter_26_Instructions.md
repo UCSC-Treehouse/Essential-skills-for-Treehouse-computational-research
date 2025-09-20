@@ -155,7 +155,7 @@ an error:
 ``` r
 df |> 
   group_by(grp) |> 
-  summarize(across(everything(), median()))
+  summarize(across(everything(), median))
 ```
 
 ------------------------------------------------------------------------
