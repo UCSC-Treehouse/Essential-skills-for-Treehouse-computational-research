@@ -17,7 +17,7 @@ Read more about our research here: [Treehouse Childhood Cancer Initiative](https
 ## Goals
 
 In order for science to be valid, it has to be reproducible. 
-Luckily, this can be easier for computational biology experiments than in wet lab experiments. 
+Happily, this can be easier for computational biology experiments than in wet lab experiments. 
 This training introduces you to a framework for making sure your future research is reproducible. 
 
 Throughout this training we will be working on the following:
