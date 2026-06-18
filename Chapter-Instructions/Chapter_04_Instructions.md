@@ -7,6 +7,8 @@ to get help from someone else. This chapter will introduce the most
 important points of the tidyverse style guide, which is used throughout
 our Essential Skills to Computational Research.
 
+Check out the “Time saving advice” at the end of the chapter.
+
 ------------------------------------------------------------------------
 
 ## Prerequisites
@@ -23,12 +25,20 @@ We will again be using the tidyverse and nycflights13 packages.
 library(tidyverse)
 ```
 
+    Warning: package 'ggplot2' was built under R version 4.2.3
+
+    Warning: package 'tidyr' was built under R version 4.2.3
+
+    Warning: package 'readr' was built under R version 4.2.3
+
+    Warning: package 'dplyr' was built under R version 4.2.3
+
     ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ✔ dplyr     1.1.4     ✔ readr     2.1.5
-    ✔ forcats   1.0.0     ✔ stringr   1.5.1
-    ✔ ggplot2   3.5.2     ✔ tibble    3.2.1
-    ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-    ✔ purrr     1.0.4     
+    ✔ forcats   1.0.1     ✔ stringr   1.6.0
+    ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+    ✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+    ✔ purrr     1.0.2     
     ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ✖ dplyr::filter() masks stats::filter()
     ✖ dplyr::lag()    masks stats::lag()
@@ -191,6 +201,18 @@ arr_delay,na.rm=TRUE),cancelled=sum(is.na(arr_delay)),n=n())|>filter(n>10)
 ```
 
 ------------------------------------------------------------------------
+
+## Time saving advice
+
+After a while, adding spaces around operators and starting on a new line
+after a pipe will become second nature. At that point, it will not add
+time to your workflow. However, it’s easy for indenting to become
+inconsistent as you edit your code. I (Holly) strongly urge you not to
+waste time manually editing intends. My go-to is selecting the code that
+has chaotic indenting, and using the cmd-i shortcut (on Mac) to trigger
+“Re-indent lines”. Whatever automated approach you use, it’s valuable
+because having code that is correctly indented really does improve
+readability
 
 **NEXT UP:** [Chapter
 5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)

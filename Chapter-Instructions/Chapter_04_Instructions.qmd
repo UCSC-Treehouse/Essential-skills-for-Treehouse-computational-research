@@ -7,6 +7,8 @@ format:
 A consistent coding style makes it easier for others (including future-you!) to read your work and is particularly important if you need to get help from someone else.
 This chapter will introduce the most important points of the tidyverse style guide, which is used throughout our Essential Skills to Computational Research.
 
+Check out the "Time saving advice" at the end of the chapter. 
+
 ------------------------------------------------------------------------
 
 ## Prerequisites
@@ -159,5 +161,18 @@ arr_delay,na.rm=TRUE),cancelled=sum(is.na(arr_delay)),n=n())|>filter(n>10)
 ```
 
 ------------------------------------------------------------------------
+
+## Time saving advice
+
+After a while, adding spaces around operators and 
+starting on a new line after a pipe will become second nature. 
+At that point, it will not add time to your workflow. 
+However, it's easy for indenting to become inconsistent as you edit your code. 
+I (Holly) strongly urge you not to waste time manually editing intends. 
+My go-to is selecting the code that has chaotic indenting, 
+and using the cmd-i shortcut (on Mac) to trigger "Re-indent lines". 
+Whatever automated approach you use, it's valuable because 
+having code that is correctly indented really does improve readability 
+
 
 **NEXT UP:** [Chapter 5](https://github.com/UCSC-Treehouse/Essential-skills-for-Treehouse-computational-research/blob/main/Chapter-Instructions/Chapter_05_Instructions.md)
