@@ -122,7 +122,7 @@ If you forget, you’ll get an error:
 #| eval: false
 df |> 
   group_by(grp) |> 
-  summarize(across(everything(), median()))
+  summarize(across(everything(), median))
 ```
 
 ------------------------------------------------------------------------
