@@ -134,9 +134,9 @@ str_view(x)
 
 <!-- -->
 
-1.  He said “That’s amazing!”
-2.  
-3.  \\\\
+    a.  He said “That’s amazing!”
+    b.  \a\b\c\d
+    c.  \\\\
 
 <!-- -->
 
