@@ -265,7 +265,7 @@ Or just the destinations:
 ```{r filter airports to dest only}
 #| eval: false
 airports |> 
-  semi_join(flights2, join_by(faa == dest)){r}
+  semi_join(flights2, join_by(faa == dest))
 ```
 
 **Anti-joins** are the opposite: they return all rows in x that don’t have a match in y.
