@@ -27,8 +27,8 @@ x <- 3 * 4
 
 Note that the value of x is not printed, it is just stored. If you want
 to view the value, type x in the console. (**Hint**: you can also
-highlight the object name by double-clicking and pressing Command +
-Enter. Another simple way, type the object name and run the line)
+highlight the object name by double clicking and pressing command +
+enter. another simple way, type the object name and run the line)
 
 You can combine multiple elements into a vector with c():
 
@@ -36,7 +36,7 @@ You can combine multiple elements into a vector with c():
 primes <- c(2, 3, 5, 7, 11, 13)
 ```
 
-And basic arithmetic on vectors is applied to every element of the
+And basic arithmetic on vectors is applied to every element of of the
 vector:
 
 ``` r
@@ -189,9 +189,13 @@ ggplot(dTA = mpg) +
 4.  Let’s revisit an exercise from Chapter 1. Run the following lines of
     code. Which of the two plots is saved as mpg-plot.png? Why?
 
-my_bar_plot \<- ggplot(mpg, aes(x = class)) + geom_bar() my_scatter_plot
-\<- ggplot(mpg, aes(x = cty, y = hwy)) + geom_point() ggsave(filename =
-“mpg-plot.png”, plot = my_bar_plot)
+``` r
+my_bar_plot <- ggplot(mpg, aes(x = class)) +
+  geom_bar()
+my_scatter_plot <- ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+ggsave(filename = "mpg-plot.png", plot = my_bar_plot)
+```
 
 ------------------------------------------------------------------------
 
