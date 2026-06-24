@@ -325,7 +325,7 @@ Or just the destinations:
 
 ``` r
 airports |> 
-  semi_join(flights2, join_by(faa == dest)){r}
+  semi_join(flights2, join_by(faa == dest))
 ```
 
 **Anti-joins** are the opposite: they return all rows in x that don’t
