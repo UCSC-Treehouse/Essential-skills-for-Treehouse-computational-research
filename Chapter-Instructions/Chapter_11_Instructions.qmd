@@ -569,11 +569,11 @@ ggplot(df, aes(x, y)) +
 How does it compare to labs()?
 
 3. Change the display of the presidential terms by:
-  a. Combining the two variants that customize colors and x axis breaks.
-  b. Improving the display of the y axis.
-  c. Labelling each term with the name of the president.
-  d. Adding informative plot labels.
-  e. Placing breaks every 4 years (this is trickier than it seems!).
+- Combine the two variants that customize colors and x axis breaks.  
+- Improve the display of the y axis.  
+- Label each term with the name of the president.  
+- Add informative plot labels.  
+- Place breaks every 4 years (this is trickier than it seems!).  
 
 4. First, create the following plot.
 Then, modify the code using override.aes to make the legend easier to see.
