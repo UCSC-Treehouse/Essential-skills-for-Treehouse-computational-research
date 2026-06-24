@@ -189,9 +189,13 @@ ggplot(dTA = mpg) +
 4.  Let’s revisit an exercise from Chapter 1. Run the following lines of
     code. Which of the two plots is saved as mpg-plot.png? Why?
 
-my_bar_plot \<- ggplot(mpg, aes(x = class)) + geom_bar() my_scatter_plot
-\<- ggplot(mpg, aes(x = cty, y = hwy)) + geom_point() ggsave(filename =
-“mpg-plot.png”, plot = my_bar_plot)
+``` r
+my_bar_plot <- ggplot(mpg, aes(x = class)) +
+  geom_bar()
+my_scatter_plot <- ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+ggsave(filename = "mpg-plot.png", plot = my_bar_plot)
+```
 
 ------------------------------------------------------------------------
 
